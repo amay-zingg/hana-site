@@ -1,0 +1,30 @@
+h2 {
+	font-family: $headingFont;
+	@include fontSize(3.5rem);
+}
+
+main {
+	width: 100%;
+}
+
+.book-promo {
+	width: 100%;
+	text-align: center;
+	@include flexbox($placeItems: center, $placeContent: center, $direction: column-reverse);
+}
+
+.promo {
+	width: 100%;
+	padding: 15px 0;
+	margin-bottom: 60px;
+}
+
+.promo p {
+	margin-bottom: 60px;
+}
+
+.book-promo img {
+	border-radius: 15px;
+	border: solid 1px $secondary;
+	box-shadow: 0px 0px 15px $primary;
+}

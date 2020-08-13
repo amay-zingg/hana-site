@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frizz Kid Art</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chicle&family=Francois+One&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <header>
+
+            <div class="logo">
+                <img src="assets/LogoTransparent.png" alt="Frizz Kid Art Logo">
+            </div>
+
+            <div class="navigation">
+                <nav class="social-nav">
+                    <ul>
+                        <li class="instagram">
+                            <a href="https://www.instagram.com/frizzkidart/" class="instagram">
+                                <img src="./assets/instagram-gradient-nav.png" alt="Instagram Logo">
+                                <span class="visuallyhidden">Instagram (Opens in a new window)</span>
+                            </a>
+                        </li>
+                        <li class="twitter">
+                            <a href="https://twitter.com/HanaShafi" class="twitter">
+                                <img src="./assets/twitter-gradient-nav.png" alt="Twitter Logo">
+                                <span class="visuallyhidden">Twitter (Opens in a new window)</span>
+                            </a>
+                        </li>
+                        <li class="redbubble">
+                            <a href="https://www.redbubble.com/people/thefrizzkid/shop" class="redbubble">
+                                <img src="./assets/redbubble-gradient-nav.png" alt="Redbubble Logo">
+                                <span class="visuallyhidden">RedBubble (Opens in a new window)</span>
+                            </a>
+                        </li>
+                        <li class="patreon">
+                            <a href="https://www.patreon.com/frizzkidart" class="patreon">
+                                <img src="./assets/patron.png" alt="Patreon Logo">
+                                <span class="visuallyhidden">Patreon (Opens in a new window)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div><!-- END OF NAVIGATION -->
+
+        </header>
+
+        <div class="hero">
+            <div class="title-block">
+                <h1>Hello! I'm Frizz Kid</h1>
+                <p>I'm an illustrator and writer that's weird and frizzy located in Toronto, Ontario.</p>
+                <a href="#book" class="book-button scroll">Look at my second book!</a>
+            </div>
+            <img src="./assets/FrizzKidPortrait.JPG" alt="Hana Shafi strikes a pose" class="hero-photo">
+        </div>
+
+        <main>
+            <div class="book-promo" id="book">
+
+                <img src="./assets/HanaShafiSmallBrokeAndKindOfDirty.jpg" alt="Small Broke and Kind of Dirty book by Hana Shafi" class="book-photo">
+                
+                <div class="promo">
+                    <h2>Small, Broke, and Kind of Dirty</h2>
+
+                    <p> This book is built around art from my popular online affirmation series. It focuses on our common and never-ending journey of self-discovery. It explores the ways in which the world can all too often wear us down, and reminds us to remember our worth, even when it’s hard to do so.</p>
+
+                    <a href="https://bookhugpress.ca/shop/author/hana-shafi/small-broke-and-kind-of-dirty-affirmations-for-the-real-world-by-hana-shafi/" class="book-button"> Pre-order my book</a>
+                </div>
+
+            </div>
+            
+        </main>
+
+
+    </div><!-- END OF WRAPPER-->
+    
+    <!-- <script defer src=""></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        const navigationScroll = function () {
+            let scrollLink = $('.scroll');
+
+            // * * * * SMOOTH SCROLLING
+            scrollLink.click(function (e) {
+                e.preventDefault();
+                $('body, html').animate(
+                    {
+                        scrollTop: $(this.hash).offset().top
+                    },
+                    1000
+                );
+            });
+        };
+
+        // * * * * INIT PIECES
+        init = function () {
+            navigationScroll();
+        };
+
+        // * * * * DOCUMENT READY
+        $(() => {
+            init();
+        }); // * * * * END OF DOCUMENT READY
+    </script>
+    
+</body>
+</html>
