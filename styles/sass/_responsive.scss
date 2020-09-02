@@ -1,8 +1,20 @@
 // * * * * MOBILE FIRST DESIGN - SO THESE ARE STYLES FOR TABLET AND DESKTOP
-@media only screen and (min-width: 600px) {
-	.wrapper {
-		width: 100%;
-		max-width: 1024px;
+@media only screen and (min-width: 900px) {
+	header {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	.logo-block {
+		width: 30%;
+	}
+
+	.navigation {
+		width: 70%;
+	}
+
+	nav.social-nav {
+		width: 300px;
 	}
 
 	nav.social-nav ul {
@@ -14,9 +26,37 @@
 		display: inline-block;
 	}
 
+	h2 {
+		@include fontSize(4rem);
+		line-height: 4rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.wrapper {
+		width: 100%;
+		max-width: 1024px;
+	}
+
+	nav.social-nav ul {
+		width: 300px;
+	}
+
 	.hero,
 	.book-promo {
 		@include flexbox($direction: row);
+	}
+
+	.book-promo {
+		margin: 15px 0;
+	}
+
+	.second {
+		@include flexbox($direction: row-reverse);
+	}
+
+	.title-block h1 {
+		padding: 0px;
 	}
 
 	.title-block,
@@ -25,5 +65,17 @@
 	img.book-photo {
 		width: 50%;
 		margin: 15px;
+	}
+
+	.image-block {
+		flex-direction: row;
+	}
+
+	.image-block img {
+		max-width: 150px;
+	}
+
+	footer {
+		@include flexbox($direction: row);
 	}
 }
