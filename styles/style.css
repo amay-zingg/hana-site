@@ -410,14 +410,6 @@ nav.social-nav ul {
           flex-grow: 0;
 }
 
-nav.social-nav ul li a.instagram img,
-nav.social-nav ul li a.twitter img,
-nav.social-nav ul li a.redbubble img {
-  width: 50px;
-  height: 50px;
-  line-height: 0;
-}
-
 nav.social-nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -427,7 +419,6 @@ nav.social-nav ul li {
       -ms-flex-direction: row;
           flex-direction: row;
   place-content: center;
-  place-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -ms-flex-negative: 0;
@@ -437,13 +428,21 @@ nav.social-nav ul li {
           flex-grow: 0;
 }
 
+nav.social-nav ul li a.instagram img,
+nav.social-nav ul li a.twitter img,
+nav.social-nav ul li a.redbubble img {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 0;
+}
+
 nav.social-nav ul li.instagram,
 nav.social-nav ul li.twitter,
 nav.social-nav ul li.redbubble {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
-  padding: 10px;
-  width: 25%;
+  width: 3.8rem;
+  height: 3.8rem;
   margin: 10px;
   border: solid 1px transparent;
 }
@@ -717,14 +716,6 @@ footer {
           flex-grow: 0;
 }
 
-.social-nav-footer ul li a.instagram img,
-.social-nav-footer ul li a.twitter img,
-.social-nav-footer ul li a.redbubble img {
-  width: 30px;
-  height: 30px;
-  line-height: 0;
-}
-
 .social-nav-footer ul li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -734,7 +725,6 @@ footer {
       -ms-flex-direction: row;
           flex-direction: row;
   place-content: center;
-  place-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -ms-flex-negative: 0;
@@ -744,13 +734,21 @@ footer {
           flex-grow: 0;
 }
 
+.social-nav-footer ul li a.instagram img,
+.social-nav-footer ul li a.twitter img,
+.social-nav-footer ul li a.redbubble img {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 0;
+}
+
 .social-nav-footer ul li.instagram,
 .social-nav-footer ul li.twitter,
 .social-nav-footer ul li.redbubble {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
-  padding: 5px;
-  width: 13%;
+  width: 2.8rem;
+  height: 2.8rem;
   margin: 5px;
   border: solid 1px transparent;
 }

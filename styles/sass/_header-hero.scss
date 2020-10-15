@@ -35,16 +35,16 @@ nav.social-nav ul {
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
 
+nav.social-nav ul li {
+	@include flexbox($placeContent: center);
+}
+
 nav.social-nav ul li a.instagram img,
 nav.social-nav ul li a.twitter img,
 nav.social-nav ul li a.redbubble img {
-	width: 50px;
-	height: 50px;
+	width: 3.5rem;
+	height: 3.5rem;
 	line-height: 0;
-}
-
-nav.social-nav ul li {
-	@include flexbox($placeItems: center, $placeContent: center);
 }
 
 nav.social-nav ul li.instagram,
@@ -52,8 +52,10 @@ nav.social-nav ul li.twitter,
 nav.social-nav ul li.redbubble {
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 50%;
-	padding: 10px;
-	width: 25%;
+	// padding: 10px;
+	// width: 25%;
+	width: 3.8rem;
+	height: 3.8rem;
 	margin: 10px;
 	border: solid 1px transparent;
 }

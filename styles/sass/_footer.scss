@@ -13,25 +13,28 @@ footer {
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: nowrap);
 }
 
+.social-nav-footer ul li {
+	@include flexbox($placeContent: center);
+}
+
 .social-nav-footer ul li a.instagram img,
 .social-nav-footer ul li a.twitter img,
 .social-nav-footer ul li a.redbubble img {
-	width: 30px;
-	height: 30px;
+	width: 2.5rem;
+	height: 2.5rem;
 	line-height: 0;
 }
 
-.social-nav-footer ul li {
-	@include flexbox($placeItems: center, $placeContent: center);
-}
 
 .social-nav-footer ul li.instagram,
 .social-nav-footer ul li.twitter,
 .social-nav-footer ul li.redbubble {
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 50%;
-	padding: 5px;
-	width: 13%;
+	// padding: 5px;
+	// width: 13%;
+	width: 2.8rem;
+	height: 2.8rem;
 	margin: 5px;
 	border: solid 1px transparent;
 }
