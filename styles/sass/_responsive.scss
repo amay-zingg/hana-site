@@ -1,5 +1,9 @@
 // * * * * MOBILE FIRST DESIGN - SO THESE ARE STYLES FOR TABLET AND DESKTOP
 @media only screen and (min-width: 900px) {
+	body{
+		background-image: linear-gradient(to bottom, $secondary, $primary);
+	}
+
 	header {
 		flex-direction: row;
 		justify-content: flex-start;

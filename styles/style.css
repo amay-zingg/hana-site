@@ -285,9 +285,8 @@ li {
 body {
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
-  background: #f79aaa;
-  background: -webkit-gradient(linear, left bottom, left top, from(#f79aaa), color-stop(65%, #fedf15), to(#fedf15));
-  background: linear-gradient(0deg, #f79aaa 0%, #fedf15 65%, #fedf15 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fedf15), to(#f79aaa));
+  background-image: linear-gradient(to bottom, #fedf15, #f79aaa);
 }
 
 .wrapper {
@@ -805,6 +804,10 @@ footer p {
 }
 
 @media only screen and (min-width: 900px) {
+  body {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f79aaa), to(#fedf15));
+    background-image: linear-gradient(to bottom, #f79aaa, #fedf15);
+  }
   header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
