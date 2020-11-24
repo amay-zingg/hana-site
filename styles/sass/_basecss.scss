@@ -236,7 +236,8 @@ body {
 	font-size: 2rem;
 	// background: rgb(247, 154, 170);
 	// background: linear-gradient(0deg, rgba(247, 154, 170, 1) 0%, rgba(254, 223, 21, 1) 65%, rgba(254, 223, 21, 1) 100%);
-	background-image: linear-gradient(to bottom, $primary, $secondary);
+	// background-image: linear-gradient(to bottom, $primary, $secondary);
+	background: linear-gradient(0deg, rgba(247, 154, 170, .5) 0%, rgba(254, 223, 21, 1) 65%, rgba(254, 223, 21, .5) 100%);
 }
 
 .wrapper {

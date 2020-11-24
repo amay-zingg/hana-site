@@ -1,7 +1,8 @@
 header {
 	width: 100%;
-	@include flexbox($placeItems: center, $placeContent: space-around, $direction: column);
+	@include flexbox($placeItems: center, $placeContent: space-between, $direction: column);
 }
+
 .logo-block {
 	width: 100%;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
@@ -10,10 +11,10 @@ header {
 .logo {
 	@include flexbox($placeItems: center, $placeContent: center);
 	border-radius: 50%;
-	padding: 20px;
-	width: 150px;
-	background: #fedf15;
-	box-shadow: 17px 17px 54px #eacd13, -17px -17px 54px #fff117;
+	background: transparent;
+
+	/* * * * PREVIOUS VERSION SHADOW * * * */
+	// box-shadow: 17px 17px 54px #eacd13, -17px -17px 54px #fff117;
 }
 
 .logo img {
@@ -22,8 +23,8 @@ header {
 }
 
 /* * * * SOCIAL NAV * * * */
-.navigation {
-	width: 100%;
+nav.main-menu, nav.social-nav {
+	width: 40%;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
 
@@ -52,8 +53,6 @@ nav.social-nav ul li.twitter,
 nav.social-nav ul li.redbubble {
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 50%;
-	// padding: 10px;
-	// width: 25%;
 	width: 3.8rem;
 	height: 3.8rem;
 	margin: 10px;
