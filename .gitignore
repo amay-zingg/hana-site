@@ -1,0 +1,6 @@
+/.vscode
+/assets/.DS_store
+
+# Ignore Mac System Files
+.DS_store
+thumbs.db
