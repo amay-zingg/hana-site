@@ -234,14 +234,14 @@ li {
 body {
 	font-family: $bodyFont;
 	font-size: 2rem;
-	// background: rgb(247, 154, 170);
-	// background: linear-gradient(0deg, rgba(247, 154, 170, 1) 0%, rgba(254, 223, 21, 1) 65%, rgba(254, 223, 21, 1) 100%);
-	// background-image: linear-gradient(to bottom, $primary, $secondary);
-	background: linear-gradient(0deg, rgba(247, 154, 170, .5) 0%, rgba(254, 223, 21, 1) 65%, rgba(254, 223, 21, .5) 100%);
+	letter-spacing: 2.9px;
+	background-color: $primary;
+	// background: linear-gradient(to right, $primary 50%, $secondary 50%);
 }
 
+// MOBILE FIRST SIZING
 .wrapper {
-	width: 320px;
+	width: 90%;
 	margin: 0 auto;
 	padding: 10px;
 }

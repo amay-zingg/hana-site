@@ -285,14 +285,23 @@ li {
 body {
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(247, 154, 170, 0.5)), color-stop(65%, #fedf15), to(rgba(254, 223, 21, 0.5)));
-  background: linear-gradient(0deg, rgba(247, 154, 170, 0.5) 0%, #fedf15 65%, rgba(254, 223, 21, 0.5) 100%);
+  letter-spacing: 2.9px;
+  background-color: #fedf15;
 }
 
 .wrapper {
-  width: 320px;
+  width: 90%;
   margin: 0 auto;
   padding: 10px;
+}
+
+/* * * * DON'T FORGET IT'S MOBILE FIRST SIZING * * * */
+.announcement-banner {
+  color: #FFF;
+  background: #0C0A0A;
+  padding: 10px 15px;
+  margin: 0;
+  overflow: hidden;
 }
 
 header {
@@ -315,6 +324,8 @@ header {
           flex-grow: 0;
 }
 
+/* * * * * * * * * * * * * * HEADER BLOCKS * * * * * * * * * * * * * * */
+/* * * * LOGO * * * */
 .logo-block {
   width: 100%;
   display: -webkit-box;
@@ -354,7 +365,6 @@ header {
           flex-grow: 0;
   border-radius: 50%;
   background: transparent;
-  /* * * * PREVIOUS VERSION SHADOW * * * */
 }
 
 .logo img {
@@ -364,7 +374,7 @@ header {
 
 /* * * * SOCIAL NAV * * * */
 nav.main-menu, nav.social-nav {
-  width: 40%;
+  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -801,10 +811,6 @@ footer p {
 }
 
 @media only screen and (min-width: 900px) {
-  body {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f79aaa), to(#fedf15));
-    background-image: linear-gradient(to bottom, #f79aaa, #fedf15);
-  }
   header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -852,9 +858,12 @@ footer p {
 }
 
 @media only screen and (min-width: 600px) {
+  body {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(247, 154, 170, 0.5)), color-stop(65%, #fedf15), to(rgba(254, 223, 21, 0.5)));
+    background: linear-gradient(0deg, rgba(247, 154, 170, 0.5) 0%, #fedf15 65%, rgba(254, 223, 21, 0.5) 100%);
+  }
   .wrapper {
-    width: 100%;
-    max-width: 1024px;
+    width: 1024px;
   }
   nav.social-nav ul {
     width: 300px;

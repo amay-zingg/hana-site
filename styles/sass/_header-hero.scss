@@ -1,8 +1,19 @@
+/* * * * DON'T FORGET IT'S MOBILE FIRST SIZING * * * */
+.announcement-banner{
+	color: #FFF;
+	background: $black;
+	padding: 10px 15px;
+	margin: 0;
+	overflow: hidden;
+}
+
 header {
 	width: 100%;
 	@include flexbox($placeItems: center, $placeContent: space-between, $direction: column);
 }
 
+/* * * * * * * * * * * * * * HEADER BLOCKS * * * * * * * * * * * * * * */
+/* * * * LOGO * * * */
 .logo-block {
 	width: 100%;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
@@ -12,9 +23,6 @@ header {
 	@include flexbox($placeItems: center, $placeContent: center);
 	border-radius: 50%;
 	background: transparent;
-
-	/* * * * PREVIOUS VERSION SHADOW * * * */
-	// box-shadow: 17px 17px 54px #eacd13, -17px -17px 54px #fff117;
 }
 
 .logo img {
@@ -24,7 +32,7 @@ header {
 
 /* * * * SOCIAL NAV * * * */
 nav.main-menu, nav.social-nav {
-	width: 40%;
+	width: 35%;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
 

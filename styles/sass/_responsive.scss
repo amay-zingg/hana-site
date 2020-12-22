@@ -1,8 +1,10 @@
 // * * * * MOBILE FIRST DESIGN - SO THESE ARE STYLES FOR TABLET AND DESKTOP
 @media only screen and (min-width: 900px) {
-	body{
-		background-image: linear-gradient(to bottom, $secondary, $primary);
-	}
+
+	// body{
+	// 	// background-image: linear-gradient(to bottom, $secondary, $primary);
+	// 	background: linear-gradient(to right, $primary 50%, $secondary 50%);
+	// }
 
 	header {
 		flex-direction: row;
@@ -37,9 +39,12 @@
 }
 
 @media only screen and (min-width: 600px) {
-	.wrapper {
-		width: 100%;
-		max-width: 1024px;
+	body{
+		background: linear-gradient(0deg, rgba(247,154,170,0.5) 0%, #fedf15 65%, rgba(254,223,21,0.5) 100%);
+	}
+
+	.wrapper { 
+		width: 1024px; 
 	}
 
 	nav.social-nav ul {
