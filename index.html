@@ -30,158 +30,208 @@
 </head>
 <body>
 
-    <div class="announcement-banner" data-pauseOnHover="true" data-duration='9000' >
+    <div class="announcement-banner" data-pauseOnHover="true" data-duration="9000" >
         Hey I'm Hana and this is my new siiiiiiiiiiiite
         <!-- My second book: Small, Broke, and Kind of Dirty is out now with @bookhugpress -->
     </div>
 
+    <div class="wrapper"></div>
     <header>
-        <div class="wrapper">
+
+        <!-- MAIN MENU + CART/ACCOUNT -->
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#" class="cart">Cart</a></li>
+                <!-- <li><a href="#" class="account">Account</a></li> -->
+            </ul>
+        </nav>
             
-            <nav class="main-menu">
-                <a href="#">About</a>
-                <a href="#">Store</a>
-                <a href="#">Contact</a>
-                <a href="#">Gallery</a>
-                <a href="#" class="cart">Cart</a>
-                <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
-            </nav>
-            
-            <div class="logo-block">
-                <div class="logo">
+        <!-- LOGO -->
+        <div class="logo-block">
+            <h1 class="logo">
+                <a href="/" class="logo-image" title="Go to the Home Page">
                     <img src="assets/logos/LogoTransparent.png" alt="Frizz Kid Art Logo">
-                </div>
-            </div>
+                </a>
+            </h1>
+        </div>
             
-            <nav class="social-nav">
-                <ul>
-                    <li class="instagram">
-                        <a href="https://www.instagram.com/frizzkidart/" class="instagram">
-                            <img src="./assets/instagram-gradient-nav.png" alt="Instagram Logo">
-                            <span class="visuallyhidden">Instagram (Opens in a new window)</span>
-                        </a>
-                    </li>
-                    <li class="twitter">
-                        <a href="https://twitter.com/HanaShafi" class="twitter">
-                            <img src="./assets/twitter-gradient-nav.png" alt="Twitter Logo">
-                            <span class="visuallyhidden">Twitter (Opens in a new window)</span>
-                        </a>
-                    </li>
-                    <li class="redbubble">
-                        <a href="https://www.redbubble.com/people/thefrizzkid/shop" class="redbubble">
-                            <img src="./assets/redbubble-gradient-nav.png" alt="Redbubble Logo">
-                            <span class="visuallyhidden">RedBubble (Opens in a new window)</span>
-                        </a>
-                    </li>
-                    <li class="patreon">
-                        <a href="https://www.patreon.com/frizzkidart" class="patreon">
-                            <img src="./assets/patron.png" alt="Patreon Logo">
-                            <span class="visuallyhidden">Patreon (Opens in a new window)</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div><!-- END OF HEADER WRAPPER -->
+        <!-- SOCIAL MENU -->
+        <nav class="social-nav">
+            <ul>
+                <li class="instagram-svg">
+                    <a href="https://www.instagram.com/frizzkidart/" class="instagram"></a>
+                </li>
+                <li class="twitter-svg">
+                    <a href="https://twitter.com/HanaShafi" class="twitter">
+                    </a>
+                </li>
+                <li class="redbubble-svg">
+                    <a href="https://www.redbubble.com/people/thefrizzkid/shop" class="redbubble">
+                    </a>
+                </li>
+                <li class="facebook-svg">
+                    <a href="#" class="facebook">
+                    </a>
+                </li>
+                <li class="tiktok-svg">
+                    <a href="#" class="tiktok">
+                    </a>
+                </li>
+                <li class="patreon-svg">
+                    <a href="https://www.patreon.com/frizzkidart" class="patreon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- RESPONSIVE CART + ACCOUNT -->
+        <div class="responsive-cart">
+            <a href="/cart" title="Cart">
+                <svg height="60px" viewBox="-68 0 512 512" width="60px" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m319.875 130c10.417969 0 19.097656 8 19.929688 18.390625l26.777343 332c.9375 11.582031-8.210937 21.609375-19.9375 21.609375h-316.640625c-11.742187 0-20.875-10.039062-19.941406-21.609375l26.78125-332c.832031-10.390625 9.511719-18.390625 19.929688-18.390625zm0 0"
+                        fill="#f79aaa" />
+                    <path
+                        d="m262.742188 326.390625c0 30.433594-30.75 50.761719-74.417969 88.609375-44.140625-38.25-74.421875-58.308594-74.421875-88.609375 0-21.902344 15.179687-40.390625 37.210937-40.390625 28.28125 0 37.210938 32.25 37.210938 32.25s8.929687-32.25 37.210937-32.25c22.027344 0 37.207032 18.488281 37.207032 40.390625zm0 0"
+                        fill="#FFF" />
+                    <path
+                        d="m272.742188 326.390625c0-28.257813-20.734376-50.390625-47.207032-50.390625-18.28125 0-30.042968 10.078125-37.210937 20.074219-7.167969-9.996094-18.929688-20.074219-37.210938-20.074219-26.472656 0-47.210937 22.132812-47.210937 50.390625 0 35.757813 32.875 57.175781 77.871094 96.167969 1.878906 1.628906 4.214843 2.441406 6.550781 2.441406 2.335937 0 4.667969-.8125 6.546875-2.441406 42.808594-37.101563 77.871094-60.105469 77.871094-96.167969zm-84.417969 75.417969c-39.300781-33.589844-64.421875-51.617188-64.421875-75.417969 0-17.324219 11.699218-30.390625 27.210937-30.390625 20.199219 0 27.292969 23.941406 27.574219 24.917969 1.199219 4.332031 5.140625 7.332031 9.636719 7.332031 4.496093 0 8.4375-3 9.636719-7.332031.070312-.25 7.136718-24.917969 27.574218-24.917969 15.511719 0 27.207032 13.066406 27.207032 30.390625 0 24.359375-27.53125 43.886719-64.417969 75.417969zm0 0" />
+                    <path
+                        d="m198.324219 502c0 5.523438-4.476563 10-10 10-5.523438 0-10-4.476562-10-10s4.476562-10 10-10c5.523437 0 10 4.476562 10 10zm0 0" />
+                    <path
+                        d="m30.003906 512h113.320313c5.523437 0 10-4.476562 10-10s-4.476563-10-10-10h-113.320313c-2.789062 0-5.464844-1.171875-7.355468-3.226562-1.886719-2.042969-2.839844-4.804688-2.617188-7.578126l26.78125-332.007812c.410156-5.152344 4.785156-9.1875 9.960938-9.1875h61.550781v40h-20c-5.523438 0-10 4.476562-10 10s4.476562 10 10 10h60c5.523437 0 10-4.476562 10-10s-4.476563-10-10-10h-20v-40h100v40h-20c-5.523438 0-10 4.476562-10 10s4.476562 10 10 10h60c5.523437 0 10-4.476562 10-10s-4.476563-10-10-10h-20v-40h61.550781c5.175781 0 9.550781 4.035156 9.960938 9.191406l26.78125 332.003906c.222656 2.773438-.730469 5.535157-2.632813 7.59375-1.878906 2.039063-4.550781 3.207032-7.339844 3.207032h-113.320312c-5.523438 0-10 4.480468-10 10 0 5.523437 4.476562 10 10 10h113.320312c8.367188 0 16.410157-3.523438 22.042969-9.648438 5.671875-6.136718 8.539062-14.433594 7.863281-22.761718l-26.777343-331.992188c-1.238282-15.472656-14.371094-27.59375-29.898438-27.59375h-61.550781v-50c0-38.597656-31.402344-70-70-70-38.597657 0-70 31.402344-70 70v50h-61.550781c-15.527344 0-28.660157 12.121094-29.898438 27.585938l-26.7773438 332c-.6757812 8.328124 2.1914058 16.625 7.8476558 22.742187 5.648438 6.148437 13.691407 9.671875 22.058594 9.671875zm108.320313-442c0-27.570312 22.429687-50 50-50 27.570312 0 50 22.429688 50 50v50h-100zm0 0" />
+                </svg>
+            </a>
+        </div>
+        
+        <!-- MOBILE NAV = MAIN MENU + CART -->
+        <button class="responsive-nav-button">
+            <i class="fas fa-bars"></i>
+            <span class="visuallyhidden">This opens the navigation menu</span>
+        </button>
+        
+        <nav class="responsive-nav" id="responsive-nav">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#" class="cart">Cart</a></li>
+                <!-- <li><a href="#" class="account">Account</a></li> -->
+            </ul>
+        </nav>
+
     </header>
 
-        <div class="hero">
+    <!-- MOBILE ANNOUNCEMENT BAR -->
+    <div class="responsive-announcement-banner" data-pauseOnHover="true" data-duration="9000">
+        Hey I'm Hana and this is my new siiiiiiiiiiiite
+        <!-- My second book: Small, Broke, and Kind of Dirty is out now with @bookhugpress -->
+    </div>
+            
+    <main>
+        <section class="intro">
             <div class="title-block">
                 <h1>Welcome</h1>
-                <p>Hey! I'm Hana, a.k.a Frizz Kid. I'm an illustrator and writer living in Toronto. I love tea, opossums, and Halloween.
-                <!-- I'm Frizz Kid! I'm an illustrator and writer based in Toronto, and most folks know me for my weekly affirmation series
-                    and other badass illustrations. It's been a labour of love since March 2016, when I created the first affirmation image
-                    to try and give people a single moment of solace and understanding in their day. Since then, I've created over 175+
-                    affirmations, I've had my debut book of poetry and illustration published and in stores, and made a bunch of other silly
-                    illustrations with dinosaurs and flowers and all that neat stuff. Bringing that stuff to all of you weekly is, more
-                    often than not, unpaid work that I take upon myself. Help support me so I can continue making empowering, feminist,
-                    take-no-shit, healing artwork! -->
+                <p>Hey! I'm Hana, a.k.a Frizz Kid. I'm an illustrator and writer living in Toronto. I love tea, opossums, and
+                    Halloween.
+                    <!-- I'm Frizz Kid! I'm an illustrator and writer based in Toronto, and most folks know me for my weekly affirmation series
+                                and other badass illustrations. It's been a labour of love since March 2016, when I created the first affirmation image
+                                to try and give people a single moment of solace and understanding in their day. Since then, I've created over 175+
+                                affirmations, I've had my debut book of poetry and illustration published and in stores, and made a bunch of other silly
+                                illustrations with dinosaurs and flowers and all that neat stuff. Bringing that stuff to all of you weekly is, more
+                                often than not, unpaid work that I take upon myself. Help support me so I can continue making empowering, feminist,
+                                take-no-shit, healing artwork! -->
                 </p>
                 <div class="image-block">
-                    <img src="./assets/frizzyArt/Tea.jpg" alt="Frizz Kid Art | Tea">
-                    <img src="./assets/frizzyArt/Possum.jpg" alt="Frizz Kid Art | Opposum">
-                    <img src="./assets/frizzyArt/Halloween.jpg" alt="Frizz Kid Art | Halloween">
+                    <img src="./assets/art/Tea.jpg" alt="Frizz Kid Art | Tea">
+                    <img src="./assets/art/Possum.jpg" alt="Frizz Kid Art | Opposum">
+                    <img src="./assets/art/Halloween.jpg" alt="Frizz Kid Art | Halloween">
                 </div>
                 <a href="#book" class="book-button scroll">Look at my second book!</a>
             </div>
-            <img src="./assets/FrizzKidPortrait.JPG" alt="Hana Shafi strikes a pose" class="hero-photo">
+            <img src="./assets/hana/FrizzKidPortrait.JPG" alt="Hana Shafi strikes a pose" class="hero-photo">
+        </section>
+        
+        <div class="book-promo" id="book">
+
+            <img src="./assets/HanaShafiSmallBrokeAndKindOfDirty.jpg" alt="Small Broke and Kind of Dirty book by Hana Shafi" class="book-photo">
+            
+            <div class="promo">
+                <h2>Small, Broke, and Kind of Dirty</h2>
+
+                <p> This book is built around art from my popular online affirmation series. It focuses on our common and never-ending journey of self-discovery. It explores the ways in which the world can all too often wear us down, and reminds us to remember our worth, even when it’s hard to do so.</p>
+
+                <a href="https://bookhugpress.ca/shop/author/hana-shafi/small-broke-and-kind-of-dirty-affirmations-for-the-real-world-by-hana-shafi/" class="book-button first"> My second book</a>
+            </div>
+
         </div>
 
-        <main>
-            <div class="book-promo" id="book">
+        <div class="book-promo second">
+        
+            <img src="./assets/HanaShafiItBeginsWithTheBody.jpg" alt="Small Broke and Kind of Dirty book by Hana Shafi"
+                class="book-photo">
+        
+            <div class="promo">
+                <h2>It Begins With The Body</h2>
+        
+                <p> This book explores the milestones and hurdles of a brown girl coming into her own. My poems display a raw and frank intimacy
+                and address anxiety, unemployment, heartbreak, relationships, identity, and faith.</p>
+        
+                <a href="https://bookhugpress.ca/shop/author/hana-shafi/it-begins-with-the-body-by-hana-shafi/"
+                    class="book-button"> Order my book</a>
+            </div>
+        </div>
 
-                <img src="./assets/HanaShafiSmallBrokeAndKindOfDirty.jpg" alt="Small Broke and Kind of Dirty book by Hana Shafi" class="book-photo">
+        <div id="twitter">
+            <!-- https://developer.twitter.com/en/docs/twitter-for-websites/timelines/overview -->
+
+            <a class="twitter-timeline" href="https://twitter.com/HanaShafi?ref_src=twsrc%5Etfw" 
+            data-width="600"
+            data-height="600"
+            data-tweet-limit="5">Tweets by HanaShafi</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <!-- data-chrome="nofooter noborders transparent" -->
+
+        </div>
+        
+        <div class="writing">
+            <h2>I'm passionate about writing</h2>
+
+            <p>I've written articles for a few publications <a href="https://this.org/2014/11/20/peanut-butter-and-chutney/">this one</a> was nominated for a National Magazine Award.</p>
+
+            <h3>See for yourself</h3>
+
+            <!-- WALRUS ARTICLE - https://thewalrus.ca/the-kids-are-mad-as-hell/?fbclid=IwAR25Wrgf989eOGzzdmxnYpsGbiGIY8d4xXlKgDesJ6RBUi2veUAhElBPGtI -->
+
+            <div class="links">
                 
-                <div class="promo">
-                    <h2>Small, Broke, and Kind of Dirty</h2>
+                <a href="https://hazlitt.net/authors/hana-shafi" target="_blank" title="Hazlitt (Opens in a new window)">
+                    <img src="./assets/logos/hazlitt-logo.jpg" alt="Hazlitt Logo">
+                    <span class="visuallyhidden">Hazlitt (Opens in a new window)</span>
+                </a>
+                
+                <a href="https://this.org/author/hanashafi/" target="_blank" title="This (Opens in a new window)">
+                    <svg viewBox="0 0 400 119" style="width: 100%"><path fill="#d22"
+                        d="M325 119c28 0 46-14 46-37v-1c0-21-16-29-42-35-16-3-20-6-20-11 0-4 4-7 11-7 10 0 22 4 32 11l16-22a71 71 0 0 0-47-15c-27 0-44 15-44 36 0 23 19 30 43 36 15 3 19 6 19 11s-4 8-13 8c-13 0-25-5-36-14l-18 21c14 12 33 19 53 19m-94-2h31V4h-31v113zm-120 0h32V74h40v43h31V4h-31v42h-40V4h-32v113zm-75 0h31V31h34V4H2v27h34v86z">
+                    </path></svg>
+                    <span class="visuallyhidden">This (Opens in a new window)</span>
+                </a>
 
-                    <p> This book is built around art from my popular online affirmation series. It focuses on our common and never-ending journey of self-discovery. It explores the ways in which the world can all too often wear us down, and reminds us to remember our worth, even when it’s hard to do so.</p>
-
-                    <a href="https://bookhugpress.ca/shop/author/hana-shafi/small-broke-and-kind-of-dirty-affirmations-for-the-real-world-by-hana-shafi/" class="book-button first"> My second book</a>
-                </div>
-
+                <a href="https://thewalrus.ca/author/hana-shafi/" target="_blank" title="The Walrus (Opens in a new window)">
+                    <img src="./assets/logos/TheWalrus.png" alt="">
+                    <span class="visuallyhidden">The Walrus (Opens in a new window)</span>
+                </a>
             </div>
-
-            <div class="book-promo second">
+        </div>
             
-                <img src="./assets/HanaShafiItBeginsWithTheBody.jpg" alt="Small Broke and Kind of Dirty book by Hana Shafi"
-                    class="book-photo">
-            
-                <div class="promo">
-                    <h2>It Begins With The Body</h2>
-            
-                    <p> This book explores the milestones and hurdles of a brown girl coming into her own. My poems display a raw and frank intimacy
-                    and address anxiety, unemployment, heartbreak, relationships, identity, and faith.</p>
-            
-                    <a href="https://bookhugpress.ca/shop/author/hana-shafi/it-begins-with-the-body-by-hana-shafi/"
-                        class="book-button"> Order my book</a>
-                </div>
-            </div>
+    </main>
+    </div><!-- END OF MAIN CONTENT WRAPPER -->
 
-            <div id="twitter">
-                <!-- https://developer.twitter.com/en/docs/twitter-for-websites/timelines/overview -->
-
-                <a class="twitter-timeline" href="https://twitter.com/HanaShafi?ref_src=twsrc%5Etfw" 
-                data-width="600"
-                data-height="600"
-                data-tweet-limit="5">Tweets by HanaShafi</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                <!-- data-chrome="nofooter noborders transparent" -->
-
-            </div>
-            
-            <div class="writing">
-                <h2>I'm passionate about writing</h2>
-
-                <p>I've written articles for a few publications <a href="https://this.org/2014/11/20/peanut-butter-and-chutney/">this one</a> was nominated for a National Magazine Award.</p>
-
-                <h3>See for yourself</h3>
-
-                <!-- WALRUS ARTICLE - https://thewalrus.ca/the-kids-are-mad-as-hell/?fbclid=IwAR25Wrgf989eOGzzdmxnYpsGbiGIY8d4xXlKgDesJ6RBUi2veUAhElBPGtI -->
-
-                <div class="links">
-                    
-                    <a href="https://hazlitt.net/authors/hana-shafi" target="_blank" title="Hazlitt (Opens in a new window)">
-                        <img src="./assets/logos/hazlitt-logo.jpg" alt="Hazlitt Logo">
-                        <span class="visuallyhidden">Hazlitt (Opens in a new window)</span>
-                    </a>
-                    
-                    <a href="https://this.org/author/hanashafi/" target="_blank" title="This (Opens in a new window)">
-                        <svg viewBox="0 0 400 119" style="width: 100%"><path fill="#d22"
-                            d="M325 119c28 0 46-14 46-37v-1c0-21-16-29-42-35-16-3-20-6-20-11 0-4 4-7 11-7 10 0 22 4 32 11l16-22a71 71 0 0 0-47-15c-27 0-44 15-44 36 0 23 19 30 43 36 15 3 19 6 19 11s-4 8-13 8c-13 0-25-5-36-14l-18 21c14 12 33 19 53 19m-94-2h31V4h-31v113zm-120 0h32V74h40v43h31V4h-31v42h-40V4h-32v113zm-75 0h31V31h34V4H2v27h34v86z">
-                        </path></svg>
-                        <span class="visuallyhidden">This (Opens in a new window)</span>
-                    </a>
-
-                    <a href="https://thewalrus.ca/author/hana-shafi/" target="_blank" title="The Walrus (Opens in a new window)">
-                        <img src="./assets/logos/TheWalrus.png" alt="">
-                        <span class="visuallyhidden">The Walrus (Opens in a new window)</span>
-                    </a>
-                </div>
-            </div>
-            
-        </main>
-
-    </div><!-- END OF WRAPPER-->
     <footer>
         <nav>
             <div class="social-nav-footer">
@@ -228,3 +278,32 @@
     <script src="./js/script.js"></script>
 </body>
 </html>
+<!-- OLD SOCIAL NAV -->
+<!-- <nav class="social-nav">
+    <ul>
+        <li class="instagram">
+            <a href="https://www.instagram.com/frizzkidart/" class="instagram">
+                <img src="./assets/instagram-gradient-nav.png" alt="Instagram Logo">
+                <span class="visuallyhidden">Instagram (Opens in a new window)</span>
+            </a>
+        </li>
+        <li class="twitter">
+            <a href="https://twitter.com/HanaShafi" class="twitter">
+                <img src="./assets/twitter-gradient-nav.png" alt="Twitter Logo">
+                <span class="visuallyhidden">Twitter (Opens in a new window)</span>
+            </a>
+        </li>
+        <li class="redbubble">
+            <a href="https://www.redbubble.com/people/thefrizzkid/shop" class="redbubble">
+                <img src="./assets/redbubble-gradient-nav.png" alt="Redbubble Logo">
+                <span class="visuallyhidden">RedBubble (Opens in a new window)</span>
+            </a>
+        </li>
+        <li class="patreon">
+            <a href="https://www.patreon.com/frizzkidart" class="patreon">
+                <img src="./assets/patron.png" alt="Patreon Logo">
+                <span class="visuallyhidden">Patreon (Opens in a new window)</span>
+            </a>
+        </li>
+    </ul>
+</nav> -->

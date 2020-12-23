@@ -1,31 +1,32 @@
 // * * * * MOBILE FIRST DESIGN - SO THESE ARE STYLES FOR TABLET AND DESKTOP
 @media only screen and (min-width: 900px) {
+	/* * * * BASE STYLES * * * */
+	.wrapper{
+		max-width: 1024px;
+		margin: 0 auto;
+	}
 
-	// body{
-	// 	// background-image: linear-gradient(to bottom, $secondary, $primary);
-	// 	background: linear-gradient(to right, $primary 50%, $secondary 50%);
-	// }
+	/* * * * ANNOUNCEMENT BANNER + RESPONSIVE NAVIGATION * * * */
+	.responsive-announcement-banner, nav.responsive-nav{
+		display: none;
+	}
 
+	button.responsive-nav-button, header .responsive-cart{
+		top: -200px;
+	}
+
+	.announcement-banner, nav.main-menu{
+		display: block;
+	}
+
+	/* * * * NAVIGATION STYLES * * * */
 	header {
 		flex-direction: row;
-		justify-content: flex-start;
-	}
-
-	.logo-block {
-		width: 30%;
-	}
-
-	.navigation {
-		width: 70%;
-	}
-
-	nav.social-nav {
-		width: 300px;
+		justify-content: flex-end;
 	}
 
 	nav.social-nav ul {
 		@include flexbox($wrap: nowrap);
-		width: 300px;
 	}
 
 	nav.social-nav ul li.patreon {
@@ -43,12 +44,23 @@
 		background: linear-gradient(0deg, rgba(247,154,170,0.5) 0%, #fedf15 65%, rgba(254,223,21,0.5) 100%);
 	}
 
-	.wrapper { 
-		width: 1024px; 
+	nav.social-nav, nav.main-menu{
+		width: 35%;
 	}
 
-	nav.social-nav ul {
-		width: 300px;
+	.logo-block{
+		width: 30%;
+	}
+
+	/* * * * HEADER * * * */
+	header h1{
+		margin: 0;
+		width: 40%;
+	}
+
+	header h1:hover, header h1:active{
+		border-radius: 5px;
+		box-shadow: 1px 1px 25px $accent, -1px -1px 25px $accent;
 	}
 
 	.hero,

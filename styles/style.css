@@ -285,23 +285,24 @@ li {
 body {
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
-  letter-spacing: 2.9px;
   background-color: #fedf15;
 }
 
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  padding: 10px;
 }
 
-/* * * * DON'T FORGET IT'S MOBILE FIRST SIZING * * * */
-.announcement-banner {
+.announcement-banner, .responsive-announcement-banner {
   color: #FFF;
   background: #0C0A0A;
   padding: 10px 15px;
   margin: 0;
   overflow: hidden;
+}
+
+.announcement-banner {
+  display: none;
 }
 
 header {
@@ -325,9 +326,55 @@ header {
 }
 
 /* * * * * * * * * * * * * * HEADER BLOCKS * * * * * * * * * * * * * * */
+/* * * * DON'T FORGET IT'S MOBILE FIRST SIZING * * * */
+nav.social-nav, nav.main-menu, .logo-block {
+  width: 100%;
+}
+
+/* * * * MAIN MENU * * * */
+nav.main-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.main-menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav.main-menu a {
+  font-family: 'Chicle', cursive;
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+nav.main-menu a:hover {
+  text-shadow: 1px 1px 1px #F6A241;
+  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
+  border: 2px solid #000;
+  -webkit-box-shadow: 1px 1px 25px #fedf15, -1px -1px 25px #f79aaa;
+          box-shadow: 1px 1px 25px #fedf15, -1px -1px 25px #f79aaa;
+}
+
 /* * * * LOGO * * * */
 .logo-block {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,16 +412,21 @@ header {
           flex-grow: 0;
   border-radius: 50%;
   background: transparent;
+  font-size: 4rem;
 }
 
-.logo img {
-  width: 130px;
-  height: auto;
+a.logo-image img {
+  width: 300px;
+}
+
+header h1:hover, header h1:active {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 25px #f79aaa, -1px -1px 25px #f79aaa;
+          box-shadow: 1px 1px 25px #f79aaa, -1px -1px 25px #f79aaa;
 }
 
 /* * * * SOCIAL NAV * * * */
 nav.main-menu, nav.social-nav {
-  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,10 +443,6 @@ nav.main-menu, nav.social-nav {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-}
-
-nav.social-nav {
-  margin: 2% 0;
 }
 
 nav.social-nav ul {
@@ -432,60 +480,244 @@ nav.social-nav ul li {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-}
-
-nav.social-nav ul li a.instagram img,
-nav.social-nav ul li a.twitter img,
-nav.social-nav ul li a.redbubble img {
-  width: 3.5rem;
-  height: 3.5rem;
-  line-height: 0;
-}
-
-nav.social-nav ul li.instagram,
-nav.social-nav ul li.twitter,
-nav.social-nav ul li.redbubble {
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 50%;
-  width: 3.8rem;
-  height: 3.8rem;
-  margin: 10px;
-  border: solid 1px transparent;
-}
-
-nav.social-nav ul li.instagram:hover,
-nav.social-nav ul li.twitter:hover,
-nav.social-nav ul li.redbubble:hover {
-  background: #f79aaa;
-  border: solid 1px #fedf15;
-  -webkit-box-shadow: 0px 0px 15px #f79aaa;
-          box-shadow: 0px 0px 15px #f79aaa;
-}
-
-nav.social-nav ul li.patreon {
-  display: block;
-  margin: 5px;
-  height: 70px;
-}
-
-nav.social-nav li a.patreon {
-  height: 70px;
-  display: inline-block;
+  width: 50px;
+  height: 50px;
   border: solid 2px transparent;
 }
 
-nav.social-nav li a.patreon img {
-  height: 66px;
+nav.social-nav ul li a,
+nav.social-nav ul li a,
+nav.social-nav ul li a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: white;
 }
 
-nav.social-nav li a.patreon:hover {
-  -webkit-box-shadow: 3px 3px 6px #f79aaa;
-          box-shadow: 3px 3px 6px #f79aaa;
-  border: solid 2px #000;
+nav.social-nav ul li.instagram-svg a {
+  background: url(../assets/svg/instagram-black.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 40%;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+nav.social-nav ul li.twitter-svg a {
+  background: url(../assets/svg/twitter-black.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 40%;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+nav.social-nav ul li.facebook-svg a {
+  background: url(../assets/svg/facebook-black.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 40%;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+nav.social-nav ul li.tiktok-svg a {
+  background: url(../assets/svg/tiktok-black.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 40%;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+nav.social-nav ul li.redbubble-svg a {
+  background: url(../assets/svg/redbubble_logo-black.svg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 40%;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+nav.social-nav ul .patreon-svg {
+  display: block;
+  margin: 20px;
+  width: 200px;
+  height: 50px;
+  background-image: url(../assets/logos/patreon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: solid 2px transparent;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  cursor: pointer;
+}
+
+nav.social-nav ul li.instagram-svg:hover,
+nav.social-nav ul li.facebook-svg:hover,
+nav.social-nav ul li.twitter-svg:hover,
+nav.social-nav ul li.tiktok-svg:hover,
+nav.social-nav ul li.redbubble-svg:hover,
+nav.social-nav ul li.instagram-svg:active,
+nav.social-nav ul li.facebook-svg:active,
+nav.social-nav ul li.twitter-svg:active,
+nav.social-nav ul li.tiktok-svg:active,
+nav.social-nav ul li.redbubble-svg:active {
+  border: solid 2px #0C0A0A;
+  -webkit-box-shadow: 1px 1px 25px #f79aaa, -1px -1px 25px #f79aaa;
+          box-shadow: 1px 1px 25px #f79aaa, -1px -1px 25px #f79aaa;
+  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
+  border-radius: 50%;
+}
+
+nav.social-nav ul li.patreon-svg:hover, nav.social-nav ul li.patreon-svg:active {
+  -webkit-box-shadow: 1px 1px 25px #f79aaa, -1px -1px 25px #f79aaa;
+          box-shadow: 1px 1px 25px #f79aaa, -1px -1px 25px #f79aaa;
+  border: solid 2px #f79aaa;
+}
+
+/* * * * RESPONSIVE NAV * * * */
+nav.responsive-nav, nav.main-menu {
+  display: none;
+}
+
+nav.social-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+nav.main-menu, nav.social-nav, .responsive-cart {
+  width: 100%;
+}
+
+header .responsive-cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px;
+}
+
+header .responsive-cart a {
+  font-family: 'Chicle', cursive;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+header .responsive-cart a:hover, header .responsive-cart a:active {
+  -webkit-box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
+          box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
+  border: solid 2px #fedf15;
+}
+
+button.responsive-nav-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+  margin: 0;
+  padding: 25px 25px;
+  background: transparent;
+  border: none;
+}
+
+button.responsive-nav-button:hover, button.responsive-nav-button:active, nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
+  text-shadow: 2px 2px 5px #f79aaa;
+  color: #000;
+}
+
+nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active {
+  background: #fedf15;
+  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
+  -webkit-box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
+          box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
+  border: solid 2px #fedf15;
+}
+
+nav.responsive-nav {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  right: 15%;
+  left: 15%;
+  width: 70%;
+  margin-top: 70px;
+}
+
+nav.responsive-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Chicle', cursive;
+  background: #f79aaa;
+  -webkit-box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
+          box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
+}
+
+nav.responsive-nav ul li {
+  padding: 1em;
+  text-align: center;
+  border: solid 2px transparent;
+}
+
+nav.responsive-nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
+  text-shadow: 2px 2px 5px #fedf15;
+  text-decoration: none;
 }
 
 /* * * * HERO * * * */
-.hero {
+section.intro {
   width: 100%;
   text-align: center;
   display: -webkit-box;
@@ -811,23 +1043,30 @@ footer p {
 }
 
 @media only screen and (min-width: 900px) {
+  /* * * * BASE STYLES * * * */
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  /* * * * ANNOUNCEMENT BANNER + RESPONSIVE NAVIGATION * * * */
+  .responsive-announcement-banner, nav.responsive-nav {
+    display: none;
+  }
+  button.responsive-nav-button, header .responsive-cart {
+    top: -200px;
+  }
+  .announcement-banner, nav.main-menu {
+    display: block;
+  }
+  /* * * * NAVIGATION STYLES * * * */
   header {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .logo-block {
-    width: 30%;
-  }
-  .navigation {
-    width: 70%;
-  }
-  nav.social-nav {
-    width: 300px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   nav.social-nav ul {
     display: -webkit-box;
@@ -844,7 +1083,6 @@ footer p {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
-    width: 300px;
   }
   nav.social-nav ul li.patreon {
     display: inline-block;
@@ -862,11 +1100,21 @@ footer p {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(247, 154, 170, 0.5)), color-stop(65%, #fedf15), to(rgba(254, 223, 21, 0.5)));
     background: linear-gradient(0deg, rgba(247, 154, 170, 0.5) 0%, #fedf15 65%, rgba(254, 223, 21, 0.5) 100%);
   }
-  .wrapper {
-    width: 1024px;
+  nav.social-nav, nav.main-menu {
+    width: 35%;
   }
-  nav.social-nav ul {
-    width: 300px;
+  .logo-block {
+    width: 30%;
+  }
+  /* * * * HEADER * * * */
+  header h1 {
+    margin: 0;
+    width: 40%;
+  }
+  header h1:hover, header h1:active {
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 25px #F6A241, -1px -1px 25px #F6A241;
+            box-shadow: 1px 1px 25px #F6A241, -1px -1px 25px #F6A241;
   }
   .hero,
   .book-promo {
