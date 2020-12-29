@@ -11,9 +11,9 @@
 		display: none;
 	}
 
-	button.responsive-nav-button, header .responsive-cart{
-		top: -200px;
-	}
+	// button.responsive-nav-button, header .responsive-cart{
+	// 	top: -200px;
+	// }
 
 	.announcement-banner{
 		display: block;
@@ -33,6 +33,10 @@
 	.logo-block{
 		width: 20%;
 	}
+
+	// a.logo-image img{
+	// 	max-width: 100px;
+	// }
 
 	nav.main-menu{
 		display: block;
@@ -56,6 +60,15 @@
 	body{
 		background: linear-gradient(0deg, rgba(247,154,170,0.5) 0%, #fedf15 65%, rgba(254,223,21,0.5) 100%);
 	}
+
+	a.logo-image{
+		width: 50%;
+	}
+
+	// .image-block {
+	// 	margin: 30px 0 60px 0;
+	// 	width: 70%;
+	// }
 
 	/* * * * sort through this * * * */
 	.hero,

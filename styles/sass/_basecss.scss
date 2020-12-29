@@ -234,7 +234,6 @@ li {
 body {
 	font-family: $bodyFont;
 	font-size: 2rem;
-	background-color: $primary;
 }
 
 // MOBILE FIRST SIZING
@@ -243,3 +242,7 @@ body {
 	margin: 0 auto;
 	padding: 1em;
 }
+
+/* * * * SHADOW COMBO TO KEEP * * * */
+// box-shadow: 1px 1px 25px $secondary, -1px -1px 25px $secondary;
+// background: linear-gradient(313deg, $primary 0%, $secondary 71%);

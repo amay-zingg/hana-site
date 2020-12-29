@@ -16,6 +16,7 @@ const navigationScroll = function () {
 // * * * * TICKER TAPE MARQUEE
 const banner = function () {
     let $banner = $('.announcement-banner').marquee();
+    let $banner2 = $('.responsive-announcement-banner').marquee();
 }
 
 // * * * * RESPONSIVE MENU
