@@ -35,8 +35,27 @@
         <!-- My second book: Small, Broke, and Kind of Dirty is out now with @bookhugpress -->
     </div>
 
-    <div class="wrapper"></div>
+    <div class="wrapper">
     <header>
+
+        <!-- MOBILE NAV = MAIN MENU + CART -->
+        <input type="checkbox" class="responsive-nav-button">
+            <label for="checkbox" class="responsive-nav-button" title="Opens Navigation">
+                <i class="fas fa-bars"></i>
+                <span class="visuallyhidden">This opens the navigation menu</span>
+            </label>
+        </input>
+        
+        <nav class="responsive-nav" id="responsive-nav">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#" class="cart">Cart</a></li>
+                <!-- <li><a href="#" class="account">Account</a></li> -->
+            </ul>
+        </nav>
 
         <!-- MAIN MENU + CART/ACCOUNT -->
         <nav class="main-menu">
@@ -91,7 +110,7 @@
         <!-- RESPONSIVE CART + ACCOUNT -->
         <div class="responsive-cart">
             <a href="/cart" title="Cart">
-                <svg height="60px" viewBox="-68 0 512 512" width="60px" xmlns="http://www.w3.org/2000/svg">
+                <svg height="40px" viewBox="-68 0 512 512" width="40px" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="m319.875 130c10.417969 0 19.097656 8 19.929688 18.390625l26.777343 332c.9375 11.582031-8.210937 21.609375-19.9375 21.609375h-316.640625c-11.742187 0-20.875-10.039062-19.941406-21.609375l26.78125-332c.832031-10.390625 9.511719-18.390625 19.929688-18.390625zm0 0"
                         fill="#f79aaa" />
@@ -107,23 +126,6 @@
                 </svg>
             </a>
         </div>
-        
-        <!-- MOBILE NAV = MAIN MENU + CART -->
-        <button class="responsive-nav-button">
-            <i class="fas fa-bars"></i>
-            <span class="visuallyhidden">This opens the navigation menu</span>
-        </button>
-        
-        <nav class="responsive-nav" id="responsive-nav">
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#" class="cart">Cart</a></li>
-                <!-- <li><a href="#" class="account">Account</a></li> -->
-            </ul>
-        </nav>
 
     </header>
 

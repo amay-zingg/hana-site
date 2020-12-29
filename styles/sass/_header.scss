@@ -1,6 +1,6 @@
 .announcement-banner, .responsive-announcement-banner{
 	color: #FFF;
-	background: $black;
+	background: $secondary;
 	padding: 10px 15px;
 	margin: 0;
 	overflow: hidden;
@@ -16,16 +16,111 @@ header {
 }
 
 /* * * * * * * * * * * * * * HEADER BLOCKS * * * * * * * * * * * * * * */
+
 /* * * * DON'T FORGET IT'S MOBILE FIRST SIZING * * * */
-nav.social-nav, nav.main-menu, .logo-block{
+nav.main-menu, nav.social-nav, nav.social-nav ul{
 	width: 100%;
 }
 
-/* * * * MAIN MENU * * * */
-nav.main-menu ul{
+.logo-block{
+		width: 80%;
+	}
+
+/* * * * RESPONSIVE NAV * * * */
+nav.responsive-nav, input.responsive-nav-button{
+	display: none;
+}
+
+header .responsive-cart{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	display: block;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-end;
+	padding: 20px;
+}
+
+header .responsive-cart a{
+	font-family: 'Chicle', cursive;
+	color: #000;
+	text-decoration: none;
+	border-bottom: 5px solid transparent;
+}
+
+header .responsive-cart a:hover, header .responsive-cart a:active{
+	border-bottom: 5px solid $secondary;
+}
+
+/* * * * THE SANDWICH * * * */
+label.responsive-nav-button, .responsive-nav-button{
+	display: block;
+}
+
+.responsive-nav-button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 2em;
+	margin: 0;
+	padding: 25px 25px;
+	background: transparent;
+	border: none;
+}
+
+.responsive-nav-button:hover, .responsive-nav-button:active,  nav.responsive-nav ul li a:hover,  nav.responsive-nav ul li a:active{
+	text-shadow: 2px 2px 5px #f79aaa;
+	color: #000;
+}
+
+nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active{
+	background: rgb(254,223,21);
+	background: linear-gradient(313deg, rgba(254,223,21,1) 0%, rgba(247,154,170,1) 71%);
+	box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
+	border: solid 2px #fedf15;
+}
+
+nav.responsive-nav{
+	position: absolute;
+	z-index: 20;
+	top: 0;
+	right: 15%;
+	left: 15%;
+	width: 70%;
+	margin-top: 70px;
+}
+
+nav.responsive-nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'Chicle', cursive;
+	background: #f79aaa;
+	box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
+}
+
+nav.responsive-nav ul li{
+	padding: 1em;
+	text-align: center;
+	border: solid 2px transparent;
+}
+
+nav.responsive-nav ul li a{
+	color: #000;
+	text-decoration: none;
+}
+
+nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active{
+	text-shadow: 2px 2px 5px #fedf15;
+	text-decoration: none;
+}
+
+/* * * * * * * * * * * * * * STYLING FOR DESKTOP NAV * * * * * * * * * * * * * * */
+/* * * * MAIN MENU * * * */
+nav.main-menu, nav.main-menu ul{
+	width: 100%;
+	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
 
 nav.main-menu ul li{
@@ -40,7 +135,6 @@ nav.main-menu a{
 	text-decoration: none;
 	padding: 5px 10px;
 	border-radius: 5px;
-	// margin: 10px;
 	border: 2px solid transparent;
 }
 
@@ -51,30 +145,33 @@ nav.main-menu a:hover{
 	box-shadow: 1px 1px 25px $primary, -1px -1px 25px $secondary;
 }
 
-
 /* * * * LOGO * * * */
 .logo-block {
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
 
-.logo {
+h1.logo {
+	width: 100%;
 	@include flexbox($placeItems: center, $placeContent: center);
-	border-radius: 50%;
 	background: transparent;
 	font-size: 4rem;
 }
 
-a.logo-image img{
-	width: 300px;
+// a.logo-image img{
+// 	max-width: 300px;
+// }
+
+header h1{
+	margin: 0;
+	border-bottom: 5px solid transparent;
 }
 
 header h1:hover, header h1:active{
-	border-radius: 5px;
-	box-shadow: 1px 1px 25px $secondary, -1px -1px 25px $secondary;
+	border-bottom: 5px solid $secondary;
 }
 
 /* * * * SOCIAL NAV * * * */
-nav.main-menu, nav.social-nav {
+nav.social-nav {
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
 
@@ -189,105 +286,10 @@ nav.social-nav ul li.patreon-svg:hover, nav.social-nav ul li.patreon-svg:active 
 	border: solid 2px $secondary;
 }
 
-/* * * * RESPONSIVE NAV * * * */
-nav.responsive-nav, nav.main-menu{
+// This has to be down here because it will get cancelled out
+nav.main-menu{
 	display: none;
 }
-
-nav.social-nav ul{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-nav.main-menu, nav.social-nav, .responsive-cart{
-	width: 100%;
-}
-
-header .responsive-cart{
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	display: block;
-	display: flex;
-	justify-content: flex-end;
-	padding: 10px;
-}
-
-header .responsive-cart a{
-	font-family: 'Chicle', cursive;
-	color: #000;
-	text-decoration: none;
-	border-radius: 5px;
-	border: 2px solid transparent;
-}
-
-header .responsive-cart a:hover, header .responsive-cart a:active{
-	box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
-	border: solid 2px #fedf15;
-}
-
-button.responsive-nav-button{
-	// display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-size: 2em;
-	margin: 0;
-	padding: 25px 25px;
-	background: transparent;
-	border: none;
-}
-
-button.responsive-nav-button:hover, button.responsive-nav-button:active,  nav.responsive-nav ul li a:hover,  nav.responsive-nav ul li a:active{
-	text-shadow: 2px 2px 5px #f79aaa;
-	color: #000;
-}
-
-nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active{
-	background: rgb(254,223,21);
-	background: linear-gradient(313deg, rgba(254,223,21,1) 0%, rgba(247,154,170,1) 71%);
-	box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
-	border: solid 2px #fedf15;
-}
-
-nav.responsive-nav{
-	position: absolute;
-	z-index: 20;
-	top: 0;
-	right: 15%;
-	left: 15%;
-	width: 70%;
-	margin-top: 70px;
-}
-
-nav.responsive-nav ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-family: 'Chicle', cursive;
-	background: #f79aaa;
-	box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
-}
-
-nav.responsive-nav ul li{
-	padding: 1em;
-	text-align: center;
-	border: solid 2px transparent;
-}
-
-nav.responsive-nav ul li a{
-	color: #000;
-	text-decoration: none;
-}
-
-nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active{
-	text-shadow: 2px 2px 5px #fedf15;
-	text-decoration: none;
-}
-
 
 
 /* * * * HERO * * * */

@@ -15,22 +15,35 @@
 		top: -200px;
 	}
 
-	.announcement-banner, nav.main-menu{
+	.announcement-banner{
 		display: block;
 	}
 
 	/* * * * NAVIGATION STYLES * * * */
 	header {
 		flex-direction: row;
-		justify-content: flex-end;
+		align-items: flex-end;
+		justify-content: space-around;
 	}
 
-	nav.social-nav ul {
-		@include flexbox($wrap: nowrap);
+	nav.social-nav, nav.main-menu{
+		width: 40%;
+	}
+
+	.logo-block{
+		width: 20%;
+	}
+
+	nav.main-menu{
+		display: block;
 	}
 
 	nav.social-nav ul li.patreon {
 		display: inline-block;
+	}
+
+	input.responsive-nav-button, label.responsive-nav-button, .responsive-nav-button, nav.responsive-nav, header .responsive-cart{
+		display: none;
 	}
 
 	h2 {
@@ -44,25 +57,7 @@
 		background: linear-gradient(0deg, rgba(247,154,170,0.5) 0%, #fedf15 65%, rgba(254,223,21,0.5) 100%);
 	}
 
-	nav.social-nav, nav.main-menu{
-		width: 35%;
-	}
-
-	.logo-block{
-		width: 30%;
-	}
-
-	/* * * * HEADER * * * */
-	header h1{
-		margin: 0;
-		width: 40%;
-	}
-
-	header h1:hover, header h1:active{
-		border-radius: 5px;
-		box-shadow: 1px 1px 25px $accent, -1px -1px 25px $accent;
-	}
-
+	/* * * * sort through this * * * */
 	.hero,
 	.book-promo {
 		@include flexbox($direction: row);

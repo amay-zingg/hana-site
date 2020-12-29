@@ -18,6 +18,7 @@ const banner = function () {
     let $banner = $('.announcement-banner').marquee();
 }
 
+// * * * * RESPONSIVE MENU
 const navMenu = function () {
     // * * * * MENU CLICK OUTSIDE
     $(document).on("click", function(event){
@@ -26,7 +27,6 @@ const navMenu = function () {
         }
     });
 
-// * * * * RESPONSIVE MENU
     $( ".responsive-nav-button" ).click(function() {
         $( ".responsive-nav" ).toggle("slow");
     });
@@ -43,24 +43,3 @@ init = function () {
 $(() => {
     init();
 }); // * * * * END OF DOCUMENT READY
-
-
-// window.fbAsyncInit = function() {
-//     FB.init({
-//         appId: '{your-app-id}',
-//         cookie: true,
-//         xfbml: true,
-//         version: '{v8.0}'
-//     });
-
-// FB.AppEvents.logPageView();
-
-// };
-
-// (function(d, s, id){
-//     var js, fjs = d.getElementsByTagName(s)[0];
-//     if (d.getElementById(id)) {return;}
-//     js = d.createElement(s); js.id = id;
-//     js.src = "https://connect.facebook.net/en_US/sdk.js";
-//     fjs.parentNode.insertBefore(js, fjs);
-// }(document, 'script', 'facebook-jssdk'));
