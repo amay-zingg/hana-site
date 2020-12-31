@@ -8,8 +8,8 @@ section.intro {
 
 .title-block {
     width: 100%;
-    margin-bottom: 60px;
-    @include flexbox($placeItems: center, $placeContent: center, $direction: column-reverse);
+    margin-bottom: 40px;
+    @include flexbox($placeItems: center, $placeContent: center, $direction: column);
 }
 
 .title-block p {
@@ -22,7 +22,7 @@ section.intro {
 	@include fontSize(4.5rem);
 	line-height: 4.5rem;
 	margin: 0;
-	padding: 35px;
+	padding: 20px;
 }
 
 .hero-photo {
@@ -42,6 +42,7 @@ a.book-button {
 	color: #000;
 	font-family: $headingFont;
 	transition: border 1s ease-in;
+	margin-bottom: 1em;
 }
 
 a.book-button:hover {
@@ -51,10 +52,33 @@ a.book-button:hover {
 	font-style: italic;
 }
 
+/* * * * BUTTON STYLES * * * */
+button.frizz-button, .frizz-button, a.learn-more-link {
+	font-family: 'Chicle', cursive;
+	min-height: 40px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 10px;
+	// text-shadow: 1px 1px 1px $black;
+	background: linear-gradient(313deg, $primary 0%, $secondary 71%);
+	border: 2px solid $primary;
+	cursor: pointer;
+	color: #000;
+	text-decoration: none;
+}
+
+button.frizz-button:hover, button.frizz-button:active, .frizz-button:hover, .frizz-button:active, a.learn-more-link:hover, a.learn-more-link:active {
+	// box-shadow: 1px 1px 25px {{ settings.color_hover_shadow }}, -1px -1px 25px {{ settings.color_hover_shadow }};
+	background: #fff;
+	box-shadow: 1px 1px 2px $black;
+	border: 2px solid $secondary;
+}
+
 // * * * * IMAGE BLOCK
 .image-block {
     @include flexbox($placeItems: center, $placeContent: center, $direction: column);
-    width: 70%;
+	width: 70%;
+	margin-bottom: 1em;
 }
 
 .image-block img {

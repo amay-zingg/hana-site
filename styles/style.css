@@ -426,7 +426,7 @@ nav.responsive-nav ul li {
 }
 
 nav.responsive-nav ul li a {
-  color: #000;
+  color: #0C0A0A;
   text-decoration: none;
 }
 
@@ -530,11 +530,19 @@ a.logo-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 header h1 {
@@ -547,6 +555,55 @@ header h1:hover, header h1:active {
 }
 
 /* * * * SOCIAL NAV * * * */
+.responsive-nav-button:hover, .responsive-nav-button:active, nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
+  text-shadow: 2px 2px 5px #f79aaa;
+  color: #000;
+}
+
+nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active {
+  background: #fedf15;
+  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
+  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
+          box-shadow: 1px 1px 2px #0C0A0A;
+  border: solid 2px #fedf15;
+}
+
+nav.responsive-nav {
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  right: 15%;
+  left: 15%;
+  width: 70%;
+  margin-top: 70px;
+}
+
+nav.responsive-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Chicle', cursive;
+  background: #f79aaa;
+  -webkit-box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
+          box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
+}
+
+nav.responsive-nav ul li {
+  padding: 1em;
+  text-align: center;
+  border: solid 2px transparent;
+}
+
+nav.responsive-nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
+  text-shadow: 2px 2px 5px #f79aaa;
+  text-decoration: none;
+}
+
 nav.social-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,12 +656,19 @@ nav.social-nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   border-radius: 50%;
   border: solid 2px transparent;
 }
@@ -767,14 +831,14 @@ section.intro {
 
 .title-block {
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   place-content: center;
   place-items: center;
   -ms-flex-wrap: nowrap;
@@ -798,7 +862,7 @@ section.intro {
   line-height: 6.75rem;
   line-height: 4.5rem;
   margin: 0;
-  padding: 35px;
+  padding: 20px;
 }
 
 .hero-photo {
@@ -821,6 +885,7 @@ a.book-button {
   font-family: "Chicle", cursive;
   -webkit-transition: border 1s ease-in;
   transition: border 1s ease-in;
+  margin-bottom: 1em;
 }
 
 a.book-button:hover {
@@ -829,6 +894,27 @@ a.book-button:hover {
   -webkit-box-shadow: 1px 1px 10px #f79aaa;
           box-shadow: 1px 1px 10px #f79aaa;
   font-style: italic;
+}
+
+/* * * * BUTTON STYLES * * * */
+button.frizz-button, .frizz-button, a.learn-more-link {
+  font-family: 'Chicle', cursive;
+  min-height: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
+  border: 2px solid #fedf15;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+button.frizz-button:hover, button.frizz-button:active, .frizz-button:hover, .frizz-button:active, a.learn-more-link:hover, a.learn-more-link:active {
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
+          box-shadow: 1px 1px 2px #0C0A0A;
+  border: 2px solid #f79aaa;
 }
 
 .image-block {
@@ -849,6 +935,7 @@ a.book-button:hover {
       -ms-flex-positive: 0;
           flex-grow: 0;
   width: 70%;
+  margin-bottom: 1em;
 }
 
 .image-block img {

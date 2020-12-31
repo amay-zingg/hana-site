@@ -78,7 +78,7 @@ label.responsive-nav-button, .responsive-nav-button{
 }
 
 .responsive-nav-button:hover, .responsive-nav-button:active,  nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active, nav.responsive-nav ul li a:hover,  nav.responsive-nav ul li a:active{
-	text-shadow: 2px 2px 5px #f79aaa;
+	text-shadow: 2px 2px 5px $secondary;
 	color: #000;
 }
 
@@ -104,7 +104,7 @@ nav.responsive-nav ul{
 	padding: 0;
 	list-style: none;
 	font-family: 'Chicle', cursive;
-	background: #f79aaa;
+	background: $secondary;
 	// box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
 }
 
@@ -115,7 +115,7 @@ nav.responsive-nav ul li{
 }
 
 nav.responsive-nav ul li a{
-	color: #000;
+	color: $black;
 	text-decoration: none;
 }
 
@@ -166,9 +166,7 @@ h1.logo {
 
 a.logo-image{
 	width: 80%;
-	display: flex;
-	align-content: center;
-	justify-content: center;
+	@include flexbox($placeItems: center, $placeContent: center);
 }
 
 header h1{
@@ -181,6 +179,60 @@ header h1:hover, header h1:active{
 }
 
 /* * * * SOCIAL NAV * * * */
+.responsive-nav-button:hover, .responsive-nav-button:active,  nav.responsive-nav ul li a:hover,  nav.responsive-nav ul li a:active{
+	text-shadow: 2px 2px 5px #f79aaa;
+	color: #000;
+}
+
+nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active{
+	background: $primary;
+	background: linear-gradient(313deg, $primary 0%, $secondary 71%);
+	// box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
+	box-shadow: 1px 1px 2px $black;
+	border: solid 2px #fedf15;
+}
+
+nav.responsive-nav{
+	position: absolute;
+	z-index: 30;
+	top: 0;
+	right: 15%;
+	left: 15%;
+	width: 70%;
+	margin-top: 70px;
+}
+
+nav.responsive-nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: 'Chicle', cursive;
+	background: $secondary;
+	box-shadow: -2px -2px $primary, 2px 2px $primary;
+}
+
+nav.responsive-nav ul li{
+	padding: 1em;
+	text-align: center;
+	border: solid 2px transparent;
+}
+
+nav.responsive-nav ul li a{
+	color: #000;
+	text-decoration: none;
+}
+
+nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active{
+	text-shadow: 2px 2px 5px $secondary;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
 nav.social-nav {
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
@@ -188,11 +240,6 @@ nav.social-nav {
 nav.social-nav ul {
 	width: 100%;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
-    // display: flex;
-	// justify-content: flex-end;
-    // align-items: center;
-    // flex-direction: row;
-	// flex-wrap: wrap;
 }
 
 nav.social-nav ul li {
@@ -205,9 +252,7 @@ nav.social-nav ul li {
 
 nav.social-nav ul li a{
 	height: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 	border-radius: 50%;
 	border: solid 2px transparent;
 }
