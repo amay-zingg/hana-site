@@ -53,6 +53,10 @@ header .responsive-cart a{
 	border-bottom: 5px solid transparent;
 }
 
+header .responsive-cart a img{
+	height: 45px;
+}
+
 header .responsive-cart a:hover, header .responsive-cart a:active{
 	border-bottom: 5px solid $secondary;
 }
@@ -182,116 +186,64 @@ nav.social-nav {
 }
 
 nav.social-nav ul {
+	width: 100%;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+    // display: flex;
+	// justify-content: flex-end;
+    // align-items: center;
+    // flex-direction: row;
+	// flex-wrap: wrap;
 }
 
 nav.social-nav ul li {
-	@include flexbox($placeContent: center);
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+	background: linear-gradient(313deg, $primary 0%, $secondary 71%);
+	border-radius: 50%;
+}
+
+nav.social-nav ul li a{
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
 	border: solid 2px transparent;
-	margin: 5px;
-	border-radius: 5px;
 }
 
-nav.social-nav ul li a,
-nav.social-nav ul li a,
-nav.social-nav ul li a {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	color: white;
+nav.social-nav ul li a img{
+	height: 20px;
 }
 
-nav.social-nav ul li.instagram-svg a{
-	background: url(../assets/svg/instagram-black.svg);
-	background-repeat: no-repeat;
-	background-position-x: 50%;
-	background-position-y: 50%;
-	background-size: 40%;
-	transition-property: background;
-	transition-duration: 4s;
-	transition-delay: 2s;
+nav.social-nav ul li a:hover,
+nav.social-nav ul li a:active{
+	background: #fff;
+	border: solid 2px $secondary;
+	box-shadow: 1px 1px 2px $black;
 }
 
-nav.social-nav ul li.twitter-svg a{
-	background: url(../assets/svg/twitter-black.svg);
-	background-repeat: no-repeat;
-	background-position-x: 50%;
-	background-position-y: 50%;
-	background-size: 40%;
-	transition-property: background;
-	transition-duration: 4s;
-	transition-delay: 2s;
-}
-
-nav.social-nav ul li.facebook-svg a{
-	background: url(../assets/svg/facebook-black.svg);
-	background-repeat: no-repeat;
-	background-position-x: 50%;
-	background-position-y: 50%;
-	background-size: 40%;
-	transition-property: background;
-	transition-duration: 4s;
-	transition-delay: 2s;
-}
-
-nav.social-nav ul li.tiktok-svg a{
-	background: url(../assets/svg/tiktok-black.svg);
-	background-repeat: no-repeat;
-	background-position-x: 50%;
-	background-position-y: 50%;
-	background-size: 40%;
-	transition-property: background;
-	transition-duration: 4s;
-	transition-delay: 2s;
-}
-
-nav.social-nav ul li.redbubble-svg a{
-	background: url(../assets/svg/redbubble_logo-black.svg);
-	background-repeat: no-repeat;
-	background-position-x: 50%;
-	background-position-y: 50%;
-	background-size: 40%;
-	transition-property: background;
-	transition-duration: 4s;
-	transition-delay: 2s;
-}
-
-nav.social-nav ul .patreon-svg{
+nav.social-nav ul li.patreon {
 	display: block;
-	width: 200px;
+	width: auto;
+	height: auto;
+	border-radius: 0%;
+	background: 0;
+}
+
+nav.social-nav ul li.patreon a{
+	height: 60px;
+	border: solid 5px transparent;
+}
+
+nav.social-nav ul li.patreon a img{
 	height: 50px;
-	background-image: url(../assets/logos/patreon.png);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	border: solid 2px transparent;
-	transition-property: background;
-	transition-duration: 4s;
-	transition-delay: 2s;
-	cursor: pointer;
 }
 
-nav.social-nav ul li.instagram-svg:hover,
-nav.social-nav ul li.facebook-svg:hover,
-nav.social-nav ul li.twitter-svg:hover,
-nav.social-nav ul li.tiktok-svg:hover,
-nav.social-nav ul li.redbubble-svg:hover, 
-nav.social-nav ul li.instagram-svg:active,
-nav.social-nav ul li.facebook-svg:active,
-nav.social-nav ul li.twitter-svg:active,
-nav.social-nav ul li.tiktok-svg:active,
-nav.social-nav ul li.redbubble-svg:active {
-	background: $secondary;
-	margin: 5px;
-	box-shadow: 1px 1px 2px black;
-	border-radius: 5px;
-}
-
-nav.social-nav ul li.patreon-svg:hover, nav.social-nav ul li.patreon-svg:active {
-	border: solid 2px $black;
-	margin: 5px;
-	box-shadow: 1px 1px 2px $secondary;
+nav.social-nav li.patreon a:hover, nav.social-nav li.patreon a:active{
+	border: 5px solid black;
+	border-radius: 0%;
+	box-shadow: 1px 1px 2px $black;
 }
 
 // This has to be down here because it will get cancelled out
