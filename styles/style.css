@@ -375,7 +375,7 @@ header .responsive-cart a:hover, header .responsive-cart a:active {
   border-bottom: 5px solid #f79aaa;
 }
 
-/* * * * THE SANDWICH * * * */
+/* * * * THE SANDWICH NAVIGATION * * * */
 label.responsive-nav-button, .responsive-nav-button {
   display: block;
 }
@@ -526,7 +526,7 @@ h1.logo {
 }
 
 a.logo-image {
-  width: 80%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -554,7 +554,7 @@ header h1:hover, header h1:active {
   border-bottom: 5px solid #f79aaa;
 }
 
-/* * * * SOCIAL NAV * * * */
+/* * * * RESPONSIVE NAVIGATION * * * */
 .responsive-nav-button:hover, .responsive-nav-button:active, nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
   text-shadow: 2px 2px 5px #f79aaa;
   color: #000;
@@ -566,6 +566,8 @@ nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active {
   -webkit-box-shadow: 1px 1px 2px #0C0A0A;
           box-shadow: 1px 1px 2px #0C0A0A;
   border: solid 2px #fedf15;
+  -webkit-transition: background 500ms linear;
+  transition: background 500ms linear;
 }
 
 nav.responsive-nav {
@@ -602,8 +604,11 @@ nav.responsive-nav ul li a {
 nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
   text-shadow: 2px 2px 5px #f79aaa;
   text-decoration: none;
+  -webkit-transition: background 500ms linear;
+  transition: background 500ms linear;
 }
 
+/* * * * SOCIAL NAVIGATION * * * */
 nav.social-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -683,6 +688,8 @@ nav.social-nav ul li a:active {
   border: solid 2px #f79aaa;
   -webkit-box-shadow: 1px 1px 2px #0C0A0A;
           box-shadow: 1px 1px 2px #0C0A0A;
+  -webkit-transition: background 500ms linear;
+  transition: background 500ms linear;
 }
 
 nav.social-nav ul li.patreon {
@@ -807,7 +814,7 @@ h3 {
 }
 
 /* * * * * * * * * * * * * * HOMEPAGE SECTIONS * * * * * * * * * * * * * * */
-/* * * * HERO * * * */
+/* * * * INTRO * * * */
 section.intro {
   width: 100%;
   text-align: center;
@@ -829,9 +836,8 @@ section.intro {
           flex-grow: 0;
 }
 
-.title-block {
+.title-block, .main-image {
   width: 100%;
-  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -850,9 +856,8 @@ section.intro {
           flex-grow: 0;
 }
 
-.title-block p {
-  padding: 15px 0;
-  margin: 0;
+.title-block {
+  margin-bottom: 20px;
 }
 
 .title-block h1 {
@@ -865,56 +870,9 @@ section.intro {
   padding: 20px;
 }
 
-.hero-photo {
-  border-radius: 15px;
-  border: solid 1px #f79aaa;
-  -webkit-box-shadow: 0px 0px 15px #f79aaa;
-          box-shadow: 0px 0px 15px #f79aaa;
-  margin: 15px 0;
-}
-
-a.book-button {
-  background: #f79aaa;
-  padding: 15px;
-  border-radius: 5px;
-  border: solid 2px #fedf15;
-  -webkit-box-shadow: 1px 1px 10px #fedf15;
-          box-shadow: 1px 1px 10px #fedf15;
-  text-decoration: none;
-  color: #000;
-  font-family: "Chicle", cursive;
-  -webkit-transition: border 1s ease-in;
-  transition: border 1s ease-in;
-  margin-bottom: 1em;
-}
-
-a.book-button:hover {
-  background: #fedf15;
-  border: solid 2px #000;
-  -webkit-box-shadow: 1px 1px 10px #f79aaa;
-          box-shadow: 1px 1px 10px #f79aaa;
-  font-style: italic;
-}
-
-/* * * * BUTTON STYLES * * * */
-button.frizz-button, .frizz-button, a.learn-more-link {
-  font-family: 'Chicle', cursive;
-  min-height: 40px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin: 10px;
-  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
-  border: 2px solid #fedf15;
-  cursor: pointer;
-  color: #000;
-  text-decoration: none;
-}
-
-button.frizz-button:hover, button.frizz-button:active, .frizz-button:hover, .frizz-button:active, a.learn-more-link:hover, a.learn-more-link:active {
-  background: #fff;
-  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
-          box-shadow: 1px 1px 2px #0C0A0A;
-  border: 2px solid #f79aaa;
+.title-block p {
+  padding: 5px 0 20px 0;
+  margin: 0;
 }
 
 .image-block {
@@ -927,8 +885,8 @@ button.frizz-button:hover, button.frizz-button:active, .frizz-button:hover, .fri
           flex-direction: column;
   place-content: center;
   place-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-flex: 0;
@@ -943,6 +901,41 @@ button.frizz-button:hover, button.frizz-button:active, .frizz-button:hover, .fri
   -webkit-box-shadow: 1px 1px 2px black;
           box-shadow: 1px 1px 2px black;
   border-radius: 5px;
+}
+
+.main-photo {
+  width: 60%;
+  border-radius: 15px;
+  border: solid 1px #f79aaa;
+  -webkit-box-shadow: 0px 0px 15px #f79aaa;
+          box-shadow: 0px 0px 15px #f79aaa;
+  margin: 15px 0;
+}
+
+/* * * * BUTTON * * * */
+/* * * * BUTTON STYLES * * * */
+button.frizz-button, .frizz-button, a.learn-more-link {
+  font-family: 'Chicle', cursive;
+  min-height: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
+  border: 2px solid #fedf15;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  -webkit-box-shadow: 1px 1px 25px #f79aaa, -1px -1px 25px #f79aaa;
+          box-shadow: 1px 1px 25px #f79aaa, -1px -1px 25px #f79aaa;
+}
+
+button.frizz-button:hover, button.frizz-button:active, .frizz-button:hover, .frizz-button:active, a.learn-more-link:hover, a.learn-more-link:active {
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
+          box-shadow: 1px 1px 2px #0C0A0A;
+  border: 2px solid #f79aaa;
+  -webkit-transition: background 500ms linear;
+  transition: background 500ms linear;
 }
 
 footer {
@@ -1110,6 +1103,9 @@ footer p {
   .logo-block {
     width: 20%;
   }
+  a.logo-image {
+    width: 80%;
+  }
   nav.social-nav ul {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -1130,6 +1126,36 @@ footer p {
     line-height: 6rem;
     line-height: 4rem;
   }
+  /* * * * MAIN * * * */
+  section.intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    place-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .title-block {
+    width: 60%;
+  }
+  .main-image {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .main-image {
+    width: 60%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -1137,8 +1163,20 @@ footer p {
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(247, 154, 170, 0.5)), color-stop(65%, #fedf15), to(rgba(254, 223, 21, 0.5)));
     background: linear-gradient(0deg, rgba(247, 154, 170, 0.5) 0%, #fedf15 65%, rgba(254, 223, 21, 0.5) 100%);
   }
-  a.logo-image {
-    width: 50%;
+  /* * * * MAIN * * * */
+  main {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .title-block,
+  .main-image {
+    padding: 15px;
+  }
+  .image-block {
+    width: 100%;
+  }
+  img.main-photo {
+    width: 100%;
   }
   /* * * * sort through this * * * */
   .hero,
@@ -1179,13 +1217,6 @@ footer p {
   }
   .title-block h1 {
     padding: 0px;
-  }
-  .title-block,
-  .hero-photo,
-  .promo,
-  img.book-photo {
-    width: 50%;
-    margin: 15px;
   }
   .image-block {
     -webkit-box-orient: horizontal;

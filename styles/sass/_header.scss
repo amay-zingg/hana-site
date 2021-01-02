@@ -61,7 +61,7 @@ header .responsive-cart a:hover, header .responsive-cart a:active{
 	border-bottom: 5px solid $secondary;
 }
 
-/* * * * THE SANDWICH * * * */
+/* * * * THE SANDWICH NAVIGATION * * * */
 label.responsive-nav-button, .responsive-nav-button{
 	display: block;
 }
@@ -165,7 +165,7 @@ h1.logo {
 }
 
 a.logo-image{
-	width: 80%;
+	width: 50%;
 	@include flexbox($placeItems: center, $placeContent: center);
 }
 
@@ -178,7 +178,7 @@ header h1:hover, header h1:active{
 	border-bottom: 5px solid $secondary;
 }
 
-/* * * * SOCIAL NAV * * * */
+/* * * * RESPONSIVE NAVIGATION * * * */
 .responsive-nav-button:hover, .responsive-nav-button:active,  nav.responsive-nav ul li a:hover,  nav.responsive-nav ul li a:active{
 	text-shadow: 2px 2px 5px #f79aaa;
 	color: #000;
@@ -187,9 +187,9 @@ header h1:hover, header h1:active{
 nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active{
 	background: $primary;
 	background: linear-gradient(313deg, $primary 0%, $secondary 71%);
-	// box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
 	box-shadow: 1px 1px 2px $black;
 	border: solid 2px #fedf15;
+	transition: background 500ms linear;
 }
 
 nav.responsive-nav{
@@ -225,14 +225,10 @@ nav.responsive-nav ul li a{
 nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active{
 	text-shadow: 2px 2px 5px $secondary;
 	text-decoration: none;
+	transition: background 500ms linear;
 }
 
-
-
-
-
-
-
+/* * * * SOCIAL NAVIGATION * * * */
 nav.social-nav {
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
@@ -266,6 +262,7 @@ nav.social-nav ul li a:active{
 	background: #fff;
 	border: solid 2px $secondary;
 	box-shadow: 1px 1px 2px $black;
+	transition: background 500ms linear;
 }
 
 nav.social-nav ul li.patreon {

@@ -11,10 +11,6 @@
 		display: none;
 	}
 
-	// button.responsive-nav-button, header .responsive-cart{
-	// 	top: -200px;
-	// }
-
 	.announcement-banner{
 		display: block;
 	}
@@ -34,13 +30,13 @@
 		width: 20%;
 	}
 
+	a.logo-image{
+		width: 80%;
+	}
+
 	nav.social-nav ul{
 		justify-content: flex-end;
 	}
-
-	// a.logo-image img{
-	// 	max-width: 100px;
-	// }
 
 	nav.main-menu{
 		display: block;
@@ -58,21 +54,64 @@
 		@include fontSize(4rem);
 		line-height: 4rem;
 	}
+
+	/* * * * MAIN * * * */
+	section.intro{
+		@include flexbox($direction: row, $placeItems: flex-start);
+	}
+
+	//LEFT
+	.title-block{
+		width: 60%;	
+	}
+
+	//RIGHT
+	.main-image{
+		width: 40%;
+	}
 }
 
-@media only screen and (min-width: 600px) {
+// DID THIS BECAUSE I MESSED SOMETHING UP AND I GOTTA GO BACK AND FIGURE IT OUT
+@media only screen and (min-width: 600px) and (max-width: 900px){
+	//RIGHT
+	.main-image{
+		width: 60%;
+	}
+}
+
+
+@media only screen and (min-width: 600px){
 	body{
-		background: linear-gradient(0deg, rgba(247,154,170,0.5) 0%, #fedf15 65%, rgba(254,223,21,0.5) 100%);
+		background: linear-gradient(0deg, rgba(247,154,170,0.5) 0%,$primary 65%, rgba(254,223,21,0.5) 100%);
 	}
 
-	a.logo-image{
-		width: 50%;
+	/* * * * MAIN * * * */
+	main{
+		width: 95%;
+		margin: 0 auto;
 	}
 
-	// .image-block {
-	// 	margin: 30px 0 60px 0;
-	// 	width: 70%;
+	// /* * * * INTRO * * * */
+	.title-block,
+	.main-image{
+		padding: 15px;
+	}
+
+	// LEFT
+	.image-block {
+		width: 100%;
+	}
+
+	//RIGHT
+	// .main-image{
+	// 	width: 60%;
 	// }
+
+	img.main-photo{
+		width: 100%;
+	}
+
+
 
 	/* * * * sort through this * * * */
 	.hero,
@@ -92,13 +131,13 @@
 		padding: 0px;
 	}
 
-	.title-block,
-	.hero-photo,
-	.promo,
-	img.book-photo {
-		width: 50%;
-		margin: 15px;
-	}
+	// .title-block,
+	// .main-photo,
+	// .promo,
+	// img.book-photo {
+	// 	width: 50%;
+	// 	margin: 15px;
+	// }
 
 	.image-block {
 		flex-direction: row;
