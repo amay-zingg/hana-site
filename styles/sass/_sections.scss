@@ -1,6 +1,6 @@
 /* * * * * * * * * * * * * * HOMEPAGE SECTIONS * * * * * * * * * * * * * * */
 /* * * * INTRO * * * */
-section.intro, section.books, section.news {
+section.intro {
 	width: 100%;
 	text-align: center;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: column-reverse);
@@ -52,6 +52,14 @@ section.intro, section.books, section.news {
 }
 
 /* * * * BUTTON STYLES * * * */
+.button-box{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+}
+
 button.frizz-button, .frizz-button, a.learn-more-link {
 	font-family: 'Chicle', cursive;
 	min-height: 40px;
@@ -74,16 +82,55 @@ button.frizz-button:hover, button.frizz-button:active, .frizz-button:hover, .fri
 	transition: background 500ms linear;
 }
 
-/* * * * COMMENT * * * */
-.display-item-1, .display-item-2{
+/* * * * SECTIONS * * * */
+section.books{
+	width: 100%;
+	text-align: center;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: column);
 }
 
+.display-item-1, .display-item-2{
+	@include flexbox($placeContent: center, $direction: column);
+}
+
 .display-item-1 .words, .display-item-2 .words{
-	width: 60%;
+	width: 100%;
+	padding: 1em;
 }
 
 .display-item-1 .image, .display-item-2 .image{
-	width: 40%;
+	width: 100%;
 }
 
+/* * * * NEWS * * * */
+.news-block{
+	 @include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
+}
+
+.twitter, .blog-intro{
+	width: 100%;
+}
+
+.blog-intro .blog{
+	width: 100%;
+	padding: 0 10px;
+	margin: 1em 0;
+}
+
+.blog-intro .blog:first-child{
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.blog-intro .blog img{ 
+	float: left;
+	max-width: 150px;
+	margin: 5px;
+	box-shadow: 1px 1px 2px black;
+	border-radius: 5px;
+}
+
+.blog-intro .blog h2{
+	margin: 0;
+	padding: 0;
+}

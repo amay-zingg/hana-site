@@ -1,42 +1,14 @@
-h2 {
-	font-family: $headingFont;
+h1, h2{
 	@include fontSize(4.5rem);
+	font-family: $headingFont;
 	line-height: 4.5rem;
-	margin-top: 0;
+	margin: 0;
+	padding: 20px 0;
+	text-shadow: 1px 1px 1px $secondary;
 }
 
 main {
 	width: 100%;
-}
-
-
-
-
-
-.book-promo {
-	width: 100%;
-	text-align: center;
-	@include flexbox($placeItems: center, $placeContent: center, $direction: column-reverse);
-}
-
-.promo {
-	width: 100%;
-	padding: 15px 0;
-	margin-bottom: 60px;
-}
-
-.promo p {
-	margin-bottom: 60px;
-}
-
-.book-promo img {
-	border-radius: 15px;
-	border: solid 1px $secondary;
-	box-shadow: 0px 0px 15px $primary;
-}
-
-.second {
-	margin-top: 15px;
 }
 
 // * * * * WRITING

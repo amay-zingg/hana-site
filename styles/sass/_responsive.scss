@@ -100,6 +100,11 @@
 	// LEFT
 	.image-block {
 		width: 100%;
+		flex-direction: row;
+	}
+
+	.image-block img {
+		max-width: 150px;
 	}
 
 	//RIGHT
@@ -111,43 +116,50 @@
 		width: 100%;
 	}
 
-
-
-	/* * * * sort through this * * * */
-	.hero,
-	.book-promo {
+	/* * * * SECTIONS * * * */
+	.display-item-1, .display-item-2 {
 		@include flexbox($direction: row);
 	}
 
-	.book-promo {
-		margin: 15px 0;
-	}
-
-	.second {
+	.display-item-2 {
 		@include flexbox($direction: row-reverse);
 	}
 
-	.title-block h1 {
-		padding: 0px;
+	.display-item-1 .words, .display-item-2 .words{
+		width: 60%;
 	}
 
-	// .title-block,
-	// .main-photo,
-	// .promo,
-	// img.book-photo {
-	// 	width: 50%;
-	// 	margin: 15px;
+	.display-item-1 .image, .display-item-2 .image{
+		width: 40%;
+	}
+
+	.news-block{
+		@include flexbox($placeItems: flex-start, $placeContent: space-between, $direction: row, $wrap: wrap);
+	}
+
+	.twitter, .blog-intro{
+		width: 50%;
+	}
+
+	// .blog-intro .blog{
+	// 	@include flexbox($placeItems: center, $placeContent: space-between, $direction: row, $wrap: wrap);
 	// }
 
-	.image-block {
-		flex-direction: row;
-	}
+	// .blog-intro .blog .image{
+	// 	width: 30%;
+	// }
 
-	.image-block img {
-		max-width: 150px;
-	}
+	// .blog-intro .blog .words{
+	// 	width: 70%;
+	// }
 
+	/* * * * FOOTER * * * */
 	footer {
 		@include flexbox($direction: row);
 	}
+
+	.social-footer, .copyright {
+		width: 50%;
+	}
+
 }
