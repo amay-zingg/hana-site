@@ -1,6 +1,6 @@
 /* * * * * * * * * * * * * * HOMEPAGE SECTIONS * * * * * * * * * * * * * * */
 /* * * * INTRO * * * */
-section.intro {
+section.intro, section.books, section.news {
 	width: 100%;
 	text-align: center;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: column-reverse);
@@ -74,5 +74,16 @@ button.frizz-button:hover, button.frizz-button:active, .frizz-button:hover, .fri
 	transition: background 500ms linear;
 }
 
+/* * * * COMMENT * * * */
+.display-item-1, .display-item-2{
+	@include flexbox($placeItems: center, $placeContent: center, $direction: column);
+}
 
+.display-item-1 .words, .display-item-2 .words{
+	width: 60%;
+}
+
+.display-item-1 .image, .display-item-2 .image{
+	width: 40%;
+}
 
