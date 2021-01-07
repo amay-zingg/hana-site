@@ -1,0 +1,127 @@
+/* * * * * * * * CART PAGE * * * * * * * */
+section.cart{
+	padding: .5em;
+}
+
+.responsive-checkout{
+    display: block;
+}
+
+.desktop-checkout{
+    display: none;
+}
+
+form.desktop-checkout{
+	padding-bottom: 1em;
+}
+
+table {
+	text-align: left;
+	border-collapse: collapse;
+	border-style: none;
+}
+
+table p{
+	padding: 15px;
+	margin: 0;
+}
+
+table td {
+  border: 2px solid $secondary;
+  height: 250px;
+}
+
+thead tr th{
+    text-transform: uppercase;
+	text-align: left;
+	letter-spacing: 1px;
+}
+
+th.price, th.qty, th.total{
+	width: 200px;
+}
+
+td.price, td.qty, td.total{
+	vertical-align: bottom;
+}
+
+td.image-title, td.info{
+    width: 50%;
+    height: auto;
+}
+
+// IMAGE TITLE
+td.image-title{
+    text-align: center;	
+}
+
+td.image-title img{
+    height: 180px;
+    padding: 10px;
+    height: auto;
+}
+
+p.cart-title{
+	padding: 10px 10px 10px 0;
+	text-shadow: 1px 1px $secondary;
+}
+
+// QTY
+.info p{
+	text-align: center;
+}
+
+.quantity-box{
+	text-align: center;
+}
+
+.quantity-box input {
+    width: 75%;
+    margin: 5px;
+}
+
+.qty .button-box{
+	padding: 0;
+}
+
+// REMOVE BOX
+a.remove{
+	min-height: 40px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin: 10px;
+	text-shadow: 1px 1px 1px $secondary;
+	cursor: pointer;
+	background: #FFF;
+	box-shadow: 1px 1px 2px $black;
+	border: 2px solid $secondary;
+}
+
+a.remove:hover, a.remove:active{
+	border: 2px solid $black;
+}
+
+/* * * * SUBTOTAL * * * */
+.subtotal-block{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.subtotal-block .options{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+    text-align: center;
+}
+
+.subtotal-block .options p.subtotal{
+	width: 100%;
+	font-family: 'Chicle', cursive;
+	font-size: 2.5rem;
+}
+
+    

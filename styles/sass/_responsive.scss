@@ -69,8 +69,48 @@
 	.main-image{
 		width: 40%;
 	}
-}
 
+	/* * * * CHECKOUT * * * */
+	.responsive-checkout{
+		display: none;
+	}
+
+	.desktop-checkout{
+		display: block;
+	}
+
+	td.info{
+		width: 50%;
+	}
+
+	// IMAGE TITLE
+	td.image-title{
+		text-align: left;
+	}
+
+	td.image-title img{
+		height: 180px;
+	}
+
+	p.cart-title {
+		padding: 10px; 
+	}
+
+	// QTY
+	.quantity-box input{
+		width: 30%;
+	}
+
+	.qty .button-box{
+		padding: 1em;
+    }
+
+	// SUBTOTAL
+	.subtotal-block .options{
+		width: 30%;
+	}
+
+}
 // DID THIS BECAUSE I MESSED SOMETHING UP AND I GOTTA GO BACK AND FIGURE IT OUT
 @media only screen and (min-width: 600px) and (max-width: 900px){
 	//RIGHT

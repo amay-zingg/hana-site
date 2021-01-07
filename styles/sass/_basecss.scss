@@ -236,12 +236,33 @@ body {
 	font-size: 2rem;
 }
 
+a, input{
+	font-family: 'Nunito', sans-serif;
+	color: $black;
+	text-decoration: none;
+}
+
+input:focus-within, select:focus-within, textarea:focus-within{
+	background: $accent;
+  	outline: none;
+  	border: 2px solid #000;
+}
+
+
 // MOBILE FIRST SIZING
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
 	padding: 1em;
 }
+
+/* * * * PINK BORDER INPUT * * * */
+.pink-border{
+	padding: 5px 15px;
+	border: 2px solid $secondary;
+	border-radius: 10px;
+}
+
 
 /* * * * SHADOW COMBO TO KEEP * * * */
 // box-shadow: 1px 1px 25px $secondary, -1px -1px 25px $secondary;
