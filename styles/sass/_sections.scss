@@ -134,3 +134,56 @@ section.books{
 	margin: 0;
 	padding: 0;
 }
+
+/* * * * PORTFOLIO * * * */
+section.portfolio{
+	padding: .5em;
+	@include flexbox($placeItems: center, $placeContent: center, $direction: column);
+}
+
+section.portfolio .portfolio-section{
+	width: 100%;
+	border-radius: 15px;
+	border: solid 1px $secondary;
+    box-shadow: 0px 0px 15px $secondary;
+	margin: 10px 0;
+	height: 180px;
+	width: 300px;
+}
+
+section.portfolio .portfolio-section:hover, section.portfolio .portfolio-section:active{
+	border: solid 1px $black;
+	box-shadow: 0px 0px 15px $black;
+}
+
+section.portfolio .portfolio-section h2{
+	text-align: center;
+}
+
+section.portfolio .portfolio-section.one{
+	background: url(../assets/section-headers/section-banner-affirmation-art.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+section.portfolio .portfolio-section.two{
+	background: url(../assets/section-headers/section-banner-general-art.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+section.portfolio .portfolio-section.three{
+	background: url(../assets/section-headers/section-banner-writing.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+section.portfolio .portfolio-section.four{
+	background: url(../assets/section-headers/section-banner-affirmation.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}

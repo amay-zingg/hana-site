@@ -110,6 +110,17 @@
 		width: 30%;
 	}
 
+	/* * * * PORTFOLIO * * * */
+	section.portfolio{
+		@include flexbox($placeItems: center, $placeContent: space-around, $direction: row, $wrap: wrap);
+	}
+
+	section.portfolio .portfolio-section{
+		width: 48%;
+		height: 225px;
+		width: 375px;
+	}
+
 }
 // DID THIS BECAUSE I MESSED SOMETHING UP AND I GOTTA GO BACK AND FIGURE IT OUT
 @media only screen and (min-width: 600px) and (max-width: 900px){
@@ -120,6 +131,11 @@
 }
 
 @media only screen and (min-width: 750px){
+	// h1, h2{
+	// 	font-size: 4.5rem;
+	// 	line-height: 4.5rem;
+	// }
+
 	/* * * * SECTIONS * * * */
 	.display-item-1, .display-item-2 {
 		@include flexbox($direction: row);

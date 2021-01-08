@@ -415,11 +415,6 @@ label.responsive-nav-button, .responsive-nav-button {
   color: #000;
 }
 
-nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active {
-  background: #FFF;
-  border: solid 2px #f79aaa;
-}
-
 nav.responsive-nav {
   position: absolute;
   z-index: 20;
@@ -439,18 +434,30 @@ nav.responsive-nav ul {
 }
 
 nav.responsive-nav ul li {
-  padding: 1em;
   text-align: center;
   border: solid 2px transparent;
+}
+
+nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active {
+  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
+  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
+          box-shadow: 1px 1px 2px #0C0A0A;
+  border: solid 2px #fedf15;
+  -webkit-transition: background 500ms linear;
+  transition: background 500ms linear;
 }
 
 nav.responsive-nav ul li a {
   color: #0C0A0A;
   text-decoration: none;
+  display: block;
+  padding: 1em;
+  width: 100%;
 }
 
 nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
   text-decoration: none;
+  text-shadow: 2px 2px 5px #f79aaa;
 }
 
 /* * * * * * * * * * * * * * STYLING FOR DESKTOP NAV * * * * * * * * * * * * * * */
@@ -573,60 +580,6 @@ header h1:hover, header h1:active {
   border-bottom: 5px solid #f79aaa;
 }
 
-/* * * * RESPONSIVE NAVIGATION * * * */
-.responsive-nav-button:hover, .responsive-nav-button:active, nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
-  text-shadow: 2px 2px 5px #f79aaa;
-  color: #000;
-}
-
-nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active {
-  background: #fedf15;
-  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
-  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
-          box-shadow: 1px 1px 2px #0C0A0A;
-  border: solid 2px #fedf15;
-  -webkit-transition: background 500ms linear;
-  transition: background 500ms linear;
-}
-
-nav.responsive-nav {
-  position: absolute;
-  z-index: 30;
-  top: 0;
-  right: 15%;
-  left: 15%;
-  width: 70%;
-  margin-top: 70px;
-}
-
-nav.responsive-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-family: 'Chicle', cursive;
-  background: #f79aaa;
-  -webkit-box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
-          box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
-}
-
-nav.responsive-nav ul li {
-  padding: 1em;
-  text-align: center;
-  border: solid 2px transparent;
-}
-
-nav.responsive-nav ul li a {
-  color: #000;
-  text-decoration: none;
-}
-
-nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active {
-  text-shadow: 2px 2px 5px #f79aaa;
-  text-decoration: none;
-  -webkit-transition: background 500ms linear;
-  transition: background 500ms linear;
-}
-
 /* * * * SOCIAL NAVIGATION * * * */
 nav.social-nav {
   display: -webkit-box;
@@ -670,7 +623,7 @@ nav.social-nav ul {
 nav.social-nav ul li {
   width: 40px;
   height: 40px;
-  margin: 10px;
+  margin: 5px;
   background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
   border-radius: 50%;
 }
@@ -740,11 +693,9 @@ nav.main-menu {
 }
 
 h1, h2 {
-  font-size: 4.5rem;
-  font-weight: 400;
-  line-height: 6.75rem;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
   font-family: "Chicle", cursive;
-  line-height: 4.5rem;
   margin: 0;
   padding: 20px 0;
   text-shadow: 1px 1px 1px #f79aaa;
@@ -1026,6 +977,76 @@ section.books {
 .blog-intro .blog h2 {
   margin: 0;
   padding: 0;
+}
+
+/* * * * PORTFOLIO * * * */
+section.portfolio {
+  padding: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+section.portfolio .portfolio-section {
+  width: 100%;
+  border-radius: 15px;
+  border: solid 1px #f79aaa;
+  -webkit-box-shadow: 0px 0px 15px #f79aaa;
+          box-shadow: 0px 0px 15px #f79aaa;
+  margin: 10px 0;
+  height: 180px;
+  width: 300px;
+}
+
+section.portfolio .portfolio-section:hover, section.portfolio .portfolio-section:active {
+  border: solid 1px #0C0A0A;
+  -webkit-box-shadow: 0px 0px 15px #0C0A0A;
+          box-shadow: 0px 0px 15px #0C0A0A;
+}
+
+section.portfolio .portfolio-section h2 {
+  text-align: center;
+}
+
+section.portfolio .portfolio-section.one {
+  background: url(../assets/section-headers/section-banner-affirmation-art.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section.portfolio .portfolio-section.two {
+  background: url(../assets/section-headers/section-banner-general-art.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section.portfolio .portfolio-section.three {
+  background: url(../assets/section-headers/section-banner-writing.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section.portfolio .portfolio-section.four {
+  background: url(../assets/section-headers/section-banner-affirmation.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* * * * * * * * CART PAGE * * * * * * * */
@@ -1368,6 +1389,30 @@ p.website-by a img:active {
   }
   .subtotal-block .options {
     width: 30%;
+  }
+  /* * * * PORTFOLIO * * * */
+  section.portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    place-content: space-around;
+    place-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  section.portfolio .portfolio-section {
+    width: 48%;
+    height: 225px;
+    width: 375px;
   }
 }
 

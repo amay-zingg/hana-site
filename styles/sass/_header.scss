@@ -82,13 +82,6 @@ label.responsive-nav-button, .responsive-nav-button{
 	color: #000;
 }
 
-nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active{
-	background: #FFF;
-	// background: linear-gradient(313deg, $primary 0%, $secondary 71%);
-	// box-shadow: 1px 1px 25px #e891f0, -1px -1px 25px #f79aaa;
-	border: solid 2px $secondary;
-}
-
 nav.responsive-nav{
 	position: absolute;
 	z-index: 20;
@@ -105,23 +98,31 @@ nav.responsive-nav ul{
 	list-style: none;
 	font-family: 'Chicle', cursive;
 	background: $secondary;
-	// box-shadow: -2px -2px #fedf15, 2px 2px #fedf15;
 }
 
 nav.responsive-nav ul li{
-	padding: 1em;
 	text-align: center;
 	border: solid 2px transparent;
+}
+
+nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active{
+	background: linear-gradient(313deg, $primary 0%,$secondary 71%);
+	box-shadow: 1px 1px 2px $black;
+	border: solid 2px #fedf15;
+	transition: background 500ms linear;
 }
 
 nav.responsive-nav ul li a{
 	color: $black;
 	text-decoration: none;
+	display: block;
+	padding: 1em;
+	width: 100%;
 }
 
 nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active{
-	// text-shadow: 2px 2px 5px #fedf15;
 	text-decoration: none;
+	text-shadow: 2px 2px 5px $secondary;
 }
 
 /* * * * * * * * * * * * * * STYLING FOR DESKTOP NAV * * * * * * * * * * * * * * */
@@ -178,56 +179,6 @@ header h1:hover, header h1:active{
 	border-bottom: 5px solid $secondary;
 }
 
-/* * * * RESPONSIVE NAVIGATION * * * */
-.responsive-nav-button:hover, .responsive-nav-button:active,  nav.responsive-nav ul li a:hover,  nav.responsive-nav ul li a:active{
-	text-shadow: 2px 2px 5px #f79aaa;
-	color: #000;
-}
-
-nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active{
-	background: $primary;
-	background: linear-gradient(313deg, $primary 0%, $secondary 71%);
-	box-shadow: 1px 1px 2px $black;
-	border: solid 2px #fedf15;
-	transition: background 500ms linear;
-}
-
-nav.responsive-nav{
-	position: absolute;
-	z-index: 30;
-	top: 0;
-	right: 15%;
-	left: 15%;
-	width: 70%;
-	margin-top: 70px;
-}
-
-nav.responsive-nav ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-family: 'Chicle', cursive;
-	background: $secondary;
-	box-shadow: -2px -2px $primary, 2px 2px $primary;
-}
-
-nav.responsive-nav ul li{
-	padding: 1em;
-	text-align: center;
-	border: solid 2px transparent;
-}
-
-nav.responsive-nav ul li a{
-	color: #000;
-	text-decoration: none;
-}
-
-nav.responsive-nav ul li a:hover, nav.responsive-nav ul li a:active{
-	text-shadow: 2px 2px 5px $secondary;
-	text-decoration: none;
-	transition: background 500ms linear;
-}
-
 /* * * * SOCIAL NAVIGATION * * * */
 nav.social-nav {
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
@@ -241,7 +192,7 @@ nav.social-nav ul {
 nav.social-nav ul li {
 	width: 40px;
 	height: 40px;
-	margin: 10px;
+	margin: 5px;
 	background: linear-gradient(313deg, $primary 0%, $secondary 71%);
 	border-radius: 50%;
 }
