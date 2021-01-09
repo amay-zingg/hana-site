@@ -187,3 +187,120 @@ section.portfolio .portfolio-section.four{
 	background-position: center;
 	background-size: cover;
 }
+
+/* * * * * * * * * * * * * * SINGLE PRODUCT * * * * * * * * * * * * * * */
+.product{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.product .product-left, .product .product-right{
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+.product .product-left{
+	align-items: center;
+}
+
+.product .product-right{
+	padding: 0 1em;
+	justify-content: center;
+}
+
+img.main-product{
+	width: 80%;
+	border-radius: 15px;
+	border: 2px solid $secondary;
+	box-shadow: 1px 1px 5px $secondary, -1px -1px 5px $secondary;
+}
+
+p.price{
+	padding: 0;
+	margin: 0;
+	font-family: 'Chicle', cursive;
+	letter-spacing: 3px;
+	font-size: 3rem;
+	border-bottom: 2px solid $secondary;
+	text-shadow: 1px 1px 1px $secondary;
+}
+
+.quantity-cart{
+	display: flex;
+	// justify-content: center;
+	align-items: center;
+}
+
+/* * * * PRODUCT PAGE - FORM * * * */
+form.centered-form{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+form select.product-select{
+	margin-bottom: 1em;
+	padding: 10px 0;
+	display: block;
+	min-height: 40px;
+	width: 375px;
+	cursor: pointer;
+	font-size: 1.4rem;
+}
+
+.quantity{
+	border: 2px solid $secondary;
+	border-radius: 10px;
+	position: relative;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 40px;
+	width: 100px;
+}
+
+.quantity input{
+	border: none;
+	font-size: 1.4rem;
+	width: 95px;
+	height: 35px;
+	border-radius: 10px;
+	padding: 0 20px;
+}
+
+// /* Chrome, Safari, Edge, Opera */
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// /* Firefox */
+// input[type=number] {
+//   -moz-appearance: textfield;
+// }
+
+/* * * * PINK BORDER INPUT * * * */
+.pink-border{
+	padding: 5px 15px;
+	border: 2px solid $secondary;
+	border-radius: 10px;
+}
+
+/* * * * BREADCRUMBS * * * */
+nav.breadcrumb{
+	width: 100%;
+	padding: 20px 0;
+}
+
+nav.breadcrumb a:hover, nav.breadcrumb a:active{
+	text-shadow: 1px 1px 1px $secondary;
+}
+
+span.arrow-icon{
+	font-size: 1.5rem;
+}

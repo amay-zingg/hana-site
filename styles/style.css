@@ -1049,6 +1049,146 @@ section.portfolio .portfolio-section.four {
   background-size: cover;
 }
 
+/* * * * * * * * * * * * * * SINGLE PRODUCT * * * * * * * * * * * * * * */
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.product .product-left, .product .product-right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product .product-left {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product .product-right {
+  padding: 0 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+img.main-product {
+  width: 80%;
+  border-radius: 15px;
+  border: 2px solid #f79aaa;
+  -webkit-box-shadow: 1px 1px 5px #f79aaa, -1px -1px 5px #f79aaa;
+          box-shadow: 1px 1px 5px #f79aaa, -1px -1px 5px #f79aaa;
+}
+
+p.price {
+  padding: 0;
+  margin: 0;
+  font-family: 'Chicle', cursive;
+  letter-spacing: 3px;
+  font-size: 3rem;
+  border-bottom: 2px solid #f79aaa;
+  text-shadow: 1px 1px 1px #f79aaa;
+}
+
+.quantity-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* * * * PRODUCT PAGE - FORM * * * */
+form.centered-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form select.product-select {
+  margin-bottom: 1em;
+  padding: 10px 0;
+  display: block;
+  min-height: 40px;
+  width: 375px;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.quantity {
+  border: 2px solid #f79aaa;
+  border-radius: 10px;
+  position: relative;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 40px;
+  width: 100px;
+}
+
+.quantity input {
+  border: none;
+  font-size: 1.4rem;
+  width: 95px;
+  height: 35px;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+/* * * * PINK BORDER INPUT * * * */
+.pink-border {
+  padding: 5px 15px;
+  border: 2px solid #f79aaa;
+  border-radius: 10px;
+}
+
+/* * * * BREADCRUMBS * * * */
+nav.breadcrumb {
+  width: 100%;
+  padding: 20px 0;
+}
+
+nav.breadcrumb a:hover, nav.breadcrumb a:active {
+  text-shadow: 1px 1px 1px #f79aaa;
+}
+
+span.arrow-icon {
+  font-size: 1.5rem;
+}
+
 /* * * * * * * * CART PAGE * * * * * * * */
 section.cart {
   padding: .5em;
