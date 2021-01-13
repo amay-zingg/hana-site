@@ -1,17 +1,13 @@
 // * * * * SMOOTH SCROLLING ON SAME PAGE LINKS
-const navigationScroll = function () {
-    let scrollLink = $('.scroll');
-
-    scrollLink.click(function (e) {
-        e.preventDefault();
-        $('body, html').animate(
-            {
-                scrollTop: $(this.hash).offset().top
-            },
-            1000
-        );
-    });
-};
+$("a[href^=\\#]").click(function(e) {   
+    e.preventDefault();   
+    var dest = $(this).attr('href');   
+    console.log(dest);   
+    $('html,body').animate(
+        { scrollTop: $(dest).offset().top }
+        , 'slow'
+    ); 
+});
 
 // * * * * TICKER TAPE MARQUEE
 const banner = function () {
@@ -35,7 +31,7 @@ const navMenu = function () {
 
 // * * * * INIT PIECES
 init = function () {
-    navigationScroll();
+    // navigationScroll();
     banner();
     navMenu();
 };

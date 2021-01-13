@@ -158,6 +158,8 @@ section.portfolio .portfolio-section:hover, section.portfolio .portfolio-section
 
 section.portfolio .portfolio-section h2{
 	text-align: center;
+	width: 100%;
+	height: 100%;
 }
 
 section.portfolio .portfolio-section.one{
@@ -187,6 +189,18 @@ section.portfolio .portfolio-section.four{
 	background-position: center;
 	background-size: cover;
 }
+
+/* * * * GALLERY * * * */
+.gallery{
+	padding: .5em;
+	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+}
+
+.gallery .image-frame{
+	width: 30%;
+	padding: .5em;
+}
+
 
 /* * * * * * * * * * * * * * SINGLE PRODUCT * * * * * * * * * * * * * * */
 .product{
