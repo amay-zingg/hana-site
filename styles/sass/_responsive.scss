@@ -121,6 +121,15 @@
 		width: 375px;
 	}
 
+	//CONTACT
+	form.contact-form label{
+		display: inline-block;
+	}
+
+	form.contact-form textarea{
+		width: 70%;
+	}
+
 }
 // DID THIS BECAUSE I MESSED SOMETHING UP AND I GOTTA GO BACK AND FIGURE IT OUT
 @media only screen and (min-width: 600px) and (max-width: 900px){
@@ -131,11 +140,6 @@
 }
 
 @media only screen and (min-width: 750px){
-	// h1, h2{
-	// 	font-size: 4.5rem;
-	// 	line-height: 4.5rem;
-	// }
-
 	/* * * * SECTIONS * * * */
 	.display-item-1, .display-item-2 {
 		@include flexbox($direction: row);
@@ -153,8 +157,40 @@
 		width: 40%;
 	}
 
-}
+	/* * * * CONTACT * * * */
+	.contact-page{
+		flex-direction: row;
+	}
 
+	.contact-left, .contact-right{
+		width: 50%;
+	}
+
+	.contact-input-box{
+		margin-top: 0;
+	}
+
+	form.contact-form textarea{
+		width: 100%;
+	}
+
+	form.contact-form input{
+		width: 100%;
+	}
+
+	form.contact-form .button-box{
+		padding-left: 0;
+	}
+	
+	.contact-form .button-box{
+		justify-content: flex-end;
+	}
+
+	form.contact-form label{
+		display: block;
+	}
+
+}
 
 @media only screen and (min-width: 600px){
 	body{
@@ -184,12 +220,19 @@
 	}
 
 	//RIGHT
-	// .main-image{
-	// 	width: 60%;
-	// }
+	.product-images-block img {
+		// max-width: 40%;
+		max-width: 150px;
+		height: 150px;
+	}
 
-	img.main-photo{
-		width: 100%;
+	.product{
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	form select.product-select{
+		width: 375px;
 	}
 
 	/* * * * SECTIONS * * * */
@@ -212,6 +255,15 @@
 	// .blog-intro .blog .words{
 	// 	width: 70%;
 	// }
+
+	form.contact-form label{
+		width: 20%;
+		display: inline-block;
+	}
+
+	form.contact-form input{
+		width: 70%;
+	}
 
 	/* * * * FOOTER * * * */
 	footer {

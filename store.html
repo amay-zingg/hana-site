@@ -36,10 +36,10 @@
 
 <body>
 
-    <!-- maybe only on intro page? -->
-    <!-- <div class="announcement-banner" data-pauseOnHover="true" data-duration="9000">
+    <!-- ANNOUNCEMENT BANNER -->
+    <div class="announcement-banner" data-pauseOnHover="true" data-duration="9000">
         Hey I'm Hana and this is my new siiiiiiiiiiiite
-    </div> -->
+    </div>
 
     <div class="wrapper">
         <header>
@@ -139,9 +139,9 @@
         </header>
 
         <!-- MOBILE ANNOUNCEMENT BAR -->
-        <!-- <div class="responsive-announcement-banner" data-pauseOnHover="true" data-duration="9000">
+        <div class="responsive-announcement-banner" data-pauseOnHover="true" data-duration="9000">
             Hey I'm Hana and this is my new siiiiiiiiiiiite
-        </div> -->
+        </div>
 
         <main>
 
@@ -153,26 +153,51 @@
                     <i class="fas fa-chevron-right"></i>
                     <span class="visuallyhidden">Points Right</span>
                 </span>
-                <span>Survived So Much Art Print</span>
+                <span>Bones Pattern Art Print</span>
             </nav>
 
             <div class="product">
         
                 <div class="product-left">
-                    <img src="assets/art/Survived8x8ProductShot.jpg" alt="You survived so much Art Print"
-                        id="ProductPhotoImg" class="main-product">
+
+                    <div class="featured-image">
+                    
+                        <div class="featured-photo" id="featured-photo">
+                            <img src="./assets/art/PatternPrints-BlueBones.jpg" alt="Blue Bones Pattern Art Print">
+                        </div>
+                    
+                        <div class="second-photo" id="second-photo">
+                            <img src="./assets/art/PatternBone11x14ProductShot.jpg" alt="Blue Bones Pattern Art Print">
+                        </div>
+                    
+                        <div class="third-photo" id="third-photo">
+                            <img src="./assets/art/PatternBoneCloseUpPrint.jpg" alt="Blue Bones Pattern Art Print">
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="product-images-block">
+                        <img src="./assets/art/PatternPrints-BlueBones.jpg" alt="Blue Bones Pattern Art Print"
+                            class="select-featured-photo">
+                    
+                        <img src="./assets/art/PatternBone11x14ProductShot.jpg" alt="Blue Bones Pattern Art Print"
+                            class="select-second-photo">
+                    
+                        <img src="./assets/art/PatternBoneCloseUpPrint.jpg" alt="Blue Bones Pattern Art Print"
+                            class="select-third-photo">
+                    </div>
+                    
                 </div>
         
                 <div class="product-right">
-                    <h1 class="section-heading">You Survived so Much Art Print</h1>
+                    <h1 class="section-heading">Bones Pattern Art Print</h1>
         
-                    <p class="price">$12.00</p>
+<!-- FILL IN REAL SHIPPING PAGE -->
+                    <p class="price">$50.00<span><a href="/shipping">Shipping</a> calculated at checkout.</span></p>
         
                     <div>
-                        <p>❝You have survived so much❞</p>
-                    
-                        <p>Enjoy an 8 by 8 inch affirmation print on glossy poster paper. Lightweight and perfect for hanging up with a thumb tack
-                    or framing! Ideal for anywhere you might need a friendly and kind reminder.</p>
+                        <p>Enjoy an 11 by 14 inch pattern print on glossy card stock, printed with reflective gold metallic ink. Ideal for spots
+                        where the light hits so you can see that awesome gold ink work its magic!</p>
                 </div>
         
                     <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm"
@@ -180,7 +205,7 @@
         
                         <select name="id" id="productSelect" class="product-select pink-border">
                             <option value="1">
-                                Title - $
+                                11" x 14" - $50
                             </option>
                             <option disabled="disabled">
                                 Sold Out
