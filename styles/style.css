@@ -1145,6 +1145,10 @@ p.price {
           align-items: center;
 }
 
+p.italic {
+  font-style: italic;
+}
+
 /* * * * PRODUCT PAGE - FORM * * * */
 form.centered-form {
   display: -webkit-box;
@@ -1215,6 +1219,100 @@ nav.breadcrumb a:hover, nav.breadcrumb a:active {
 
 span.arrow-icon {
   font-size: 1.5rem;
+}
+
+/* * * * CONTACT PAGE * * * */
+.contact-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-page h1 {
+  width: 100%;
+}
+
+.contact-left, .contact-right {
+  width: 50%;
+}
+
+.contact-page .contact-left img {
+  width: 300px;
+  height: auto;
+}
+
+.contact-page .contact-right {
+  padding-left: 1em;
+}
+
+form.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+form.contact-form p {
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Chicle', cursive;
+  font-size: 3rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #fff;
+  text-shadow: 1px 1px 1px #f79aaa;
+  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
+          box-shadow: 1px 1px 2px #0C0A0A;
+  border: 2px solid #0C0A0A;
+}
+
+.contact-input-box {
+  display: block;
+  width: 100%;
+}
+
+form.contact-form label, form.contact-form input, form.contact-form textarea {
+  margin: 10px 5px;
+}
+
+form.contact-form label {
+  width: 20%;
+  display: inline-block;
+}
+
+form.contact-form input {
+  width: 70%;
+}
+
+form.contact-form textarea {
+  width: 70%;
+  margin-left: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 300px;
+}
+
+.contact-form .button-box {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact-form .button-box input {
+  width: 30%;
+  -webkit-box-shadow: 1px 1px 2px black;
+          box-shadow: 1px 1px 2px black;
 }
 
 /* * * * * * * * CART PAGE * * * * * * * */

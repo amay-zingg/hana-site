@@ -248,6 +248,10 @@ p.price{
 	align-items: center;
 }
 
+p.italic{
+	font-style: italic;
+}
+
 /* * * * PRODUCT PAGE - FORM * * * */
 form.centered-form{
 	display: flex;
@@ -317,4 +321,83 @@ nav.breadcrumb a:hover, nav.breadcrumb a:active{
 
 span.arrow-icon{
 	font-size: 1.5rem;
+}
+
+/* * * * CONTACT PAGE * * * */
+.contact-page{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.contact-page h1{
+	width: 100%;
+}
+
+.contact-left, .contact-right{
+	width: 50%;
+}
+
+.contact-page .contact-left img{
+	width: 300px;
+	height: auto;
+}
+
+.contact-page .contact-right{
+	padding-left: 1em;
+}
+
+form.contact-form{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+form.contact-form p{
+	font-weight: bolder;
+	text-align: center;
+	font-family: 'Chicle', cursive;
+	font-size: 3rem;
+	padding: 10px 15px;
+	border-radius: 5px;
+	background: #fff;
+	text-shadow: 1px 1px 1px $secondary;
+	box-shadow: 1px 1px 2px $black;
+	border: 2px solid $black;
+}
+
+.contact-input-box{
+	display: block;
+	width: 100%;
+}
+
+form.contact-form label, form.contact-form input, form.contact-form textarea{
+	margin: 10px 5px;
+}
+
+form.contact-form label{
+	width: 20%;
+	display: inline-block;
+}
+
+form.contact-form input{
+	width: 70%;
+}
+
+form.contact-form textarea{
+	width: 70%;
+	margin-left: 10px;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 300px;
+}
+
+.contact-form .button-box{
+	justify-content: flex-end;
+}
+
+.contact-form .button-box input{
+	width: 30%;
+	box-shadow: 1px 1px 2px black;
 }
