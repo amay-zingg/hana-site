@@ -744,6 +744,16 @@ h3 {
   padding: 15px;
 }
 
+.writing p a {
+  text-shadow: 1px 1px 1px #f79aaa;
+  border-bottom: 2px solid transparent;
+}
+
+.writing p a:hover,
+.writing p a:active {
+  border-bottom: 2px solid #f79aaa;
+}
+
 /* * * * * * * * * * * * * * HOMEPAGE SECTIONS * * * * * * * * * * * * * * */
 /* * * * INTRO * * * */
 section.intro {
@@ -936,6 +946,22 @@ section.books {
 
 .display-item-1 .image, .display-item-2 .image {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 /* * * * NEWS * * * */

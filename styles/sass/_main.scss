@@ -33,3 +33,13 @@ h3 {
 	width: 150px;
 	padding: 15px;
 }
+
+.writing p a{
+	text-shadow: 1px 1px 1px $secondary;
+	border-bottom: 2px solid transparent;
+}
+
+.writing p a:hover, 
+.writing p a:active{
+	border-bottom: 2px solid $secondary;
+}
