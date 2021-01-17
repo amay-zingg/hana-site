@@ -1032,28 +1032,28 @@ section.portfolio .portfolio-section h2 {
 }
 
 section.portfolio .portfolio-section.one {
-  background: url(../assets/section-headers/section-banner-affirmation-art.jpg);
+  background: url(../assets/section-headers/Banner-Affirmation.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 section.portfolio .portfolio-section.two {
-  background: url(../assets/section-headers/section-banner-general-art.jpg);
+  background: url(../assets/section-headers/Banner-GeneralArt.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 section.portfolio .portfolio-section.three {
-  background: url(../assets/section-headers/section-banner-writing.jpg);
+  background: url(../assets/section-headers/Banner-Writing.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 section.portfolio .portfolio-section.four {
-  background: url(../assets/section-headers/section-banner-pattern2.jpg);
+  background: url(../assets/section-headers/Banner-PatternPrint.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
