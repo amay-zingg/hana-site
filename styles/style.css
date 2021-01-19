@@ -312,6 +312,19 @@ input:focus-within, select:focus-within, textarea:focus-within {
   border-radius: 10px;
 }
 
+h1, h2 {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  font-family: "Chicle", cursive;
+  margin: 0;
+  padding: 20px 0;
+  text-shadow: 1px 1px 1px #f79aaa;
+}
+
+main {
+  width: 100%;
+}
+
 /* * * * SHADOW COMBO TO KEEP * * * */
 .announcement-banner, .responsive-announcement-banner {
   color: #FFF;
@@ -691,67 +704,6 @@ nav.social-nav li.patreon a:hover, nav.social-nav li.patreon a:active {
 
 nav.main-menu {
   display: none;
-}
-
-h1, h2 {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-  font-family: "Chicle", cursive;
-  margin: 0;
-  padding: 20px 0;
-  text-shadow: 1px 1px 1px #f79aaa;
-}
-
-main {
-  width: 100%;
-}
-
-.writing {
-  text-align: center;
-  margin: 30px 0;
-}
-
-h3 {
-  font-family: "Chicle", cursive;
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 4.5rem;
-  line-height: 3rem;
-  margin-bottom: 0;
-}
-
-.writing .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  place-content: center;
-  place-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-}
-
-.writing .links a {
-  width: 150px;
-  padding: 15px;
-}
-
-.writing p a {
-  text-shadow: 1px 1px 1px #f79aaa;
-  border-bottom: 2px solid transparent;
-}
-
-.writing p a:hover,
-.writing p a:active {
-  border-bottom: 2px solid #f79aaa;
 }
 
 /* * * * * * * * * * * * * * HOMEPAGE SECTIONS * * * * * * * * * * * * * * */
@@ -1429,6 +1381,59 @@ form.contact-form .button-box .frizz-button {
   width: 30%;
   -webkit-box-shadow: 1px 1px 2px black;
           box-shadow: 1px 1px 2px black;
+}
+
+section.writing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.writing .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.writing .links a {
+  width: 150px;
+  padding: 15px;
+}
+
+.writing p a {
+  text-shadow: 1px 1px 1px #f79aaa;
+  border-bottom: 2px solid transparent;
+}
+
+.writing p a:hover,
+.writing p a:active {
+  border-bottom: 2px solid #f79aaa;
 }
 
 /* * * * * * * * CART PAGE * * * * * * * */

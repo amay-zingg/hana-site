@@ -1,0 +1,33 @@
+// * * * * WRITING
+section.writing {
+	// text-align: center;
+    // margin: 1em;
+    
+    @include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+}
+
+// h3 {
+// 	font-family: $headingFont;
+// 	@include fontSize(3rem);
+// 	line-height: 3rem;
+// 	margin-bottom: 0;
+// }
+
+.writing .links {
+	@include flexbox($placeItems: center, $placeContent: center, $direction: row);
+}
+
+.writing .links a {
+	width: 150px;
+	padding: 15px;
+}
+
+.writing p a{
+	text-shadow: 1px 1px 1px $secondary;
+	border-bottom: 2px solid transparent;
+}
+
+.writing p a:hover, 
+.writing p a:active{
+	border-bottom: 2px solid $secondary;
+}
