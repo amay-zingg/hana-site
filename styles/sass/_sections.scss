@@ -142,6 +142,42 @@ section.books{
 	padding: 0;
 }
 
+/* * * * TESTIMONIALS * * * */
+section.testimonials{
+	padding: 1em;
+}
+
+.slide{
+	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+}
+
+.slide .slide-text{
+	width: 70%;
+}
+
+.slide .slide-image{
+	width: 30%;
+	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
+}
+
+p.photo-credit{
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-style: italic;
+	color: $black;
+	text-align: center;
+}
+
+p.photo-credit a{
+	text-shadow: 1px 1px 1px $secondary;
+	border-bottom: 2px solid transparent;
+}
+
+p.photo-credit a:hover, 
+p.photo-credit a:active{
+	border-bottom: 2px solid $secondary;
+}
+
 /* * * * * * * * * * * * * * SINGLE PRODUCT * * * * * * * * * * * * * * */
 .product{
 	display: flex;

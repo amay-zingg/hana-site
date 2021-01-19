@@ -965,6 +965,72 @@ section.books {
   padding: 0;
 }
 
+/* * * * TESTIMONIALS * * * */
+section.testimonials {
+  padding: 1em;
+}
+
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.slide .slide-text {
+  width: 70%;
+}
+
+.slide .slide-image {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+p.photo-credit {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-style: italic;
+  color: #0C0A0A;
+  text-align: center;
+}
+
+p.photo-credit a {
+  text-shadow: 1px 1px 1px #f79aaa;
+  border-bottom: 2px solid transparent;
+}
+
+p.photo-credit a:hover,
+p.photo-credit a:active {
+  border-bottom: 2px solid #f79aaa;
+}
+
 /* * * * * * * * * * * * * * SINGLE PRODUCT * * * * * * * * * * * * * * */
 .product {
   display: -webkit-box;
