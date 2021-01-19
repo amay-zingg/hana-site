@@ -965,104 +965,6 @@ section.books {
   padding: 0;
 }
 
-/* * * * PORTFOLIO * * * */
-section.portfolio {
-  padding: .5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  place-content: center;
-  place-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-}
-
-section.portfolio .portfolio-section {
-  width: 100%;
-  border-radius: 15px;
-  border: solid 1px #f79aaa;
-  -webkit-box-shadow: 0px 0px 15px #f79aaa;
-          box-shadow: 0px 0px 15px #f79aaa;
-  margin: 10px 0;
-  height: 180px;
-  width: 300px;
-}
-
-section.portfolio .portfolio-section:hover, section.portfolio .portfolio-section:active {
-  border: solid 1px #0C0A0A;
-  -webkit-box-shadow: 0px 0px 15px #0C0A0A;
-          box-shadow: 0px 0px 15px #0C0A0A;
-}
-
-section.portfolio .portfolio-section h2 {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-}
-
-section.portfolio .portfolio-section.one {
-  background: url(../assets/section-headers/Banner-Affirmation.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-section.portfolio .portfolio-section.two {
-  background: url(../assets/section-headers/Banner-GeneralArt.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-section.portfolio .portfolio-section.three {
-  background: url(../assets/section-headers/Banner-Writing.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-section.portfolio .portfolio-section.four {
-  background: url(../assets/section-headers/Banner-PatternPrint.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-/* * * * GALLERY * * * */
-.gallery {
-  padding: .5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  place-content: center;
-  place-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-}
-
-.gallery .image-frame {
-  width: 30%;
-  padding: .5em;
-}
-
 /* * * * * * * * * * * * * * SINGLE PRODUCT * * * * * * * * * * * * * * */
 .product {
   display: -webkit-box;
@@ -1383,7 +1285,81 @@ form.contact-form .button-box .frizz-button {
           box-shadow: 1px 1px 2px black;
 }
 
-section.writing {
+/* * * * PORTFOLIO * * * */
+section.portfolio {
+  padding: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+section.portfolio .portfolio-section {
+  width: 100%;
+  border-radius: 15px;
+  border: solid 1px #f79aaa;
+  -webkit-box-shadow: 0px 0px 15px #f79aaa;
+          box-shadow: 0px 0px 15px #f79aaa;
+  margin: 10px 0;
+  height: 180px;
+  width: 300px;
+}
+
+section.portfolio .portfolio-section:hover, section.portfolio .portfolio-section:active {
+  border: solid 1px #0C0A0A;
+  -webkit-box-shadow: 0px 0px 15px #0C0A0A;
+          box-shadow: 0px 0px 15px #0C0A0A;
+}
+
+section.portfolio .portfolio-section h2 {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+section.portfolio .portfolio-section.one {
+  background: url(../assets/section-headers/Banner-Affirmation.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section.portfolio .portfolio-section.two {
+  background: url(../assets/section-headers/Banner-GeneralArt.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section.portfolio .portfolio-section.three {
+  background: url(../assets/section-headers/Banner-Writing.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+section.portfolio .portfolio-section.four {
+  background: url(../assets/section-headers/Banner-PatternPrint.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* * * * PHOTO GALLERIES * * * */
+.gallery {
+  padding: .5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1391,6 +1367,66 @@ section.writing {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.gallery .image-frame {
+  width: 24%;
+  padding: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.writing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.image-right, .words-left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   place-content: center;
   place-items: center;
   -ms-flex-wrap: wrap;
@@ -1422,18 +1458,14 @@ section.writing {
 }
 
 .writing .links a {
-  width: 150px;
-  padding: 15px;
+  width: 120px;
+  height: auto;
+  margin: .5em;
 }
 
-.writing p a {
-  text-shadow: 1px 1px 1px #f79aaa;
-  border-bottom: 2px solid transparent;
-}
-
-.writing p a:hover,
-.writing p a:active {
-  border-bottom: 2px solid #f79aaa;
+.writing .links a:hover, .writing .links a:active {
+  background: #f79aaa;
+  border-radius: 5px;
 }
 
 /* * * * * * * * CART PAGE * * * * * * * */
@@ -1947,6 +1979,10 @@ p.website-by a img:active {
             flex-grow: 0;
   }
   .twitter, .blog-intro {
+    width: 50%;
+  }
+  /* * * * PORTFOLIO * * * */
+  .image-right, .words-left {
     width: 50%;
   }
   form.contact-form label {
