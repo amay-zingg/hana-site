@@ -1429,10 +1429,10 @@ section.portfolio .portfolio-section.four {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   place-content: center;
   place-items: center;
   -ms-flex-wrap: wrap;
@@ -1445,7 +1445,7 @@ section.portfolio .portfolio-section.four {
 }
 
 .gallery .image-frame {
-  width: 24%;
+  width: 100%;
   padding: .5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1463,6 +1463,13 @@ section.portfolio .portfolio-section.four {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+}
+
+.gallery .image-frame img {
+  margin: 5px;
+  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
+          box-shadow: 1px 1px 2px #0C0A0A;
+  border-radius: 5px;
 }
 
 .writing {
@@ -1847,6 +1854,7 @@ p.website-by a img:active {
   .main-image {
     width: 40%;
   }
+  /* * * * PORTFOLIO * * * */
   /* * * * CHECKOUT * * * */
   .responsive-checkout {
     display: none;
@@ -2048,6 +2056,25 @@ p.website-by a img:active {
     width: 50%;
   }
   /* * * * PORTFOLIO * * * */
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .gallery .image-frame {
+    width: 24%;
+  }
   .image-right, .words-left {
     width: 50%;
   }

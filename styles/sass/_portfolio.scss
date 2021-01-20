@@ -57,15 +57,20 @@ section.portfolio .portfolio-section.four{
 /* * * * PHOTO GALLERIES * * * */
 .gallery{
 	padding: .5em;
-	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
 }
 
 .gallery .image-frame{
-	width: 24%;
+	width: 100%;
     padding: .5em;
-    @include flexbox($placeItems: center, $placeContent: center);
+	@include flexbox($placeItems: center, $placeContent: center);
 }
 
+.gallery .image-frame img{
+	margin: 5px;
+	box-shadow: 1px 1px 2px $black;
+	border-radius: 5px;
+}
 // * * * * WRITING
 .writing {
     @include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);

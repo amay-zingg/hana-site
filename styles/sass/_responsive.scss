@@ -70,6 +70,11 @@
 		width: 40%;
 	}
 
+	/* * * * PORTFOLIO * * * */
+	// .gallery .image-frame{
+	// 	width: 24%;
+	// }
+
 	/* * * * CHECKOUT * * * */
 	.responsive-checkout{
 		display: none;
@@ -257,6 +262,14 @@
 	// }
 
 	/* * * * PORTFOLIO * * * */
+	.gallery{
+		@include flexbox($direction: row);
+	}
+
+	.gallery .image-frame{
+		width: 24%;
+	}
+
 	.image-right, .words-left{
 		width: 50%;
 	}
