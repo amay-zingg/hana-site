@@ -31,6 +31,23 @@ const navMenu = function () {
     });
 };
 
+// https://github.com/kenwheeler/slick/
+// https://kenwheeler.github.io/slick/
+// * * * * CAROUSEL OF PHOTOS
+const carousel = function() {
+    $(".vertical-center").slick({
+        dots: true,
+        vertical: true,
+        centerMode: true,
+      });
+      console.log("hello");
+
+    //   $(".lazy").slick({
+    //     lazyLoad: 'ondemand', // ondemand progressive anticipated
+    //     infinite: true
+    //   });
+}
+
 // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA
 const productPhotos = function () {
     const featuredPhoto = document.querySelector('.featured-photo');
@@ -77,6 +94,7 @@ init = function () {
     scroll();
     banner();
     navMenu();
+    carousel();
     productPhotos();
 };
 
