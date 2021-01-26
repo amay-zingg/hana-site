@@ -67,24 +67,81 @@ section.portfolio .portfolio-section.six{
 	background-size: cover;
 }
 
+h2.section-title{
+	text-align: center;
+	width: 100%;
+	font-size: 4.5rem;
+}
 
 /* * * * PHOTO GALLERIES * * * */
 .gallery{
 	padding: .5em;
-	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
+	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
 
-.gallery .image-frame{
-	width: 100%;
-    padding: .5em;
-	@include flexbox($placeItems: center, $placeContent: center);
+.gallery figure.image-frame{
+	position: relative;
+	width: 90%;
+	padding: 0;
+	margin: 15px;
+	@include flexbox($placeItems: center, $placeContent: center, $wrap: wrap);
 }
 
-.gallery .image-frame img{
-	margin: 5px;
+.gallery figure.image-frame img{
 	box-shadow: 1px 1px 2px $black;
 	border-radius: 5px;
 }
+
+.gallery figure.image-frame figcaption{
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	border-radius: 5px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 1rem;
+	opacity: 0;
+	transition: 0.3s;
+}
+
+.gallery figure.image-frame figcaption p{
+	text-shadow: 1px 1px 1px $black;
+	font-size: 3rem;
+}
+
+.gallery figure.image-frame figcaption p, .gallery figure.image-frame figcaption a{
+	padding: 10px;
+	margin: 0;
+	font-family: $headingFont;
+}
+
+.gallery figure.image-frame figcaption a{
+	display: block;
+	width: 80%;
+	font-size: 2rem;
+	background: $secondary;
+	border-radius: 5px;
+	border: 2px solid $secondary;
+	margin: 0 auto;
+	box-shadow: 1px 1px 2px $black;
+	transition: border 1s ease-in;
+}
+
+.gallery figure.image-frame figcaption a:hover, .gallery figure.image-frame figcaption a:active{
+	color: $black;
+	border: 2px solid $black;
+	text-shadow: 1px 1px 1px $secondary;
+	background: linear-gradient(313deg, $primary 0%, $secondary 71%);
+}
+
+.gallery figure.image-frame:hover figcaption, .gallery figure.image-frame:active figcaption{
+	opacity: 1;
+}
+
 // * * * * WRITING
 .writing {
     @include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
@@ -94,15 +151,6 @@ section.portfolio .portfolio-section.six{
     width: 100%;
     @include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
 }
-
-// LEFT
-// .image-right{
-//     @include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
-// }
-// RIGHT
-// .words-left{
-//     @include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
-// }
 
 .writing .links {
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row);
@@ -118,13 +166,3 @@ section.portfolio .portfolio-section.six{
     background: $secondary;
     border-radius: 5px;
 }
-
-// .writing p a{
-// 	text-shadow: 1px 1px 1px $secondary;
-// 	border-bottom: 2px solid transparent;
-// }
-
-// .writing p a:hover, 
-// .writing p a:active{
-// 	border-bottom: 2px solid $secondary;
-// }

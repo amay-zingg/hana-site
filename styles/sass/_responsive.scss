@@ -71,9 +71,14 @@
 	}
 
 	/* * * * PORTFOLIO * * * */
-	// .gallery .image-frame{
-	// 	width: 24%;
-	// }
+	.gallery figure.image-frame{
+		width: 21%;
+	}
+
+	.gallery figure.image-frame figcaption p, .gallery figure.image-frame figcaption a{
+		font-size: 2rem;
+	}
+
 
 	/* * * * CHECKOUT * * * */
 	.responsive-checkout{
@@ -142,6 +147,11 @@
 	.main-image{
 		width: 60%;
 	}
+
+	.gallery figure.image-frame{
+		width: 42%;
+	}
+
 }
 
 @media only screen and (min-width: 750px){
@@ -195,6 +205,10 @@
 		display: block;
 	}
 
+	// .gallery figure.image-frame{
+	// 	width: 30%;
+	// }
+
 }
 
 @media only screen and (min-width: 600px){
@@ -226,7 +240,6 @@
 
 	//RIGHT
 	.product-images-block img {
-		// max-width: 40%;
 		max-width: 150px;
 		height: 150px;
 	}
@@ -249,25 +262,17 @@
 		width: 50%;
 	}
 
-	// .blog-intro .blog{
-	// 	@include flexbox($placeItems: center, $placeContent: space-between, $direction: row, $wrap: wrap);
-	// }
-
-	// .blog-intro .blog .image{
-	// 	width: 30%;
-	// }
-
-	// .blog-intro .blog .words{
-	// 	width: 70%;
-	// }
-
 	/* * * * PORTFOLIO * * * */
 	.gallery{
-		@include flexbox($direction: row);
+		@include flexbox($direction: row, $wrap: wrap);
 	}
 
-	.gallery .image-frame{
-		width: 24%;
+	// .gallery figure.image-frame{
+	// 	width: 42%;
+	// }
+
+	.gallery figure.image-frame figcaption{
+		padding-top: 40px;
 	}
 
 	.image-right, .words-left{

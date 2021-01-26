@@ -1708,16 +1708,22 @@ section.portfolio .portfolio-section.six {
   background-size: cover;
 }
 
+h2.section-title {
+  text-align: center;
+  width: 100%;
+  font-size: 4.5rem;
+}
+
 /* * * * PHOTO GALLERIES * * * */
 .gallery {
   padding: .5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   place-content: center;
   place-items: center;
   -ms-flex-wrap: wrap;
@@ -1729,9 +1735,11 @@ section.portfolio .portfolio-section.six {
           flex-grow: 0;
 }
 
-.gallery .image-frame {
-  width: 100%;
-  padding: .5em;
+.gallery figure.image-frame {
+  position: relative;
+  width: 90%;
+  padding: 0;
+  margin: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1741,8 +1749,8 @@ section.portfolio .portfolio-section.six {
           flex-direction: row;
   place-content: center;
   place-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-flex: 0;
@@ -1750,11 +1758,63 @@ section.portfolio .portfolio-section.six {
           flex-grow: 0;
 }
 
-.gallery .image-frame img {
-  margin: 5px;
+.gallery figure.image-frame img {
   -webkit-box-shadow: 1px 1px 2px #0C0A0A;
           box-shadow: 1px 1px 2px #0C0A0A;
   border-radius: 5px;
+}
+
+.gallery figure.image-frame figcaption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1rem;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.gallery figure.image-frame figcaption p {
+  text-shadow: 1px 1px 1px #0C0A0A;
+  font-size: 3rem;
+}
+
+.gallery figure.image-frame figcaption p, .gallery figure.image-frame figcaption a {
+  padding: 10px;
+  margin: 0;
+  font-family: "Chicle", cursive;
+}
+
+.gallery figure.image-frame figcaption a {
+  display: block;
+  width: 80%;
+  font-size: 2rem;
+  background: #f79aaa;
+  border-radius: 5px;
+  border: 2px solid #f79aaa;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 1px 2px #0C0A0A;
+          box-shadow: 1px 1px 2px #0C0A0A;
+  -webkit-transition: border 1s ease-in;
+  transition: border 1s ease-in;
+}
+
+.gallery figure.image-frame figcaption a:hover, .gallery figure.image-frame figcaption a:active {
+  color: #0C0A0A;
+  border: 2px solid #0C0A0A;
+  text-shadow: 1px 1px 1px #f79aaa;
+  background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
+}
+
+.gallery figure.image-frame:hover figcaption, .gallery figure.image-frame:active figcaption {
+  opacity: 1;
 }
 
 .writing {
@@ -2140,6 +2200,12 @@ p.website-by a img:active {
     width: 40%;
   }
   /* * * * PORTFOLIO * * * */
+  .gallery figure.image-frame {
+    width: 21%;
+  }
+  .gallery figure.image-frame figcaption p, .gallery figure.image-frame figcaption a {
+    font-size: 2rem;
+  }
   /* * * * CHECKOUT * * * */
   .responsive-checkout {
     display: none;
@@ -2203,6 +2269,9 @@ p.website-by a img:active {
 @media only screen and (min-width: 600px) and (max-width: 900px) {
   .main-image {
     width: 60%;
+  }
+  .gallery figure.image-frame {
+    width: 42%;
   }
 }
 
@@ -2349,16 +2418,16 @@ p.website-by a img:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
   }
-  .gallery .image-frame {
-    width: 24%;
+  .gallery figure.image-frame figcaption {
+    padding-top: 40px;
   }
   .image-right, .words-left {
     width: 50%;
