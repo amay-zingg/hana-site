@@ -128,13 +128,13 @@ h2.section-title{
 	border: 2px solid $secondary;
 	margin: 0 auto;
 	box-shadow: 1px 1px 2px $black;
-	transition: border 1s ease-in;
+	transition: border 200ms ease;
 }
 
 .gallery figure.image-frame figcaption a:hover, .gallery figure.image-frame figcaption a:active{
-	color: $black;
+	color: #FFF;
 	border: 2px solid $black;
-	text-shadow: 1px 1px 1px $secondary;
+	text-shadow: 1px 1px 1px $black;
 	background: linear-gradient(313deg, $primary 0%, $secondary 71%);
 }
 

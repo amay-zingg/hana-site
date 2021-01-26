@@ -1802,14 +1802,14 @@ h2.section-title {
   margin: 0 auto;
   -webkit-box-shadow: 1px 1px 2px #0C0A0A;
           box-shadow: 1px 1px 2px #0C0A0A;
-  -webkit-transition: border 1s ease-in;
-  transition: border 1s ease-in;
+  -webkit-transition: border 200ms ease;
+  transition: border 200ms ease;
 }
 
 .gallery figure.image-frame figcaption a:hover, .gallery figure.image-frame figcaption a:active {
-  color: #0C0A0A;
+  color: #FFF;
   border: 2px solid #0C0A0A;
-  text-shadow: 1px 1px 1px #f79aaa;
+  text-shadow: 1px 1px 1px #0C0A0A;
   background: linear-gradient(313deg, #fedf15 0%, #f79aaa 71%);
 }
 
