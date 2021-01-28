@@ -805,8 +805,11 @@ section.intro {
   border-radius: 5px;
 }
 
-.main-photo {
-  width: 60%;
+.main-image img.main-photo {
+  width: 80%;
+}
+
+img.main-photo {
   border-radius: 15px;
   border: solid 1px #f79aaa;
   -webkit-box-shadow: 0px 0px 15px #f79aaa;
@@ -2184,7 +2187,6 @@ p.website-by a img:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    place-items: flex-start;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -ms-flex-negative: 0;

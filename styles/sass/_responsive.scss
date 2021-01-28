@@ -57,7 +57,7 @@
 
 	/* * * * MAIN * * * */
 	section.intro{
-		@include flexbox($direction: row, $placeItems: flex-start);
+		@include flexbox($direction: row);
 	}
 
 	//LEFT
