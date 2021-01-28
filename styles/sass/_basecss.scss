@@ -276,7 +276,12 @@ main {
 	width: 100%;
 }
 
+a.basic-link{
+	text-shadow: 1px 1px 1px $secondary;
+	border-bottom: 2px solid transparent;
+}
 
-/* * * * SHADOW COMBO TO KEEP * * * */
-// box-shadow: 1px 1px 25px $secondary, -1px -1px 25px $secondary;
-// background: linear-gradient(313deg, $primary 0%, $secondary 71%);
+a.basic-link:hover, a.basic-link:active{
+	text-shadow: 1px 1px 1px #FFF;
+	border-bottom: 2px solid $secondary;
+}

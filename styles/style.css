@@ -325,7 +325,16 @@ main {
   width: 100%;
 }
 
-/* * * * SHADOW COMBO TO KEEP * * * */
+a.basic-link {
+  text-shadow: 1px 1px 1px #f79aaa;
+  border-bottom: 2px solid transparent;
+}
+
+a.basic-link:hover, a.basic-link:active {
+  text-shadow: 1px 1px 1px #FFF;
+  border-bottom: 2px solid #f79aaa;
+}
+
 .announcement-banner, .responsive-announcement-banner {
   color: #FFF;
   background: #f79aaa;
