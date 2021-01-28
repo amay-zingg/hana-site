@@ -70,13 +70,32 @@
 		width: 40%;
 	}
 
-	/* * * * REVIEWS * * * */
-	// .review-container{
-	// 	@include flexbox($direction: row);
-	// }
+	/* * * * FEATURED SECTION * * * */
+	.inner-featured-section {
+		background: url(./../assets/bannersPNG/Transparent-Patterns-full.png);
+		width: 980px;
+		height: 280px;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 
+	.featured-section-left, .featured-section-right {
+		width: 48%;
+		height: 280px;
+	}
+
+	.featured-sections-homepage{
+		@include flexbox($placeContent: space-between);
+	}
+
+	/* * * * REVIEWS * * * */
 	.review-cards figure{
-		width: 25%;
+		width: 30%;
+	}
+
+	.review-cards .review-words{
+		width: 65%;
 	}
 
 	.review-cards .review-words{
@@ -89,6 +108,22 @@
 		@include flexbox($placeItems: center, $placeContent: center, $direction: row);
 		width: 100%;
 		height: 425px;
+	}
+
+	/* * * * SECTIONS * * * */
+	.news-block{
+		@include flexbox($placeItems: flex-start, $placeContent: space-between, $direction: row, $wrap: wrap);
+	}
+
+	.twitter, .blog-intro{
+		width: 50%;
+	}
+
+	/* * * * ABOUT * * * */
+	.about figure{
+		width: 300px;
+		float: right;
+		margin: 15px;
 	}
 
 	/* * * * PORTFOLIO * * * */
@@ -172,6 +207,10 @@
 		width: 42%;
 	}
 
+	.featured-section-left, .featured-section-right {
+		width: 100%;
+	}
+
 }
 
 @media only screen and (min-width: 750px){
@@ -225,15 +264,12 @@
 		display: block;
 	}
 
-	// .gallery figure.image-frame{
-	// 	width: 30%;
-	// }
-
 }
 
 @media only screen and (min-width: 600px){
 	body{
 		background: linear-gradient(0deg, rgba(247,154,170,0.5) 0%,$primary 65%, rgba(254,223,21,0.5) 100%);
+		font-size: 2rem;
 	}
 
 	/* * * * MAIN * * * */
@@ -273,23 +309,15 @@
 		width: 375px;
 	}
 
-	/* * * * SECTIONS * * * */
-	.news-block{
-		@include flexbox($placeItems: flex-start, $placeContent: space-between, $direction: row, $wrap: wrap);
-	}
-
-	.twitter, .blog-intro{
-		width: 50%;
+	/* * * * ABOUT * * * */
+	.about{
+		width: 85%;
 	}
 
 	/* * * * PORTFOLIO * * * */
 	.gallery{
 		@include flexbox($direction: row, $wrap: wrap);
 	}
-
-	// .gallery figure.image-frame{
-	// 	width: 42%;
-	// }
 
 	.gallery figure.image-frame figcaption{
 		padding-top: 40px;

@@ -3,7 +3,8 @@ section.reviews{
     width: 100%;
     background-image: url(./../assets/backgrounds/Banner-bg.jpg);
     background-size: cover;
-    border-radius: 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
     padding: 1em;
 }
 
@@ -54,13 +55,13 @@ section.reviews h2{
 }
 
 .review-cards figure{
-    width: 75%;
+    width: 60%;
     margin: 0;
     padding: 15px;
 }
 
 .review-cards .review-words{
-    width: 80%;
+    width: 95%;
     padding: .5em;
     font-size: 1.6rem;
 	line-height: 2.5rem;
@@ -91,7 +92,7 @@ section.reviews h2{
 	display: block;
 }
 
-.review-cards .photo-credit{
+.photo-credit{
 	font-size: 1.5rem;
 	line-height: 2rem;
 	font-style: italic;
@@ -99,12 +100,12 @@ section.reviews h2{
 	text-align: center;
 }
 
-.review-cards .photo-credit a{
+.photo-credit a{
 	text-shadow: 1px 1px 1px $secondary;
 	border-bottom: 2px solid transparent;
 }
 
-.review-cards .photo-credit a:hover, 
-.review-cards .photo-credit a:active{
+.photo-credit a:hover, 
+.photo-credit a:active{
 	border-bottom: 2px solid $secondary;
 }
