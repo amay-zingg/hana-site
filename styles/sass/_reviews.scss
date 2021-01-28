@@ -1,0 +1,109 @@
+section.reviews{
+    margin: 1em 0;
+    width: 100%;
+    background-image: url(./../assets/backgrounds/Banner-bg.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+section.reviews h2{
+    text-align: center;
+    margin: .5em;
+    padding: 0;
+}
+
+.review-container{
+    @include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+}
+
+.photo-dots{
+    @include flexbox($placeItems: center, $placeContent: center, $direction: column);
+    width: 85%;
+    padding: 15px;
+    background: #FFF;
+    border: 2px solid $secondary;
+    border-radius: 15px;
+}
+
+.photo-dots p{
+    padding: 0;
+    margin: 0;
+}
+
+.photo-dots .dots-container{
+    padding: 5px;
+}
+
+.photo-dots .dots-container span{
+    color: $secondary;
+    margin: 0 15px;
+    text-shadow: 1px 1px 2px $black;
+}
+
+.photo-dots .dots-container span:hover, .photo-dots .dots-container span:active{
+    color: $black;
+}
+
+.review-cards{
+    width: 85%;
+    margin: .5em;
+    background: #FFF;
+    border-radius: 15px;
+    border: 2px solid $secondary;
+}
+
+.review-cards figure{
+    width: 25%;
+}
+
+.review-cards .review-words{
+    width: 80%;
+    padding: .5em;
+    font-size: 2rem;
+	line-height: 3rem;
+}
+
+.review-cards .review-words span{
+    padding: 0 15px;
+}
+
+.review-cards .review .inner-review{
+    @include flexbox($placeItems: center, $placeContent: center, $direction: row);
+    width: 100%;
+    height: 425px;
+}
+
+.review .featured-item{
+    width: 100%;
+}
+
+.review-cards .second-item, .review-cards .third-item{
+    display: none;
+}
+
+.review-cards .unselected{
+	display: none;
+}
+
+.review-cards .selected{
+	display: block;
+}
+
+.review-cards .photo-credit{
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-style: italic;
+	color: $black;
+	text-align: center;
+}
+
+.review-cards .photo-credit a{
+	text-shadow: 1px 1px 1px $secondary;
+	border-bottom: 2px solid transparent;
+}
+
+.review-cards .photo-credit a:hover, 
+.review-cards .photo-credit a:active{
+	border-bottom: 2px solid $secondary;
+}
