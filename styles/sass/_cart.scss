@@ -1,6 +1,20 @@
 /* * * * * * * * CART PAGE * * * * * * * */
 section.cart{
-	padding: .5em;
+	margin: 1em 0;
+    width: 100%;
+    background-image: url(./../assets/backgrounds/Banner-bg.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+    padding: 1em;
+}
+
+form{
+	width: 100%;
+    padding: 15px;
+    background: #FFF;
+    border: 2px solid $secondary;
+    border-radius: 15px;
 }
 
 .responsive-checkout{
@@ -56,8 +70,7 @@ td.image-title{
 }
 
 td.image-title img{
-    height: 180px;
-    padding: 10px;
+    width: 150px;
     height: auto;
 }
 

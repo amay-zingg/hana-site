@@ -462,6 +462,7 @@ nav.responsive-nav ul li:hover, nav.responsive-nav ul li:active {
 }
 
 nav.responsive-nav ul li a {
+  font-family: "Chicle", cursive;
   color: #0C0A0A;
   text-decoration: none;
   display: block;
@@ -1675,12 +1676,37 @@ section.portfolio {
 section.portfolio .portfolio-section {
   width: 100%;
   border-radius: 15px;
+  background-image: url(./../assets/backgrounds/Banner-bg.jpg);
+  background-size: cover;
   border: solid 1px #f79aaa;
   -webkit-box-shadow: 0px 0px 15px #f79aaa;
           box-shadow: 0px 0px 15px #f79aaa;
   margin: 10px 0;
-  height: 180px;
-  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.portfolio-section {
+  height: 200px;
+}
+
+.portfolio-section .inner-portfolio-section {
+  height: 155px;
+  width: 270px;
 }
 
 section.portfolio .portfolio-section:hover, section.portfolio .portfolio-section:active {
@@ -1693,45 +1719,40 @@ section.portfolio .portfolio-section h2 {
   text-align: center;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 5px;
 }
 
-section.portfolio .portfolio-section.one {
-  background: url(../assets/section-headers/Banner-Affirmation.jpg);
+.portfolio-section .inner-portfolio-section.one {
+  background: url(./../assets/bannersPNG/Transparent-Affirmation.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-section.portfolio .portfolio-section.two {
-  background: url(../assets/section-headers/Banner-GeneralArt.jpg);
+.portfolio-section .inner-portfolio-section.two {
+  background: url(./../assets/bannersPNG/Transparent-GeneralArt.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-section.portfolio .portfolio-section.three {
-  background: url(../assets/section-headers/Banner-Writing.jpg);
+.portfolio-section .inner-portfolio-section.three {
+  background: url(../assets/bannersPNG/Transparent-Writing.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-section.portfolio .portfolio-section.four {
-  background: url(../assets/section-headers/Banner-PatternPrint.jpg);
+.portfolio-section .inner-portfolio-section.four {
+  background: url(../assets/bannersPNG/Transparent-Patterns.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-section.portfolio .portfolio-section.five {
-  background: url(../assets/section-headers/Banner-Tattoo.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-section.portfolio .portfolio-section.six {
-  background: url(../assets/section-headers/Banner-Tattoo.jpg);
+.portfolio-section .inner-portfolio-section.five {
+  background: url(./../assets/bannersPNG/Transparent-Tattoos.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1883,6 +1904,11 @@ h2.section-title {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+  padding: .5em;
+}
+
+.writing .image img.main-photo {
+  width: 70%;
 }
 
 .writing .links {
@@ -1895,8 +1921,8 @@ h2.section-title {
           flex-direction: row;
   place-content: center;
   place-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-flex: 0;
@@ -1908,16 +1934,31 @@ h2.section-title {
   width: 120px;
   height: auto;
   margin: .5em;
+  border-bottom: 2px solid transparent;
 }
 
 .writing .links a:hover, .writing .links a:active {
-  background: #f79aaa;
-  border-radius: 5px;
+  border-bottom: 2px solid #f79aaa;
 }
 
 /* * * * * * * * CART PAGE * * * * * * * */
 section.cart {
-  padding: .5em;
+  margin: 1em 0;
+  width: 100%;
+  background-image: url(./../assets/backgrounds/Banner-bg.jpg);
+  background-size: cover;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 2px black;
+          box-shadow: 1px 1px 2px black;
+  padding: 1em;
+}
+
+form {
+  width: 100%;
+  padding: 15px;
+  background: #FFF;
+  border: 2px solid #f79aaa;
+  border-radius: 15px;
 }
 
 .responsive-checkout {
@@ -1972,8 +2013,7 @@ td.image-title {
 }
 
 td.image-title img {
-  height: 180px;
-  padding: 10px;
+  width: 150px;
   height: auto;
 }
 
@@ -2324,6 +2364,10 @@ p.website-by a img:active {
   .gallery figure.image-frame figcaption p, .gallery figure.image-frame figcaption a {
     font-size: 2rem;
   }
+  .portfolio-section, .portfolio-section .inner-portfolio-section {
+    height: 200px;
+    width: 350px;
+  }
   /* * * * CHECKOUT * * * */
   .responsive-checkout {
     display: none;
@@ -2338,7 +2382,8 @@ p.website-by a img:active {
     text-align: left;
   }
   td.image-title img {
-    height: 180px;
+    width: 200px;
+    height: auto;
   }
   p.cart-title {
     padding: 10px;
@@ -2351,30 +2396,6 @@ p.website-by a img:active {
   }
   .subtotal-block .options {
     width: 30%;
-  }
-  /* * * * PORTFOLIO * * * */
-  section.portfolio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    place-content: space-around;
-    place-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-  }
-  section.portfolio .portfolio-section {
-    width: 48%;
-    height: 225px;
-    width: 375px;
   }
   form.contact-form label {
     display: inline-block;
@@ -2466,6 +2487,32 @@ p.website-by a img:active {
   form.contact-form label {
     display: block;
   }
+  /* * * * PORTFOLIO * * * */
+  section.portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    place-content: space-around;
+    place-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  section.portfolio .portfolio-section {
+    width: 48%;
+  }
+  .inner-portfolio-section {
+    height: 155px;
+    width: 270px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -2513,7 +2560,6 @@ p.website-by a img:active {
   .about {
     width: 85%;
   }
-  /* * * * PORTFOLIO * * * */
   .gallery {
     display: -webkit-box;
     display: -ms-flexbox;

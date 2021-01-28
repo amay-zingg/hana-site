@@ -135,6 +135,11 @@
 		font-size: 2rem;
 	}
 
+	.portfolio-section, .portfolio-section .inner-portfolio-section{
+		height: 200px;
+		width: 350px;
+	}
+
 	/* * * * CHECKOUT * * * */
 	.responsive-checkout{
 		display: none;
@@ -154,7 +159,8 @@
 	}
 
 	td.image-title img{
-		height: 180px;
+		 width: 200px;
+    	height: auto;
 	}
 
 	p.cart-title {
@@ -173,17 +179,6 @@
 	// SUBTOTAL
 	.subtotal-block .options{
 		width: 30%;
-	}
-
-	/* * * * PORTFOLIO * * * */
-	section.portfolio{
-		@include flexbox($placeItems: center, $placeContent: space-around, $direction: row, $wrap: wrap);
-	}
-
-	section.portfolio .portfolio-section{
-		width: 48%;
-		height: 225px;
-		width: 375px;
 	}
 
 	//CONTACT
@@ -264,6 +259,21 @@
 		display: block;
 	}
 
+	/* * * * PORTFOLIO * * * */
+	section.portfolio{
+		@include flexbox($placeItems: center, $placeContent: space-around, $direction: row, $wrap: wrap);
+	}
+
+	section.portfolio .portfolio-section{
+		width: 48%;
+		
+	}
+
+	.inner-portfolio-section{
+		height: 155px;
+		width: 270px;
+	}
+
 }
 
 @media only screen and (min-width: 600px){
@@ -314,7 +324,6 @@
 		width: 85%;
 	}
 
-	/* * * * PORTFOLIO * * * */
 	.gallery{
 		@include flexbox($direction: row, $wrap: wrap);
 	}
