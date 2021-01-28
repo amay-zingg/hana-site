@@ -70,6 +70,27 @@
 		width: 40%;
 	}
 
+	/* * * * REVIEWS * * * */
+	// .review-container{
+	// 	@include flexbox($direction: row);
+	// }
+
+	.review-cards figure{
+		width: 25%;
+	}
+
+	.review-cards .review-words{
+		width: 100%;
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+
+	.review-cards .review .inner-review{
+		@include flexbox($placeItems: center, $placeContent: center, $direction: row);
+		width: 100%;
+		height: 425px;
+	}
+
 	/* * * * PORTFOLIO * * * */
 	.gallery figure.image-frame{
 		width: 21%;
