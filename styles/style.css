@@ -2336,7 +2336,7 @@ p.website-by a img:active {
         -ms-flex-positive: 0;
             flex-grow: 0;
     width: 100%;
-    height: 425px;
+    min-height: 425px;
   }
   /* * * * SECTIONS * * * */
   .news-block {
