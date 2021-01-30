@@ -80,16 +80,20 @@ section.reviews h2{
     width: 100%;
 }
 
-.review-cards .second-item, .review-cards .third-item{
-    display: none;
-}
+// .review-cards .second-item, .review-cards .third-item, .featured-image .second-item, .featured-image .third-item{
+//     display: none;
+// }
 
-.review-cards .unselected{
+.review-cards .unselected, .second-item, .third-item{
 	display: none;
 }
 
-.review-cards .selected{
+.selected{
 	display: block;
+}
+
+.unselected, .featured .unselected, .product .featured-item.unselected, .product .second-item.unselected, .product .third-item.unselected, .featured-image .second-item.unselected{
+    display: none;
 }
 
 .photo-credit{

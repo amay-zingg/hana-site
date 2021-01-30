@@ -285,11 +285,14 @@ section.about-page{
 	flex-direction: column;
 }
 
-.product .featured-item{
+.product .featured-item, .product .second-item, .product .third-item{
 	display: block;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.product .featured-item img, .product .second-item img, .product .third-item img{
 	width: 80%;
 }
 
@@ -299,17 +302,17 @@ section.about-page{
 	box-shadow: 1px 1px 5px $secondary, -1px -1px 5px $secondary;
 }
 
-.unselected{
-	display: none;
-}
+// .unselected{
+// 	display: none;
+// }
 
 .second-item, .third-item{
 	display: none;
 }
 
-.selected{
-	display: block;
-}
+// .selected{
+// 	display: block;
+// }
 
 .product-images-block{
 	display: flex;

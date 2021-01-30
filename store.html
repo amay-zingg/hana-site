@@ -161,15 +161,15 @@
 
                     <div class="featured-image">
                     
-                        <div class="featured-item" id="featured-photo">
+                        <div class="featured-item" id="featured-item">
                             <img src="./assets/pattern/PatternBone-Square.jpg" alt="Blue Bones Pattern Art Print">
                         </div>
                     
-                        <div class="second-item" id="second-photo">
+                        <div class="second-item" id="second-item">
                             <img src="./assets/hanaProductPhotos/PatternBone11x14ProductShot.jpg" alt="Blue Bones Pattern Art Print">
                         </div>
                     
-                        <div class="third-item" id="third-photo">
+                        <div class="third-item" id="third-item">
                             <img src="./assets/pattern/PatternBone-Full.jpg" alt="Blue Bones Pattern Art Print">
                         </div>
                     
@@ -191,7 +191,6 @@
                 <div class="product-right">
                     <h1 class="section-heading">Bones Pattern Art Print</h1>
         
-<!-- FILL IN REAL SHIPPING PAGE -->
                     <p class="price">$50.00<span><a href="/shipping">Shipping</a> calculated at checkout.</span></p>
         
                     <div>
@@ -295,8 +294,98 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="./js/photo-switch.js" type="text/javascript" charset="utf-8"></script>
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/photo-switch.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/script.js"></script> -->
+    <script>
+        // * * * * DOCUMENT READY
+        $(() => {
+            // console.log("meow");
+            // const banner = function () {
+            //     let $banner = $('.announcement-banner').marquee();
+            //     let $banner2 = $('.responsive-announcement-banner').marquee();
+            // };
+            // banner();
+
+             // * * * * SMOOTH SCROLLING ON SAME PAGE LINKS
+            const scroll = function () {
+                // console.log('meow');
+                $("a[href^=\\#]").click(function (e) {
+                    e.preventDefault();
+                    var dest = $(this).attr('href');
+                    console.log(dest);
+                    $('html,body').animate(
+                        { scrollTop: $(dest).offset().top }
+                        , 'slow'
+                    );
+                });
+            };
+            scroll();
+
+            // * * * * RESPONSIVE MENU
+            const navMenu = function () {
+                // * * * * MENU CLICK OUTSIDE
+                $(document).on("click", function (event) {
+                    // console.log("meow");
+                    if (!$(event.target).closest(".responsive-nav-button").length) {
+                        $(".responsive-nav").slideUp("fast");
+                    }
+                });
+
+                $(".responsive-nav-button").click(function () {
+                    $(".responsive-nav").toggle("slow");
+                });
+            };
+            navMenu();
+
+             // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
+            const photoSwitch = function () {
+                console.log("meow");
+                const featuredPhoto = document.querySelector('.featured-item');
+                const secondPhoto = document.querySelector('.second-item');
+                const thirdPhoto = document.querySelector('.third-item');
+
+                function onPageLoad() {
+                    secondPhoto.classList.add('unselected');
+                    thirdPhoto.classList.add('unselected');
+                };
+
+                onPageLoad();
+
+                document.querySelector('.select-featured-photo').addEventListener('click', function () {
+                    console.log("meep");
+                    featuredPhoto.classList.add('selected');
+                    featuredPhoto.classList.remove('unselected');
+                    secondPhoto.classList.add('unselected');
+                    secondPhoto.classList.remove('selected');
+                    thirdPhoto.classList.add('unselected');
+                    thirdPhoto.classList.remove('selected');
+                });
+
+                document.querySelector('.select-second-photo').addEventListener('click', function () {
+                    console.log("morp");
+                    featuredPhoto.classList.add('unselected');
+                    featuredPhoto.classList.remove('selected');
+                    secondPhoto.classList.add('selected');
+                    secondPhoto.classList.remove('unselected');
+                    thirdPhoto.classList.add('unselected');
+                    thirdPhoto.classList.remove('selected');
+                });
+
+                document.querySelector('.select-third-photo').addEventListener('click', function () {
+                    console.log("xoxo");
+                    featuredPhoto.classList.add('unselected');
+                    featuredPhoto.classList.remove('selected');
+                    secondPhoto.classList.add('unselected');
+                    secondPhoto.classList.remove('selected');
+                    thirdPhoto.classList.add('selected');
+                    thirdPhoto.classList.remove('unselected');
+                });
+            };
+            photoSwitch();
+
+        });
+    
+    </script>
     
 </body>
 
