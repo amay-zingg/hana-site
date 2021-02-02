@@ -1860,6 +1860,22 @@ h2.section-title {
   transition: border 200ms ease;
 }
 
+.gallery figure.image-frame figcaption a.instagram-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery figure.image-frame figcaption a.instagram-link span {
+  padding: 0 10px;
+}
+
 .gallery figure.image-frame figcaption a:hover, .gallery figure.image-frame figcaption a:active {
   color: #FFF;
   border: 2px solid #0C0A0A;
