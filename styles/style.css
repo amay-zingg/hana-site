@@ -1848,8 +1848,8 @@ h2.section-title {
 
 .gallery figure.image-frame figcaption a {
   display: block;
-  width: 80%;
-  font-size: 2rem;
+  width: 90%;
+  font-size: 1.5rem;
   background: #f79aaa;
   border-radius: 5px;
   border: 2px solid #f79aaa;
@@ -1874,6 +1874,10 @@ h2.section-title {
 
 .gallery figure.image-frame figcaption a.instagram-link span {
   padding: 0 10px;
+}
+
+.gallery figure.image-frame figcaption a.instagram-link img {
+  width: 20px;
 }
 
 .gallery figure.image-frame figcaption a:hover, .gallery figure.image-frame figcaption a:active {
