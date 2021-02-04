@@ -36,12 +36,12 @@ table {
 }
 
 table p{
-	padding: 15px;
+	padding: 5px;
 	margin: 0;
 }
 
 table td {
-  border: 2px solid $secondary;
+//   border: 2px solid $secondary;
   height: 250px;
 }
 
@@ -93,14 +93,21 @@ p.cart-title{
     margin: 5px;
 }
 
-.qty .button-box{
+.qty .button-box, .info .button-box{
 	padding: 0;
+}
+
+// TOTAL
+.total{
+	background: $secondary;
+	border-radius: 5px;
+	padding: 5px 0;
+	text-align: center;
 }
 
 // REMOVE BOX
 a.remove{
-	min-height: 40px;
-	padding: 5px 10px;
+	padding: 5px;
 	border-radius: 5px;
 	margin: 10px;
 	text-shadow: 1px 1px 1px $secondary;

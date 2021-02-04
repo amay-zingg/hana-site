@@ -131,10 +131,6 @@
 		width: 21%;
 	}
 
-	// .gallery figure.image-frame figcaption p, .gallery figure.image-frame figcaption a{
-	// 	font-size: 2rem;
-	// }
-
 	.portfolio-section, .portfolio-section .inner-portfolio-section{
 		height: 200px;
 		width: 350px;
@@ -153,6 +149,10 @@
 		width: 50%;
 	}
 
+	table td {
+	  border: 2px solid $secondary;
+	}
+
 	// IMAGE TITLE
 	td.image-title{
 		text-align: left;
@@ -169,11 +169,11 @@
 
 	// QTY
 	.quantity-box input{
-		width: 30%;
+		width: 80%;
 	}
 
 	.qty .button-box{
-		padding: 1em;
+		padding: 5px;
     }
 
 	// SUBTOTAL
