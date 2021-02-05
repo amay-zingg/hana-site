@@ -1,0 +1,55 @@
+/* * * * Box in the box - used on About, Blog, Contact, News * * * */
+.content-box{
+    margin: 1em 0;
+	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
+	background-image: url(./../assets/backgrounds/Banner-bg.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+    padding: 1em;
+}
+
+.content-box h1, .inner-box h2{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.inner-box{
+    margin: 15px;
+    padding: 15px;
+    background: #FFF;
+    border: 2px solid $secondary;
+    border-radius: 15px;
+}
+
+.inner-box figure{
+	width: 100%;
+	margin: 0;
+    padding: 0;
+    @include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
+}
+
+.inner-box figure img{
+	width: 300px;
+}
+
+.inner-box p{
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 600px){
+    .content-box{
+        @include flexbox($placeItems: initial, $placeContent: space-around, $direction: row, $wrap: wrap);
+    }
+
+    .inner-box{
+        width: 45%;
+    }
+
+	// .inner-box figure{
+    //     float: right;
+    //     width: auto;
+    // }
+}
