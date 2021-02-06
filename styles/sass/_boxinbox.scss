@@ -2,54 +2,78 @@
 .content-box{
     margin: 1em 0;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
-	background-image: url(./../assets/backgrounds/Banner-bg.jpg);
-    background-size: cover;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px black;
-    padding: 1em;
 }
 
 .content-box h1, .inner-box h2{
+    text-align: center;
     display: block;
     width: 100%;
-    text-align: center;
 }
 
-.inner-box{
-    margin: 15px;
+.inner-box, .inner-box-article{
+    margin: 15px 0;
     padding: 15px;
     background: #FFF;
     border: 2px solid $secondary;
     border-radius: 15px;
+    text-align: center;
 }
 
-.inner-box figure{
+.inner-box figure, .inner-box-article figure{
+    float: none;
 	width: 100%;
 	margin: 0;
     padding: 0;
     @include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
 }
 
-.inner-box figure img{
+.inner-box figure img, .inner-box-article figure img{
 	width: 300px;
 }
 
 .inner-box p{
     margin: 0;
     padding: 0;
+    font-size: 1.5rem;
+}
+
+.inner-box-article p{
+    line-height: 2.5rem;
 }
 
 @media only screen and (min-width: 600px){
     .content-box{
         @include flexbox($placeItems: initial, $placeContent: space-around, $direction: row, $wrap: wrap);
+        background-image: url(./../assets/backgrounds/Banner-bg.jpg);
+        background-size: cover;
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px black;
+        padding: 1em;
     }
 
     .inner-box{
         width: 45%;
     }
+}
 
-	// .inner-box figure{
-    //     float: right;
-    //     width: auto;
-    // }
+@media only screen and (min-width: 750px){
+    .inner-box-article{
+        text-align: left; 
+    }
+
+      .inner-box-article figure{
+        float: right;
+        width: auto;
+        margin: .5em;
+    }
+
+    .inner-box-article figure img{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .inner-box{
+        width: 30%;
+    }
 }
