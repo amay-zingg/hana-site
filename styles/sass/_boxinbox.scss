@@ -41,6 +41,16 @@
     line-height: 2.5rem;
 }
 
+// Gallery
+.article-gallery{
+    @include flexbox($placeItems: initial, $placeContent: space-around, $direction: row, $wrap: wrap);
+}
+
+.article-gallery img{
+    width: 30%;
+    margin: 15px;
+}
+
 @media only screen and (min-width: 600px){
     .content-box{
         @include flexbox($placeItems: initial, $placeContent: space-around, $direction: row, $wrap: wrap);

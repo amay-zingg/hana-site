@@ -789,6 +789,30 @@ nav.main-menu {
   line-height: 2.5rem;
 }
 
+.article-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: space-around;
+  place-items: initial;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.article-gallery img {
+  width: 30%;
+  margin: 15px;
+}
+
 @media only screen and (min-width: 600px) {
   .content-box {
     display: -webkit-box;
