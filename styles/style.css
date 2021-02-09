@@ -1093,20 +1093,28 @@ section.books {
           flex-grow: 0;
 }
 
+.twitter {
+  width: 400px;
+}
+
 .news h2 {
   text-align: center;
 }
 
-.twitter, .blog-intro {
+.twitter, .news-container {
   width: 100%;
 }
 
-.blog-intro .blog {
+.news-block .news-container .twitter {
+  float: right;
+}
+
+.news-container .blog {
   width: 100%;
   margin-bottom: 1em;
 }
 
-.blog-intro .blog img {
+.news-container img {
   float: left;
   width: 145px;
   margin: 0 15px 15px 0;
@@ -1115,44 +1123,18 @@ section.books {
   border-radius: 5px;
 }
 
-.blog-intro .blog h3 {
+.news-container h3 {
   margin: 0;
   padding: 0;
   font-size: 2.7rem;
   border-bottom: 2px solid #f79aaa;
+  font-family: "Chicle", cursive;
   display: inline-block;
 }
 
-.blog-intro .blog p {
+.news-container p {
   margin: 15px 15px 15px 0;
   padding: 0;
-}
-
-.blog-intro .button-box {
-  padding: 0;
-}
-
-.blog-intro .button-box .frizz-button {
-  margin: 0;
-}
-
-.twitter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  place-content: center;
-  place-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
 }
 
 /* * * * FEATURED SECTION * * * */
@@ -1264,7 +1246,7 @@ section.books {
 }
 
 /* * * * * * * * * * * * * * ABOUT PAGE * * * * * * * * * * * * * * */
-section.about-page {
+section.about-page, section.news {
   margin: 1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1290,7 +1272,7 @@ section.about-page {
   padding: 1em;
 }
 
-.about {
+.about, section.news .news-block {
   padding: 15px;
   background: #FFF;
   border: 2px solid #f79aaa;
@@ -2517,7 +2499,7 @@ p.website-by a img:active {
         -ms-flex-positive: 0;
             flex-grow: 0;
   }
-  .twitter, .blog-intro {
+  .twitter, .news-container {
     width: 50%;
   }
   /* * * * ABOUT * * * */

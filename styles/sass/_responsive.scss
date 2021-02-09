@@ -115,7 +115,7 @@
 		@include flexbox($placeItems: flex-start, $placeContent: space-between, $direction: row, $wrap: wrap);
 	}
 
-	.twitter, .blog-intro{
+	.twitter, .news-container{
 		width: 50%;
 	}
 
