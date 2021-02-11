@@ -162,6 +162,19 @@ section.books{
 	padding: 0;
 }
 
+/* * * * EVENTS PAGE * * * */
+.news-single.event{
+	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
+	margin-bottom: 1em;
+}
+
+.news-single.event img{
+	float: none;
+	display: block;
+	width: 300px;
+	margin: 15px;
+}
+
 /* * * * FEATURED SECTION * * * */
 .featured-section-full, .featured-collection {
     width: 100%;
