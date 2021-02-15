@@ -117,6 +117,7 @@ section.books{
 /* * * * NEWS * * * */
 .news-block{
 	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
+	width: 100%;
 }
 
 .twitter{
@@ -530,4 +531,17 @@ form.contact-form .button-box .frizz-button{
 .contact-form .button-box input{
 	width: 30%;
 	box-shadow: 1px 1px 2px black;
+}
+
+/* * * * EVENTS PAGE * * * */
+.events-gallery, .commissions-gallery{
+	 @include flexbox($placeItems: flex-start, $placeContent: space-around, $direction: row);
+	 width: 100%;
+
+}
+
+figure.event-image{
+	width: 22%;
+	margin: 0;
+	padding: .5em;
 }
