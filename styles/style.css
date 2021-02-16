@@ -1650,6 +1650,38 @@ form.contact-form .button-box .frizz-button {
 }
 
 /* * * * EVENTS PAGE * * * */
+.event-section {
+  width: 400px;
+  height: 240px;
+  margin-bottom: 1em;
+  border-radius: 15px;
+}
+
+.inner-event-section {
+  background: url(./../assets/bannersPNG/Transparent-Patterns.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 240px;
+}
+
+.inner-event-section.one {
+  background: url(./../assets/events/Banner-Events.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.inner-event-section.two {
+  background: url(./../assets/events/Banner-Com.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
 .events-gallery, .commissions-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1672,10 +1704,15 @@ form.contact-form .button-box .frizz-button {
       flex-wrap: wrap;
 }
 
+.events-gallery h2, .commissions-gallery h2 {
+  width: 100%;
+}
+
 figure.event-image {
   width: 50%;
   margin: 0;
   padding: .5em;
+  text-align: center;
 }
 
 section.reviews {
@@ -2566,6 +2603,10 @@ p.website-by a img:active {
     float: right;
     margin: 15px;
   }
+  /* * * * EVENT PAGE * * * */
+  figure.event-image {
+    width: 33%;
+  }
   /* * * * PORTFOLIO * * * */
   .gallery figure.image-frame {
     width: 21%;
@@ -2797,10 +2838,6 @@ p.website-by a img:active {
   }
   form.contact-form input {
     width: 70%;
-  }
-  /* * * * EVENT PAGE * * * */
-  figure.event-image {
-    width: 22%;
   }
   /* * * * FOOTER * * * */
   footer {
