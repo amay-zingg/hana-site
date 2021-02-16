@@ -345,6 +345,11 @@
 		width: 70%;
 	}
 
+	/* * * * EVENT PAGE * * * */
+	figure.event-image {
+		width: 22%;
+	}
+
 	/* * * * FOOTER * * * */
 	footer {
 		@include flexbox($direction: row);

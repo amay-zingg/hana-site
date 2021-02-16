@@ -1668,10 +1668,12 @@ form.contact-form .button-box .frizz-button {
       -ms-flex-positive: 0;
           flex-grow: 0;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 figure.event-image {
-  width: 22%;
+  width: 50%;
   margin: 0;
   padding: .5em;
 }
@@ -2795,6 +2797,10 @@ p.website-by a img:active {
   }
   form.contact-form input {
     width: 70%;
+  }
+  /* * * * EVENT PAGE * * * */
+  figure.event-image {
+    width: 22%;
   }
   /* * * * FOOTER * * * */
   footer {

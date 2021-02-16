@@ -537,11 +537,12 @@ form.contact-form .button-box .frizz-button{
 .events-gallery, .commissions-gallery{
 	 @include flexbox($placeItems: flex-start, $placeContent: space-around, $direction: row);
 	 width: 100%;
+	 flex-wrap: wrap;
 
 }
 
 figure.event-image{
-	width: 22%;
+	width: 50%;
 	margin: 0;
 	padding: .5em;
 }
