@@ -248,8 +248,6 @@ section.about-page, section.news{
 }
 
 .about, section.news .news-block{
-	// @include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
-	// width: 85%;
     padding: 15px;
     background: #FFF;
     border: 2px solid $secondary;
@@ -312,17 +310,9 @@ section.about-page, section.news{
 	box-shadow: 1px 1px 5px $secondary, -1px -1px 5px $secondary;
 }
 
-// .unselected{
-// 	display: none;
-// }
-
 .second-item, .third-item{
 	display: none;
 }
-
-// .selected{
-// 	display: block;
-// }
 
 .product-images-block{
 	display: flex;
