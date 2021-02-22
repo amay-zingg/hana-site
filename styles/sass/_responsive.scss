@@ -112,11 +112,11 @@
 
 	/* * * * SECTIONS * * * */
 	.news-block{
-		@include flexbox($placeItems: flex-start, $placeContent: space-between, $direction: row, $wrap: wrap);
+		@include flexbox($placeItems: flex-start, $placeContent: space-around, $direction: row, $wrap: wrap);
 	}
 
-	.twitter, .news-container{
-		width: 50%;
+	.twitter-reviews, .twitter-posts{
+		width: 48%;
 	}
 
 	/* * * * ABOUT * * * */

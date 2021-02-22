@@ -1102,7 +1102,7 @@ section.books {
   text-align: center;
 }
 
-.twitter, .news-container {
+.twitter-posts, .twitter-reviews {
   width: 100%;
 }
 
@@ -1650,71 +1650,6 @@ form.contact-form .button-box .frizz-button {
 }
 
 /* * * * EVENTS PAGE * * * */
-.event-section {
-  width: 400px;
-  height: 240px;
-  margin-bottom: 1em;
-  border-radius: 15px;
-}
-
-.inner-event-section {
-  background: url(./../assets/bannersPNG/Transparent-Patterns.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 400px;
-  height: 240px;
-}
-
-.inner-event-section.one {
-  background: url(./../assets/events/Banner-Events.jpg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 15px;
-}
-
-.inner-event-section.two {
-  background: url(./../assets/events/Banner-Com.jpg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 15px;
-}
-
-.events-gallery, .commissions-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  place-content: space-around;
-  place-items: flex-start;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.events-gallery h2, .commissions-gallery h2 {
-  width: 100%;
-}
-
-figure.event-image {
-  width: 50%;
-  margin: 0;
-  padding: .5em;
-  text-align: center;
-}
-
 section.reviews {
   margin: 1em 0;
   width: 100%;
@@ -1979,6 +1914,20 @@ section.portfolio .portfolio-section h2 {
   background-size: cover;
 }
 
+.portfolio-section .inner-portfolio-section.six {
+  background: url(./../assets/events/Banner-Events.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-section .inner-portfolio-section.seven {
+  background: url(./../assets/events/Banner-Com.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 h2.section-title {
   text-align: center;
   width: 100%;
@@ -2180,6 +2129,40 @@ h2.section-title {
 
 .writing .links a:hover, .writing .links a:active {
   border-bottom: 2px solid #f79aaa;
+}
+
+/* * * * EVENTS & COMS * * * */
+.events, .commissions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: space-around;
+  place-items: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.events h2, .commissions h2 {
+  width: 100%;
+}
+
+figure.event-image {
+  width: 50%;
+  margin: 0;
+  padding: .5em;
+  text-align: center;
 }
 
 /* * * * * * * * CART PAGE * * * * * * * */
@@ -2584,7 +2567,7 @@ p.website-by a img:active {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    place-content: space-between;
+    place-content: space-around;
     place-items: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2594,8 +2577,8 @@ p.website-by a img:active {
         -ms-flex-positive: 0;
             flex-grow: 0;
   }
-  .twitter, .news-container {
-    width: 50%;
+  .twitter-reviews, .twitter-posts {
+    width: 48%;
   }
   /* * * * ABOUT * * * */
   .about figure {

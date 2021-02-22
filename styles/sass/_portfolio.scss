@@ -72,12 +72,19 @@ section.portfolio .portfolio-section h2{
 	background-size: cover;
 }
 
-// .portfolio-section .inner-portfolio-section.six{
-// 	background: url(../assets/section-headers/Banner-Tattoo.jpg);
-// 	background-repeat: no-repeat;
-// 	background-position: center;
-// 	background-size: cover;
-// }
+.portfolio-section .inner-portfolio-section.six{
+	background: url(./../assets/events/Banner-Events.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.portfolio-section .inner-portfolio-section.seven{
+	background: url(./../assets/events/Banner-Com.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 
 h2.section-title{
 	text-align: center;
@@ -196,4 +203,22 @@ h2.section-title{
 
 .writing .links a:hover, .writing .links a:active{
     border-bottom: 2px solid $secondary;
+}
+
+/* * * * EVENTS & COMS * * * */
+.events, .commissions{
+	 @include flexbox($placeItems: flex-start, $placeContent: space-around, $direction: row);
+	 width: 100%;
+	 flex-wrap: wrap;
+}
+
+.events h2, .commissions h2{
+	width: 100%;
+}
+
+figure.event-image{
+	width: 50%;
+	margin: 0;
+	padding: .5em;
+	text-align: center;
 }
