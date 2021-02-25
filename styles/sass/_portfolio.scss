@@ -73,14 +73,14 @@ section.portfolio .portfolio-section h2{
 }
 
 .portfolio-section .inner-portfolio-section.six{
-	background: url(./../assets/events/Banner-Events.jpg);
+	background: url(./../assets/bannersPNG/Transparent-Events.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 }
 
 .portfolio-section .inner-portfolio-section.seven{
-	background: url(./../assets/events/Banner-Com.jpg);
+	background: url(./../assets/bannersPNG/Transparent-Commissions.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -94,15 +94,14 @@ h2.section-title{
 
 /* * * * PHOTO GALLERIES * * * */
 .gallery{
-	padding: .5em;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
 }
 
 .gallery figure.image-frame{
 	position: relative;
-	width: 90%;
+	width: 95%;
 	padding: 0;
-	margin: 15px;
+	margin: 5px;
 	@include flexbox($placeItems: center, $placeContent: center, $wrap: wrap);
 }
 
@@ -205,20 +204,15 @@ h2.section-title{
     border-bottom: 2px solid $secondary;
 }
 
-/* * * * EVENTS & COMS * * * */
+/* * * * EVENTS & COMMISSIONS * * * */
 .events, .commissions{
-	 @include flexbox($placeItems: flex-start, $placeContent: space-around, $direction: row);
+	 @include flexbox($placeItems: flex-start, $placeContent: center, $direction: row);
 	 width: 100%;
 	 flex-wrap: wrap;
-}
-
-.events h2, .commissions h2{
-	width: 100%;
 }
 
 figure.event-image{
 	width: 50%;
 	margin: 0;
-	padding: .5em;
 	text-align: center;
 }
