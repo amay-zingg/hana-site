@@ -95,6 +95,11 @@ h2.section-title{
 /* * * * PHOTO GALLERIES * * * */
 .gallery{
 	@include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+	text-align: center;
+}
+
+.gallery a.basic-link{
+	display: block;
 }
 
 .gallery figure.image-frame{

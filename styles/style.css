@@ -1952,6 +1952,11 @@ h2.section-title {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+  text-align: center;
+}
+
+.gallery a.basic-link {
+  display: block;
 }
 
 .gallery figure.image-frame {
