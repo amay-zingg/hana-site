@@ -115,13 +115,9 @@ section.books{
 /* * * * REVIEWS HAS OWN SCSS PAGE * * * */
 
 /* * * * NEWS * * * */
-.news-block{
+.news-block, .twitter{
 	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
 	width: 100%;
-}
-
-.twitter{
-	width: 400px;
 }
 
 .news h2{
