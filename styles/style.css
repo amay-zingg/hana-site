@@ -2155,7 +2155,7 @@ h2.section-title {
 }
 
 figure.event-image {
-  width: 50%;
+  width: 100%;
   margin: 0;
   text-align: center;
 }
@@ -2507,6 +2507,18 @@ p.website-by a img:active {
   }
   .social-footer, .copyright {
     width: 50%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .main-image {
+    width: 60%;
+  }
+  .gallery figure.image-frame {
+    width: 42%;
+  }
+  .featured-section-left, .featured-section-right {
+    width: 100%;
   }
 }
 
