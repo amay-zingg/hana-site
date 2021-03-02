@@ -1134,6 +1134,70 @@ section.books {
   padding: 0;
 }
 
+.news-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.event-button-box {
+  width: 100%;
+  border-bottom: 2px solid #f79aaa;
+}
+
+.event-button-box, .event-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.event-button {
+  width: 50%;
+  padding: 1em;
+  background: #f79aaa;
+}
+
+.event-button:hover, .event-button:active {
+  background: #FFF;
+  cursor: pointer;
+}
+
+.event-button.one {
+  border-start-start-radius: 10px;
+}
+
+.event-button.two {
+  border-start-end-radius: 10px;
+}
+
+.twitter {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 /* * * * EVENTS PAGE * * * */
 .news-single.event {
   display: -webkit-box;
@@ -1297,8 +1361,11 @@ section.about-page, section.news {
   padding: 1em;
 }
 
-.about, section.news .news-block {
+.about {
   padding: 15px;
+}
+
+.about, section.news .news-block {
   background: #FFF;
   border: 2px solid #f79aaa;
   border-radius: 15px;

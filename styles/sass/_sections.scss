@@ -159,6 +159,51 @@ section.books{
 	padding: 0;
 }
 
+.news-block{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.event-button-box{
+	width: 100%;
+	border-bottom: 2px solid $secondary;
+}
+
+.event-button-box, .event-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.event-button{
+	width: 50%;
+	padding: 1em;
+	background: $secondary;
+}
+
+.event-button:hover, .event-button:active{
+	background: #FFF;
+	cursor: pointer;
+}
+
+.event-button.one{
+	border-start-start-radius: 10px;
+}
+
+.event-button.two{
+	border-start-end-radius: 10px;
+}
+
+.twitter{
+	flex-direction: column;
+}
+
 /* * * * EVENTS PAGE * * * */
 .news-single.event{
 	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
@@ -243,8 +288,11 @@ section.about-page, section.news{
     padding: 1em;
 }
 
-.about, section.news .news-block{
+.about{
     padding: 15px;
+}
+
+.about, section.news .news-block{
     background: #FFF;
     border: 2px solid $secondary;
     border-radius: 15px;
