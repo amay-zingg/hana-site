@@ -1073,159 +1073,7 @@ section.books {
 }
 
 /* * * * REVIEWS HAS OWN SCSS PAGE * * * */
-/* * * * NEWS * * * */
-.news-block, .twitter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  place-content: center;
-  place-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  width: 100%;
-}
-
-.news h2 {
-  text-align: center;
-}
-
-.twitter-posts, .twitter-reviews {
-  width: 100%;
-}
-
-.news-block .news-container .twitter {
-  float: right;
-}
-
-.news-container .blog {
-  width: 100%;
-  margin-bottom: 1em;
-}
-
-.news-container img {
-  float: left;
-  width: 145px;
-  margin: 0 15px 15px 0;
-  -webkit-box-shadow: 1px 1px 2px black;
-          box-shadow: 1px 1px 2px black;
-  border-radius: 5px;
-}
-
-.news-container h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 2.7rem;
-  border-bottom: 2px solid #f79aaa;
-  font-family: "Chicle", cursive;
-  display: inline-block;
-}
-
-.news-container p {
-  margin: 15px 15px 15px 0;
-  padding: 0;
-}
-
-.news-block {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.event-button-box {
-  width: 100%;
-  border-bottom: 2px solid #f79aaa;
-}
-
-.event-button-box, .event-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.event-button {
-  width: 50%;
-  padding: 1em;
-  background: #f79aaa;
-}
-
-.event-button:hover, .event-button:active {
-  background: #FFF;
-  cursor: pointer;
-}
-
-.event-button.one {
-  border-start-start-radius: 10px;
-}
-
-.event-button.two {
-  border-start-end-radius: 10px;
-}
-
-.twitter {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-/* * * * EVENTS PAGE * * * */
-.news-single.event {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  place-content: center;
-  place-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  margin-bottom: 1em;
-}
-
-.news-single.event img {
-  float: none;
-  display: block;
-  width: 300px;
-  margin: 15px;
-}
-
+/* * * * Blog + Twitter has it's own SCSS page * * * */
 /* * * * FEATURED SECTION * * * */
 .featured-section-full, .featured-collection {
   width: 100%;
@@ -1335,7 +1183,7 @@ section.books {
 }
 
 /* * * * * * * * * * * * * * ABOUT PAGE * * * * * * * * * * * * * * */
-section.about-page, section.news {
+section.about-page {
   margin: 1em 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1363,9 +1211,6 @@ section.about-page, section.news {
 
 .about {
   padding: 15px;
-}
-
-.about, section.news .news-block {
   background: #FFF;
   border: 2px solid #f79aaa;
   border-radius: 15px;
@@ -1712,7 +1557,6 @@ form.contact-form .button-box .frizz-button {
           box-shadow: 1px 1px 2px black;
 }
 
-/* * * * EVENTS PAGE * * * */
 section.reviews {
   margin: 1em 0;
   width: 100%;
@@ -1869,6 +1713,193 @@ section.reviews h2 {
 .photo-credit a:hover,
 .photo-credit a:active {
   border-bottom: 2px solid #f79aaa;
+}
+
+/* * * * NEWS * * * */
+section.news, section.twitter-feed {
+  margin: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  background-image: url(./../assets/backgrounds/Banner-bg.jpg);
+  background-size: cover;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 2px black;
+          box-shadow: 1px 1px 2px black;
+  padding: 1em;
+  text-align: center;
+}
+
+.news-container, .twitter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-content: center;
+  place-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  width: 100%;
+  background: #FFF;
+  border: 2px solid #f79aaa;
+  border-radius: 15px;
+}
+
+/* * * * BUTTONS * * * */
+.event-button-box {
+  width: 100%;
+  border-bottom: 2px solid #f79aaa;
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+}
+
+.event-button-box, .event-button {
+  background: #f79aaa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.event-button {
+  width: 50%;
+  background: #f79aaa;
+}
+
+.event-button a {
+  width: 100%;
+  text-align: center;
+  font-family: "Chicle", cursive;
+  text-shadow: 1px 1px 2px #FFF;
+  letter-spacing: 1px;
+  padding: 1em;
+}
+
+.event-button a:hover, .event-button a:active {
+  text-shadow: 1px 1px 1px #f79aaa;
+}
+
+.event-button:hover, .event-button:active {
+  background: #FFF;
+  cursor: pointer;
+}
+
+.event-button.one {
+  border-start-start-radius: 10px;
+}
+
+.event-button.two {
+  border-start-end-radius: 10px;
+}
+
+/* * * * EVENT BLOCK CONTENT * * * */
+.blog-post-container, .twitter {
+  width: 100%;
+  padding: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.blog-post-single {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.blog-post-single img {
+  float: left;
+  width: 145px;
+  margin: 0 15px 15px 0;
+  -webkit-box-shadow: 1px 1px 2px black;
+          box-shadow: 1px 1px 2px black;
+  border-radius: 5px;
+}
+
+.blog-post-single h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.7rem;
+  border-bottom: 2px solid #f79aaa;
+  font-family: "Chicle", cursive;
+  display: inline-block;
+}
+
+.blog-post-single p {
+  padding: 15px 0 0 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* * * * Responsive Styles * * * */
+@media only screen and (min-width: 900px) {
+  .news-container, .twitter-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    place-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .blog-post-container, .twitter, .twitter-posts, .twitter-reviews {
+    width: 48%;
+  }
 }
 
 /* * * * PORTFOLIO * * * */
@@ -2825,32 +2856,6 @@ p.website-by a img:active {
             flex-grow: 0;
     width: 100%;
     min-height: 425px;
-  }
-  /* * * * SECTIONS * * * */
-  .news-block {
-    width: 48%;
-  }
-  .news-block, .news-container, .twitter {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    place-content: space-around;
-    place-items: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-    width: 100%;
-  }
-  .twitter-reviews, .twitter-posts {
-    width: 48%;
   }
   /* * * * ABOUT * * * */
   .about figure {

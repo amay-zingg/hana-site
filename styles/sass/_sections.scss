@@ -114,108 +114,7 @@ section.books{
 
 /* * * * REVIEWS HAS OWN SCSS PAGE * * * */
 
-/* * * * NEWS * * * */
-.news-block, .twitter{
-	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
-	width: 100%;
-}
-
-.news h2{
-	text-align: center;
-}
-
-.twitter-posts, .twitter-reviews{
-	width: 100%;
-}
-
-.news-block .news-container .twitter{
-	float: right;
-}
-
-.news-container .blog{
-	width: 100%;
-	margin-bottom: 1em;
-}
-
-.news-container img{ 
-	float: left;
-	width: 145px;
-	margin: 0 15px 15px 0;
-	box-shadow: 1px 1px 2px black;
-	border-radius: 5px;
-}
-
-.news-container h3{
-	margin: 0;
-	padding: 0;
-	font-size: 2.7rem;
-	border-bottom: 2px solid $secondary;
-	font-family: $headingFont;
-	display: inline-block;
-}
-
-.news-container p{
-	margin: 15px 15px 15px 0;
-	padding: 0;
-}
-
-.news-block{
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-start;
-}
-
-.event-button-box{
-	width: 100%;
-	border-bottom: 2px solid $secondary;
-}
-
-.event-button-box, .event-button{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0;
-	margin: 0;
-}
-
-.event-button{
-	width: 50%;
-	padding: 1em;
-	background: $secondary;
-}
-
-.event-button:hover, .event-button:active{
-	background: #FFF;
-	cursor: pointer;
-}
-
-.event-button.one{
-	border-start-start-radius: 10px;
-}
-
-.event-button.two{
-	border-start-end-radius: 10px;
-}
-
-.twitter{
-	flex-direction: column;
-}
-
-/* * * * EVENTS PAGE * * * */
-.news-single.event{
-	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
-	margin-bottom: 1em;
-}
-
-.news-single.event img{
-	float: none;
-	display: block;
-	width: 300px;
-	margin: 15px;
-}
+/* * * * Blog + Twitter has it's own SCSS page * * * */
 
 /* * * * FEATURED SECTION * * * */
 .featured-section-full, .featured-collection {
@@ -278,7 +177,7 @@ section.books{
 }
 
 /* * * * * * * * * * * * * * ABOUT PAGE * * * * * * * * * * * * * * */
-section.about-page, section.news{
+section.about-page{
 	margin: 1em 0;
 	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
 	background-image: url(./../assets/backgrounds/Banner-bg.jpg);
@@ -289,10 +188,7 @@ section.about-page, section.news{
 }
 
 .about{
-    padding: 15px;
-}
-
-.about, section.news .news-block{
+	padding: 15px;
     background: #FFF;
     border: 2px solid $secondary;
     border-radius: 15px;
@@ -566,20 +462,3 @@ form.contact-form .button-box .frizz-button{
 	width: 30%;
 	box-shadow: 1px 1px 2px black;
 }
-
-/* * * * EVENTS PAGE * * * */
-// .event-section{
-// 	width: 400px;
-//     height: 240px;
-// 	margin-bottom: 1em;
-// 	border-radius: 15px;
-// }
-
-// .inner-event-section {
-//     background: url(./../assets/bannersPNG/Transparent-Patterns.png);
-//     background-size: contain;
-//     background-position: center;
-// 	background-repeat: no-repeat;
-// 	width: 400px;
-//     height: 240px;
-// }

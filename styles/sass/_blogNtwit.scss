@@ -1,0 +1,113 @@
+/* * * * NEWS * * * */
+section.news, section.twitter-feed{
+	margin: 1em 0;
+	@include flexbox($placeItems: center, $placeContent: center, $direction: column, $wrap: wrap);
+	background-image: url(./../assets/backgrounds/Banner-bg.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+    padding: 1em;
+    text-align: center;
+}
+
+.news-container, .twitter-container{
+    @include flexbox($placeItems: flex-start, $placeContent: center, $direction: column, $wrap: wrap);
+	width: 100%;
+    background: #FFF;
+    border: 2px solid $secondary;
+    border-radius: 15px;
+}
+
+/* * * * BUTTONS * * * */
+.event-button-box{
+	width: 100%;
+	border-bottom: 2px solid $secondary;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+}
+
+.event-button-box, .event-button{
+    background: $secondary;
+    @include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+	padding: 0;
+	margin: 0;
+}
+
+.event-button{
+	width: 50%;
+	background: $secondary;
+}
+
+.event-button a{
+    width: 100%;
+    text-align: center;
+    font-family: $headingFont;
+    text-shadow: 1px 1px 2px #FFF;
+    letter-spacing: 1px;
+    padding: 1em;
+}
+
+ .event-button a:hover, .event-button a:active{
+    text-shadow: 1px 1px 1px $secondary;
+}
+
+.event-button:hover, .event-button:active{
+	background: #FFF;
+	cursor: pointer;
+}
+
+.event-button.one{
+	border-start-start-radius: 10px;
+}
+
+.event-button.two{
+	border-start-end-radius: 10px;
+}
+
+/* * * * EVENT BLOCK CONTENT * * * */
+.blog-post-container, .twitter{
+	width: 100%;
+    padding: .5em;
+    @include flexbox($placeItems: center, $placeContent: center, $direction: row, $wrap: wrap);
+}
+
+.blog-post-single{
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.blog-post-single img{ 
+	float: left;
+	width: 145px;
+	margin: 0 15px 15px 0;
+	box-shadow: 1px 1px 2px black;
+	border-radius: 5px;
+}
+
+.blog-post-single h3{
+	margin: 0;
+	padding: 0;
+	font-size: 2.7rem;
+	border-bottom: 2px solid $secondary;
+	font-family: $headingFont;
+	display: inline-block;
+}
+
+.blog-post-single p{
+	padding: 15px 0 0 0;
+    margin: 0;
+    text-align: left;
+}
+
+/* * * * Responsive Styles * * * */
+@media only screen and (min-width: 900px){
+
+    .news-container, .twitter-container{
+        @include flexbox($placeContent: space-around, $direction: row, $wrap: wrap);
+    }
+
+	.blog-post-container, .twitter, .twitter-posts, .twitter-reviews{
+        width: 48%;
+    }
+
+}

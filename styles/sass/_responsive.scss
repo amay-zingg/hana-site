@@ -273,19 +273,6 @@
 		min-height: 425px;
 	}
 
-	/* * * * SECTIONS * * * */
-	.news-block{
-		width: 48%;
-	}
-
-	.news-block, .news-container, .twitter{
-		@include flexbox($placeItems: flex-start, $placeContent: space-around, $direction: row, $wrap: wrap);
-		width: 100%;
-	}
-
-	.twitter-reviews, .twitter-posts{
-		width: 48%;
-	}
 
 	/* * * * ABOUT * * * */
 	.about figure{
