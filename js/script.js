@@ -25,6 +25,7 @@ const navMenu = function () {
     });
 };
 
+
 // * * * * INIT PIECES
 init = function () {
     scroll();
@@ -34,4 +35,7 @@ init = function () {
 // * * * * DOCUMENT READY
 $(() => {
     init();
+
+   
+
 }); // * * * * END OF DOCUMENT READY

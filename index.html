@@ -337,7 +337,7 @@
                     <img src="./assets/pattern/PatternBone-Full.jpg"
                         alt="Pattern Print Blue Bones | Frizz Kid Art">
                     <h3>Pattern Print Art</h3>
-                    <p class="blog-post-intro">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The process has been so delightful, and it’s a way for me ...
+                    <p class="blog-post-first" id="blog-post-first">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The process has been so delightful, and it’s a way for me ...
                     </p>
                     <div class="button-box">
                         <a href="blog-article.html" class="frizz-button">Read More</a>
@@ -347,7 +347,7 @@
                 <div class="blog-post-single">
                     <img src="./assets/pattern/PatternBone-Full.jpg" alt="Pattern Print Blue Bones | Frizz Kid Art">
                     <h3>Pattern Print Art</h3>
-                    <p class="blog-post-intro">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand
+                    <p>My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand
                         drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The
                         process has been so delightful, and it’s a way for me ...
                     </p>
@@ -441,13 +441,94 @@
 
     </footer>
     
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
     <script>
         // * * * * DOCUMENT READY
             $(() => {
-                console.log("meow");
+
+
+                // * * * * TRUNCATE
+                $(".blog-post-first").slice(0).addClass("truncate");
+
+                var truncate = function (elem, limit, after) {
+
+                    // Make sure an element and number of items to truncate is provided
+                    if (!elem || !limit) return;
+
+                    // Get the inner content of the element
+                    var content = elem.textContent.trim();
+
+                    // Convert the content into an array of words
+                    // Remove any words above the limit
+                    content = content.split(' ').slice(0, limit);
+
+                    // Convert the array of words back into a string
+                    // If there's content to add after it, add it
+                    content = content.join(' ') + (after ? after : '');
+
+                    // Inject the content back into the DOM
+                    elem.textContent = content;
+
+                };
+
+                var elem = document.querySelector('.truncate');
+                truncate(elem, 100, '...');
+               
+
+                /* * * * I'm confused * * * */
+
+                // $("p.blog-post-intro").slice(0).css('background', 'yellow');
+                // $(".blog-post-first").slice(0).addClass("truncate");
+
+                // $('input[type="submit"]').click(function () {
+                //     var words = $('#name').val().split(' ');
+                //     alert(words.length);
+                // });
+
+                // $("button").scroll(function () {
+                //     var words = $.trim($("textarea").val()).split(" ");
+                //     alert(words.length);
+                // });
+
+
+                // const truncate = function() {
+                //     console.log("meow");
+
+                //     $(document).on("scroll", function (event) {
+                //         // console.log("meow");
+                //         if (!$(event.target).closest(".photo-border").length) {
+                //             $(".blog-post-first").hide();
+                //         }
+                //     });
+
+                //     $(".photo-border").scroll(function () {
+                //         $(".blog-post-first").addClass("slow");
+                //     });
+
+                    // var str = $('.blog-post-first').val(),
+                    //     count = str.split(' ').length;
+                    // var numOfWords = $('#blog-post-first').val().replace(/^[\s,.;]+/, "").replace(/[\s,.;]+$/, "").split(/[\s,.;]+/).length;
+                }; 
+
+                // truncate();
+
+                // let title = "This is your title";
+                // let shortText = jQuery.trim(title).substring(0, 10)
+                //     .trim(this) + "...";
+
+                // var title = "This is your title";
+
+                // var shortText = jQuery.trim(title).substring(0, 10)
+                //     .split(" ").slice(0, -1).join(" ") + "...";
+
+                // $('.blog-post-intro').append('before: ' + title + '<br>' + 'after: ' + shortText);
+            
+
+
+                // console.log("meow");
                 const banner = function () {
                     let $banner = $('.announcement-banner').marquee();
                     let $banner2 = $('.responsive-announcement-banner').marquee();
@@ -456,7 +537,7 @@
 
                 // * * * * SMOOTH SCROLLING ON SAME PAGE LINKS
                 const scroll = function () {
-                    console.log('meow');
+                    // console.log('meow');
                     $("a[href^=\\#]").click(function (e) {
                         e.preventDefault();
                         var dest = $(this).attr('href');
@@ -473,7 +554,7 @@
                 const navMenu = function () {
                     // * * * * MENU CLICK OUTSIDE
                     $(document).on("click", function (event) {
-                        console.log("meow");
+                        // console.log("meow");
                         if (!$(event.target).closest(".responsive-nav-button").length) {
                             $(".responsive-nav").slideUp("fast");
                         }
@@ -487,7 +568,7 @@
 
                  // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
                 const photoSwitch = function () {
-                    console.log("meow");
+                    // console.log("meow");
                     const featuredPhoto = document.querySelector('.featured-item');
                     const secondPhoto = document.querySelector('.second-item');
                     const thirdPhoto = document.querySelector('.third-item');
@@ -500,7 +581,7 @@
                     onPageLoad();
 
                     document.querySelector('.select-featured-photo').addEventListener('click', function () {
-                        console.log("meep");
+                        // console.log("meep");
                         featuredPhoto.classList.add('selected');
                         featuredPhoto.classList.remove('unselected');
                         secondPhoto.classList.add('unselected');
@@ -510,7 +591,7 @@
                     });
 
                     document.querySelector('.select-second-photo').addEventListener('click', function () {
-                        console.log("morp");
+                        // console.log("morp");
                         featuredPhoto.classList.add('unselected');
                         featuredPhoto.classList.remove('selected');
                         secondPhoto.classList.add('selected');
@@ -520,7 +601,7 @@
                     });
 
                     document.querySelector('.select-third-photo').addEventListener('click', function () {
-                        console.log("xoxo");
+                        // console.log("xoxo");
                         featuredPhoto.classList.add('unselected');
                         featuredPhoto.classList.remove('selected');
                         secondPhoto.classList.add('unselected');
@@ -532,7 +613,8 @@
                 photoSwitch();
             });
 
-    
+            
+
     </script>
     <!-- <script src="./js/photo-switch.js" type="text/javascript" charset="utf-8"></script> -->
     

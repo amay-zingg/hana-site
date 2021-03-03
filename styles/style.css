@@ -1073,7 +1073,7 @@ section.books {
 }
 
 /* * * * REVIEWS HAS OWN SCSS PAGE * * * */
-/* * * * Blog + Twitter has it's own SCSS page * * * */
+/* * * * Blog + Twitter (blogNtwit) SCSS PAGE * * * */
 /* * * * FEATURED SECTION * * * */
 .featured-section-full, .featured-collection {
   width: 100%;
@@ -1128,7 +1128,6 @@ section.books {
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 2px black;
           box-shadow: 1px 1px 2px black;
-  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -1852,6 +1851,7 @@ section.news, section.twitter-feed {
 .blog-post-single {
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .blog-post-single img {
@@ -1866,7 +1866,7 @@ section.news, section.twitter-feed {
 .blog-post-single h3 {
   margin: 0;
   padding: 0;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   border-bottom: 2px solid #f79aaa;
   font-family: "Chicle", cursive;
   display: inline-block;
@@ -1875,7 +1875,7 @@ section.news, section.twitter-feed {
 .blog-post-single p {
   padding: 15px 0 0 0;
   margin: 0;
-  text-align: left;
+  font-size: 2rem;
 }
 
 /* * * * Responsive Styles * * * */
