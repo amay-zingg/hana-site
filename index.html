@@ -337,7 +337,7 @@
                     <img src="./assets/pattern/PatternBone-Full.jpg"
                         alt="Pattern Print Blue Bones | Frizz Kid Art">
                     <h3>Pattern Print Art</h3>
-                    <p class="blog-post-first" id="blog-post-first">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The process has been so delightful, and it’s a way for me ...
+                    <p class="blog-post-first">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The process has been so delightful, and it’s a way for me
                     </p>
                     <div class="button-box">
                         <a href="blog-article.html" class="frizz-button">Read More</a>
@@ -347,9 +347,9 @@
                 <div class="blog-post-single">
                     <img src="./assets/pattern/PatternBone-Full.jpg" alt="Pattern Print Blue Bones | Frizz Kid Art">
                     <h3>Pattern Print Art</h3>
-                    <p>My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand
+                    <p class="blog-post-second">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand
                         drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The
-                        process has been so delightful, and it’s a way for me ...
+                        process has been so delightful, and it’s a way for me
                     </p>
                     <div class="button-box">
                         <a href="blog-article.html" class="frizz-button">Read More</a>
@@ -450,11 +450,8 @@
             $(() => {
 
 
-                // * * * * TRUNCATE
-                $(".blog-post-first").slice(0).addClass("truncate");
-
+                // * * * * TRUNCATE - trying to figure out why it only works for one not both paragraphs
                 var truncate = function (elem, limit, after) {
-
                     // Make sure an element and number of items to truncate is provided
                     if (!elem || !limit) return;
 
@@ -474,61 +471,28 @@
 
                 };
 
-                var elem = document.querySelector('.truncate');
-                truncate(elem, 100, '...');
+                var elem = document.querySelector('.blog-post-first');
+                truncate(elem, 30, '...');
+
+
+
+                var truncate2 = function (elem2, limit, after) {
+                    if (!elem2 || !limit) return;
+
+                    var content = elem2.textContent.trim();
+
+                    content = content.split(' ').slice(0, limit);
+
+                    content = content.join(' ') + (after ? after : '');
+
+                    elem2.textContent = content;
+                };
+
+                var elem2 = document.querySelector('.blog-post-second');
+                truncate2(elem2, 52, '...');
                
 
-                /* * * * I'm confused * * * */
-
-                // $("p.blog-post-intro").slice(0).css('background', 'yellow');
-                // $(".blog-post-first").slice(0).addClass("truncate");
-
-                // $('input[type="submit"]').click(function () {
-                //     var words = $('#name').val().split(' ');
-                //     alert(words.length);
-                // });
-
-                // $("button").scroll(function () {
-                //     var words = $.trim($("textarea").val()).split(" ");
-                //     alert(words.length);
-                // });
-
-
-                // const truncate = function() {
-                //     console.log("meow");
-
-                //     $(document).on("scroll", function (event) {
-                //         // console.log("meow");
-                //         if (!$(event.target).closest(".photo-border").length) {
-                //             $(".blog-post-first").hide();
-                //         }
-                //     });
-
-                //     $(".photo-border").scroll(function () {
-                //         $(".blog-post-first").addClass("slow");
-                //     });
-
-                    // var str = $('.blog-post-first').val(),
-                    //     count = str.split(' ').length;
-                    // var numOfWords = $('#blog-post-first').val().replace(/^[\s,.;]+/, "").replace(/[\s,.;]+$/, "").split(/[\s,.;]+/).length;
-                }; 
-
-                // truncate();
-
-                // let title = "This is your title";
-                // let shortText = jQuery.trim(title).substring(0, 10)
-                //     .trim(this) + "...";
-
-                // var title = "This is your title";
-
-                // var shortText = jQuery.trim(title).substring(0, 10)
-                //     .split(" ").slice(0, -1).join(" ") + "...";
-
-                // $('.blog-post-intro').append('before: ' + title + '<br>' + 'after: ' + shortText);
-            
-
-
-                // console.log("meow");
+                // * * * * MARQUEE
                 const banner = function () {
                     let $banner = $('.announcement-banner').marquee();
                     let $banner2 = $('.responsive-announcement-banner').marquee();
