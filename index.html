@@ -333,11 +333,11 @@
 
             <div class="blog-post-container">
 
-                <div class="blog-post-single">
+                <!-- <div class="blog-post-single">
                     <img src="./assets/pattern/PatternBone-Full.jpg"
                         alt="Pattern Print Blue Bones | Frizz Kid Art">
                     <h3>Pattern Print Art</h3>
-                    <p class="blog-post-first">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The process has been so delightful, and it’s a way for me
+                    <p class="blog-post">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The process has been so delightful, and it’s a way for me
                     </p>
                     <div class="button-box">
                         <a href="blog-article.html" class="frizz-button">Read More</a>
@@ -347,14 +347,14 @@
                 <div class="blog-post-single">
                     <img src="./assets/pattern/PatternBone-Full.jpg" alt="Pattern Print Blue Bones | Frizz Kid Art">
                     <h3>Pattern Print Art</h3>
-                    <p class="blog-post-second">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand
+                    <p class="blog-post">My pattern series is the newest series I’ve been working on. It started as a way to do a therapeutic freehand
                         drawing during the mind-numbingly boring pandemic isolation that so many of us have been dealing with. The
                         process has been so delightful, and it’s a way for me
                     </p>
                     <div class="button-box">
                         <a href="blog-article.html" class="frizz-button">Read More</a>
                     </div>
-                </div>
+                </div> -->
             </div>
     
             <div id="twitter" class="twitter">
@@ -441,146 +441,8 @@
 
     </footer>
     
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
-    <script>
-        // * * * * DOCUMENT READY
-            $(() => {
-
-
-                // * * * * TRUNCATE - trying to figure out why it only works for one not both paragraphs
-                var truncate = function (elem, limit, after) {
-                    // Make sure an element and number of items to truncate is provided
-                    if (!elem || !limit) return;
-
-                    // Get the inner content of the element
-                    var content = elem.textContent.trim();
-
-                    // Convert the content into an array of words
-                    // Remove any words above the limit
-                    content = content.split(' ').slice(0, limit);
-
-                    // Convert the array of words back into a string
-                    // If there's content to add after it, add it
-                    content = content.join(' ') + (after ? after : '');
-
-                    // Inject the content back into the DOM
-                    elem.textContent = content;
-
-                };
-
-                var elem = document.querySelector('.blog-post-first');
-                truncate(elem, 30, '...');
-
-
-
-                var truncate2 = function (elem2, limit, after) {
-                    if (!elem2 || !limit) return;
-
-                    var content = elem2.textContent.trim();
-
-                    content = content.split(' ').slice(0, limit);
-
-                    content = content.join(' ') + (after ? after : '');
-
-                    elem2.textContent = content;
-                };
-
-                var elem2 = document.querySelector('.blog-post-second');
-                truncate2(elem2, 52, '...');
-               
-
-                // * * * * MARQUEE
-                const banner = function () {
-                    let $banner = $('.announcement-banner').marquee();
-                    let $banner2 = $('.responsive-announcement-banner').marquee();
-                };
-                banner();
-
-                // * * * * SMOOTH SCROLLING ON SAME PAGE LINKS
-                const scroll = function () {
-                    // console.log('meow');
-                    $("a[href^=\\#]").click(function (e) {
-                        e.preventDefault();
-                        var dest = $(this).attr('href');
-                        console.log(dest);
-                        $('html,body').animate(
-                            { scrollTop: $(dest).offset().top }
-                            , 'slow'
-                        );
-                    });
-                };
-                scroll();
-
-                // * * * * RESPONSIVE MENU
-                const navMenu = function () {
-                    // * * * * MENU CLICK OUTSIDE
-                    $(document).on("click", function (event) {
-                        // console.log("meow");
-                        if (!$(event.target).closest(".responsive-nav-button").length) {
-                            $(".responsive-nav").slideUp("fast");
-                        }
-                    });
-
-                    $(".responsive-nav-button").click(function () {
-                        $(".responsive-nav").toggle("slow");
-                    });
-                };
-                navMenu();
-
-                 // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
-                const photoSwitch = function () {
-                    // console.log("meow");
-                    const featuredPhoto = document.querySelector('.featured-item');
-                    const secondPhoto = document.querySelector('.second-item');
-                    const thirdPhoto = document.querySelector('.third-item');
-
-                    function onPageLoad() {
-                        secondPhoto.classList.add('unselected');
-                        thirdPhoto.classList.add('unselected');
-                    };
-
-                    onPageLoad();
-
-                    document.querySelector('.select-featured-photo').addEventListener('click', function () {
-                        // console.log("meep");
-                        featuredPhoto.classList.add('selected');
-                        featuredPhoto.classList.remove('unselected');
-                        secondPhoto.classList.add('unselected');
-                        secondPhoto.classList.remove('selected');
-                        thirdPhoto.classList.add('unselected');
-                        thirdPhoto.classList.remove('selected');
-                    });
-
-                    document.querySelector('.select-second-photo').addEventListener('click', function () {
-                        // console.log("morp");
-                        featuredPhoto.classList.add('unselected');
-                        featuredPhoto.classList.remove('selected');
-                        secondPhoto.classList.add('selected');
-                        secondPhoto.classList.remove('unselected');
-                        thirdPhoto.classList.add('unselected');
-                        thirdPhoto.classList.remove('selected');
-                    });
-
-                    document.querySelector('.select-third-photo').addEventListener('click', function () {
-                        // console.log("xoxo");
-                        featuredPhoto.classList.add('unselected');
-                        featuredPhoto.classList.remove('selected');
-                        secondPhoto.classList.add('unselected');
-                        secondPhoto.classList.remove('selected');
-                        thirdPhoto.classList.add('selected');
-                        thirdPhoto.classList.remove('unselected');
-                    });
-                };
-                photoSwitch();
-            });
-
-            
-
-    </script>
-    <!-- <script src="./js/photo-switch.js" type="text/javascript" charset="utf-8"></script> -->
-    
+    <script src="/js/script.js"></script>
 </body>
 </html>
