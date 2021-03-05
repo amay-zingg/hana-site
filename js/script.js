@@ -73,10 +73,26 @@ const displayBlogPost = () => {
 
 // * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
 // * * * * MARQUEE
-    const banner = function () {
-        let $banner = $('.announcement-banner').marquee();
-        let $banner2 = $('.responsive-announcement-banner').marquee();
-    };
+function banner() {
+
+    let $banner = $('.announcement-banner');
+    let $banner2 = $('.responsive-announcement-banner');
+    let $banner3 = $('.announcement-banner').marquee();
+    let $banner4 = $('.responsive-announcement-banner').marquee();
+
+    return ($banner || $banner2 ? $banner3 || $banner4 : '');
+}    
+
+// function banner() {
+//     let $banner = $('.announcement-banner');
+//     let $banner2 = $('.responsive-announcement-banner');
+//     let $banner3 = $('.announcement-banner').marquee();
+//     let $banner4 = $('.responsive-announcement-banner').marquee();
+
+//     if ($banner) { return $banner3; }
+//     else if ($banner2) { return $banner4; }
+//     else { return null; }
+// }
 
     // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
     const photoSwitch = function () {
@@ -124,7 +140,7 @@ const displayBlogPost = () => {
 init = function () {
     scroll();
     navMenu();
-    // banner();
+    banner();
     // photoSwitch();
     displayBlogPost();
 };
