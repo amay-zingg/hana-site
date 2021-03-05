@@ -69,19 +69,35 @@ const displayBlogPost = () => {
     $(".blog-post-container").append(blogPost)
 }
 
+// * * * * Moved to init
 // displayBlogPost();
 
 // * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
 // * * * * MARQUEE
+// function banner() {
+
+//     let $banner = $('.announcement-banner');
+//     let $banner2 = $('.responsive-announcement-banner');
+//     let $banner3 = $('.announcement-banner').marquee();
+//     let $banner4 = $('.responsive-announcement-banner').marquee();
+
+//     return ($banner || $banner2 ? $banner3 || $banner4 : '');
+// }    
+
 function banner() {
-
-    let $banner = $('.announcement-banner');
-    let $banner2 = $('.responsive-announcement-banner');
     let $banner3 = $('.announcement-banner').marquee();
-    let $banner4 = $('.responsive-announcement-banner').marquee();
-
-    return ($banner || $banner2 ? $banner3 || $banner4 : '');
-}    
+    
+    // if index.html exists in the url
+    if (window.location.href.indexOf('index.html') > -1) {
+        // select the p by its id and hide it or - 
+        $banner3.css('visibility', 'visible');
+    }
+    else {
+        // show it
+        $banner3.css('visibility', 'hidden');
+    }
+}
+    
 
 // function banner() {
 //     let $banner = $('.announcement-banner');
