@@ -74,6 +74,18 @@ const displayBlogPost = () => {
 
 // * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
 // * * * * MARQUEE
+function banner() {
+    // if index.html exists in the url
+    if (window.location.href.indexOf('index.html') > -1) {
+        // select the p by its id and hide it or - 
+        $('.announcement-banner').css('visibility', 'visible');
+    }
+    else {
+        // show it
+        $('.announcement-banner').marquee().css('visibility', 'hidden');
+    }
+}
+
 // function banner() {
 
 //     let $banner = $('.announcement-banner');
@@ -83,21 +95,6 @@ const displayBlogPost = () => {
 
 //     return ($banner || $banner2 ? $banner3 || $banner4 : '');
 // }    
-
-function banner() {
-    let $banner3 = $('.announcement-banner').marquee();
-    
-    // if index.html exists in the url
-    if (window.location.href.indexOf('index.html') > -1) {
-        // select the p by its id and hide it or - 
-        $banner3.css('visibility', 'visible');
-    }
-    else {
-        // show it
-        $banner3.css('visibility', 'hidden');
-    }
-}
-    
 
 // function banner() {
 //     let $banner = $('.announcement-banner');
