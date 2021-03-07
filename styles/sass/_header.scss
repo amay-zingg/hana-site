@@ -4,6 +4,9 @@
 	padding: 10px 15px;
 	margin: 0;
 	overflow: hidden;
+  	position:relative;
+	height:60px;
+  	width:100%;
 }
 
 .announcement-banner{
@@ -12,6 +15,15 @@
 
 .responsive-announcement-banner{
 	margin: 1em;
+}
+
+.announcement-banner .announcement{
+	cursor:pointer;
+	overflow:hidden;
+	position:absolute;
+	left:10px;
+	margin-right:10px;
+	top:10px;
 }
 
 header {

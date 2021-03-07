@@ -74,17 +74,60 @@ const displayBlogPost = () => {
 
 // * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
 // * * * * MARQUEE
-function banner() {
-    // if index.html exists in the url
-    if (window.location.href.indexOf('index.html') > -1) {
-        // select the p by its id and hide it or - 
-        $('.announcement-banner').css('visibility', 'visible');
+// function banner() {
+//     // if index.html exists in the url
+//     if (window.location.href.indexOf('index.html') > -1) {
+//         // select the p by its id and hide it or - 
+//         $('.announcement-banner').css('visibility', 'visible');
+//     }
+//     else {
+//         // show it
+//         $('.announcement-banner').marquee().css('visibility', 'hidden');
+//     }
+// }
+
+function marquee(a, b) {
+    var width = b.width();
+    var start_pos = a.width();
+    var end_pos = -width;
+
+    function scroll() {
+        if (b.position().left <= -width) {
+            b.css('left', start_pos);
+            scroll();
+        }
+        else {
+            time = (parseInt(b.position().left, 10) - end_pos) *
+                (10000 / (start_pos - end_pos)); // Increase or decrease speed by changing value 10000
+            b.animate({
+                'left': -width
+            }, time, 'linear', function() {
+                scroll();
+            });
+        }
     }
-    else {
-        // show it
-        $('.announcement-banner').marquee().css('visibility', 'hidden');
-    }
+
+    b.css({
+        'width': width,
+        'left': start_pos
+    });
+    scroll(a, b);
+    
+    b.mouseenter(function() {     // Remove these lines
+        b.stop();                 //
+        b.clearQueue();           // if you don't want
+    });                           //
+    b.mouseleave(function() {     // marquee to pause
+        scroll(a, b);             //
+    });                           // on mouse over
+    
 }
+
+
+
+// $(document).ready(function() {
+//     marquee($('.announcement-banner'), $('.announcement'));  //Enter name of container element & marquee element
+// });
 
 // function banner() {
 
@@ -153,13 +196,15 @@ function banner() {
 init = function () {
     scroll();
     navMenu();
-    banner();
+    // banner();
     // photoSwitch();
     displayBlogPost();
+
+    
 };
 
 // * * * * DOCUMENT READY
 $(() => {
     init();
-
+    marquee($('.announcement-banner'), $('.announcement'));  //Enter name of container element & marquee element
 }); // * * * * END OF DOCUMENT READY
