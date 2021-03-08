@@ -74,31 +74,19 @@ const displayBlogPost = () => {
 
 // * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
 // * * * * MARQUEE
-// function banner() {
-//     // if index.html exists in the url
-//     if (window.location.href.indexOf('index.html') > -1) {
-//         // select the p by its id and hide it or - 
-//         $('.announcement-banner').css('visibility', 'visible');
-//     }
-//     else {
-//         // show it
-//         $('.announcement-banner').marquee().css('visibility', 'hidden');
-//     }
-// }
-
 function marquee(a, b) {
     var width = b.width();
-    var start_pos = a.width();
-    var end_pos = -width;
+    var start_position = a.width();
+    var end_position = -width;
 
     function scroll() {
         if (b.position().left <= -width) {
-            b.css('left', start_pos);
+            b.css('left', start_position);
             scroll();
         }
         else {
-            time = (parseInt(b.position().left, 10) - end_pos) *
-                (10000 / (start_pos - end_pos)); // Increase or decrease speed by changing value 10000
+            time = (parseInt(b.position().left, 10) - end_position) *
+                (9000 / (start_position - end_position));
             b.animate({
                 'left': -width
             }, time, 'linear', function() {
@@ -109,46 +97,18 @@ function marquee(a, b) {
 
     b.css({
         'width': width,
-        'left': start_pos
+        'left': start_position
     });
     scroll(a, b);
     
-    b.mouseenter(function() {     // Remove these lines
-        b.stop();                 //
-        b.clearQueue();           // if you don't want
-    });                           //
-    b.mouseleave(function() {     // marquee to pause
-        scroll(a, b);             //
-    });                           // on mouse over
-    
+    b.mouseenter(function() {    
+        b.stop();                 
+        b.clearQueue();           
+    });                           
+    b.mouseleave(function() {     
+        scroll(a, b);             
+    });                           
 }
-
-
-
-// $(document).ready(function() {
-//     marquee($('.announcement-banner'), $('.announcement'));  //Enter name of container element & marquee element
-// });
-
-// function banner() {
-
-//     let $banner = $('.announcement-banner');
-//     let $banner2 = $('.responsive-announcement-banner');
-//     let $banner3 = $('.announcement-banner').marquee();
-//     let $banner4 = $('.responsive-announcement-banner').marquee();
-
-//     return ($banner || $banner2 ? $banner3 || $banner4 : '');
-// }    
-
-// function banner() {
-//     let $banner = $('.announcement-banner');
-//     let $banner2 = $('.responsive-announcement-banner');
-//     let $banner3 = $('.announcement-banner').marquee();
-//     let $banner4 = $('.responsive-announcement-banner').marquee();
-
-//     if ($banner) { return $banner3; }
-//     else if ($banner2) { return $banner4; }
-//     else { return null; }
-// }
 
     // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
     const photoSwitch = function () {
@@ -206,5 +166,6 @@ init = function () {
 // * * * * DOCUMENT READY
 $(() => {
     init();
-    marquee($('.announcement-banner'), $('.announcement'));  //Enter name of container element & marquee element
+    // marquee($('.announcement-banner'), $('.announcement')); 
+    marquee($('.responsive-announcement-banner'), $('.announcement'));
 }); // * * * * END OF DOCUMENT READY

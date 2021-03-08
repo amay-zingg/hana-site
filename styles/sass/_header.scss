@@ -13,17 +13,19 @@
 	display: none;
 }
 
-.responsive-announcement-banner{
-	margin: 1em;
-}
+// .responsive-announcement-banner{
+// 	margin: 1em;
+// }
 
-.announcement-banner .announcement{
+.announcement-banner .announcement, 
+.responsive-announcement-banner .announcement{
 	cursor:pointer;
 	overflow:hidden;
 	position:absolute;
 	left:10px;
 	margin-right:10px;
 	top:10px;
+	z-index: 30;
 }
 
 header {
