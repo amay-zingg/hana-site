@@ -86,7 +86,7 @@ function marquee(a, b) {
         }
         else {
             time = (parseInt(b.position().left, 10) - end_position) *
-                (9000 / (start_position - end_position));
+                (15000 / (start_position - end_position));
             b.animate({
                 'left': -width
             }, time, 'linear', function() {
@@ -109,6 +109,10 @@ function marquee(a, b) {
         scroll(a, b);             
     });                           
 }
+// * * * * I borrowed this code to understand it's divine structure
+// * * * * http://jsfiddle.net/vivekw/pHNpk/2/
+// * * * * https://www.w3docs.com/snippets/css/how-to-have-the-marquee-effect-without-using-the-marquee-tag-with-css-javascript-and-jquery.html
+// https://www.w3docs.com/tools/code-editor/2121
 
     // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
     const photoSwitch = function () {
@@ -159,13 +163,12 @@ init = function () {
     // banner();
     // photoSwitch();
     displayBlogPost();
-
+    // marquee($('.announcement-banner'), $('.announcement'));
     
 };
 
 // * * * * DOCUMENT READY
 $(() => {
     init();
-    // marquee($('.announcement-banner'), $('.announcement')); 
-    marquee($('.responsive-announcement-banner'), $('.announcement'));
+    
 }); // * * * * END OF DOCUMENT READY

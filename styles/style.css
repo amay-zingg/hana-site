@@ -726,6 +726,17 @@ nav.main-menu {
   display: none;
 }
 
+/* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
+@media only screen and (min-width: 900px) {
+  /* * * * ANNOUNCEMENT BANNER + RESPONSIVE NAVIGATION * * * */
+  #responsive, nav.responsive-nav {
+    display: none;
+  }
+  .announcement-banner {
+    display: block;
+  }
+}
+
 /* * * * Box in the box - used on About, Blog, Contact, News * * * */
 .content-box {
   margin: 1em 0;
@@ -2733,13 +2744,6 @@ p.website-by a img:active {
   .wrapper {
     max-width: 1024px;
     margin: 0 auto;
-  }
-  /* * * * ANNOUNCEMENT BANNER + RESPONSIVE NAVIGATION * * * */
-  .responsive-announcement-banner, nav.responsive-nav {
-    display: none;
-  }
-  .announcement-banner {
-    display: block;
   }
   /* * * * NAVIGATION STYLES * * * */
   header {

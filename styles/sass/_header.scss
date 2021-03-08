@@ -261,3 +261,15 @@ nav.main-menu{
 }
 
 
+/* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
+@media only screen and (min-width: 900px) {
+
+	/* * * * ANNOUNCEMENT BANNER + RESPONSIVE NAVIGATION * * * */
+	#responsive, nav.responsive-nav{
+		display: none;
+	}
+
+	.announcement-banner{
+		display: block;
+	}
+}
