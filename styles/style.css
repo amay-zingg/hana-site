@@ -335,30 +335,37 @@ a.basic-link:hover, a.basic-link:active {
   border-bottom: 2px solid #f79aaa;
 }
 
-.announcement-banner, .responsive-announcement-banner {
-  color: #FFF;
-  background: #f79aaa;
-  padding: 10px 15px;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-  height: 60px;
-  width: 100%;
-}
-
 .announcement-banner {
-  display: none;
+  background-color: #1c87c9;
+  color: #fff;
+  padding: 5px;
 }
 
-.announcement-banner .announcement,
-.responsive-announcement-banner .announcement {
-  cursor: pointer;
-  overflow: hidden;
-  position: absolute;
-  left: 10px;
-  margin-right: 10px;
-  top: 10px;
-  z-index: 30;
+.announcement-banner .announcement {
+  -webkit-animation: marquee 10s linear infinite;
+  animation: marquee 10s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }
 
 header {
@@ -729,12 +736,6 @@ nav.main-menu {
 /* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
 @media only screen and (min-width: 900px) {
   /* * * * ANNOUNCEMENT BANNER + RESPONSIVE NAVIGATION * * * */
-  #responsive, nav.responsive-nav {
-    display: none;
-  }
-  .announcement-banner {
-    display: block;
-  }
 }
 
 /* * * * Box in the box - used on About, Blog, Contact, News * * * */

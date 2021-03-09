@@ -74,41 +74,43 @@ const displayBlogPost = () => {
 
 // * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
 // * * * * MARQUEE
-function marquee(a, b) {
-    var width = b.width();
-    var start_position = a.width();
-    var end_position = -width;
+// function marquee(a, b) {
+//     var width = b.width();
+//     var start_position = a.width();
+//     var end_position = -width;
 
-    function scroll() {
-        if (b.position().left <= -width) {
-            b.css('left', start_position);
-            scroll();
-        }
-        else {
-            time = (parseInt(b.position().left, 10) - end_position) *
-                (15000 / (start_position - end_position));
-            b.animate({
-                'left': -width
-            }, time, 'linear', function() {
-                scroll();
-            });
-        }
-    }
+//     function scroll() {
+//         if (b.position().left <= -width) {
+//             b.css('left', start_position);
+//             scroll();
+//         }
+//         else {
+//             time = (parseInt(b.position().left, 10) - end_position) *
+//                 (15000 / (start_position - end_position));
+//             b.animate({
+//                 'left': -width
+//             }, time, 'linear', function() {
+//                 scroll();
+//             });
+//         }
+//     }
 
-    b.css({
-        'width': width,
-        'left': start_position
-    });
-    scroll(a, b);
+//     b.css({
+//         'width': width,
+//         'left': start_position
+//     });
+//     scroll(a, b);
     
-    b.mouseenter(function() {    
-        b.stop();                 
-        b.clearQueue();           
-    });                           
-    b.mouseleave(function() {     
-        scroll(a, b);             
-    });                           
-}
+//     b.mouseenter(function() {    
+//         b.stop();                 
+//         b.clearQueue();           
+//     });                           
+//     b.mouseleave(function() {     
+//         scroll(a, b);             
+//     });                           
+// }
+// marquee($('.announcement-banner'), $('.announcement'));
+
 // * * * * I borrowed this code to understand it's divine structure
 // * * * * http://jsfiddle.net/vivekw/pHNpk/2/
 // * * * * https://www.w3docs.com/snippets/css/how-to-have-the-marquee-effect-without-using-the-marquee-tag-with-css-javascript-and-jquery.html
@@ -163,12 +165,9 @@ init = function () {
     // banner();
     // photoSwitch();
     displayBlogPost();
-    // marquee($('.announcement-banner'), $('.announcement'));
-    
 };
 
 // * * * * DOCUMENT READY
 $(() => {
     init();
-    
 }); // * * * * END OF DOCUMENT READY
