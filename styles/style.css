@@ -335,15 +335,34 @@ a.basic-link:hover, a.basic-link:active {
   border-bottom: 2px solid #f79aaa;
 }
 
-.announcement-banner {
-  background-color: #1c87c9;
-  color: #fff;
-  padding: 5px;
+.announcement-banner, .responsive-announcement-banner {
+  color: #FFF;
+  background: #f79aaa;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  height: 60px;
+  width: 100%;
 }
 
-.announcement-banner .announcement {
-  -webkit-animation: marquee 10s linear infinite;
-  animation: marquee 10s linear infinite;
+.announcement-banner {
+  display: none;
+}
+
+.responsive-announcement-banner {
+  margin: 1em 0;
+}
+
+.announcement-banner .announcement, .responsive-announcement-banner .announcement {
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-animation: marquee 20s linear infinite;
+  animation: marquee 20s linear infinite;
+}
+
+.announcement-banner .announcement:hover, .responsive-announcement-banner .announcement:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 @-webkit-keyframes marquee {
@@ -736,6 +755,12 @@ nav.main-menu {
 /* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
 @media only screen and (min-width: 900px) {
   /* * * * ANNOUNCEMENT BANNER + RESPONSIVE NAVIGATION * * * */
+  .responsive-announcement-banner, nav.responsive-nav {
+    display: none;
+  }
+  .announcement-banner {
+    display: block;
+  }
 }
 
 /* * * * Box in the box - used on About, Blog, Contact, News * * * */

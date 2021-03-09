@@ -29,14 +29,14 @@ const navMenu = function () {
 const blogPostArray = [
     {
         title: "I'm title 1",
-        image: "../assets/pattern/PatternBone-Full.jpg",
+        image: "./assets/pattern/PatternBone-Full.jpg",
         imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
         postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
         link: "blog-article.html"
     },
      {
         title: "I'm title 2",
-        image: "../assets/pattern/PatternBone-Full.jpg",
+        image: "./assets/pattern/PatternBone-Full.jpg",
         imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
         postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
         link: "blog-article.html"
@@ -73,96 +73,54 @@ const displayBlogPost = () => {
 // displayBlogPost();
 
 // * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
-// * * * * MARQUEE
-// function marquee(a, b) {
-//     var width = b.width();
-//     var start_position = a.width();
-//     var end_position = -width;
 
-//     function scroll() {
-//         if (b.position().left <= -width) {
-//             b.css('left', start_position);
-//             scroll();
-//         }
-//         else {
-//             time = (parseInt(b.position().left, 10) - end_position) *
-//                 (15000 / (start_position - end_position));
-//             b.animate({
-//                 'left': -width
-//             }, time, 'linear', function() {
-//                 scroll();
-//             });
-//         }
-//     }
 
-//     b.css({
-//         'width': width,
-//         'left': start_position
-//     });
-//     scroll(a, b);
-    
-//     b.mouseenter(function() {    
-//         b.stop();                 
-//         b.clearQueue();           
-//     });                           
-//     b.mouseleave(function() {     
-//         scroll(a, b);             
-//     });                           
-// }
-// marquee($('.announcement-banner'), $('.announcement'));
+// // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
+const photoSwitch = function () {
+    const featuredPhoto = document.querySelector('.featured-item');
+    const secondPhoto = document.querySelector('.second-item');
+    const thirdPhoto = document.querySelector('.third-item');
 
-// * * * * I borrowed this code to understand it's divine structure
-// * * * * http://jsfiddle.net/vivekw/pHNpk/2/
-// * * * * https://www.w3docs.com/snippets/css/how-to-have-the-marquee-effect-without-using-the-marquee-tag-with-css-javascript-and-jquery.html
-// https://www.w3docs.com/tools/code-editor/2121
-
-    // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
-    const photoSwitch = function () {
-        const featuredPhoto = document.querySelector('.featured-item');
-        const secondPhoto = document.querySelector('.second-item');
-        const thirdPhoto = document.querySelector('.third-item');
-
-        function onPageLoad() {
-            secondPhoto.classList.add('unselected');
-            thirdPhoto.classList.add('unselected');
-        };
-
-        onPageLoad();
-
-        document.querySelector('.select-featured-photo').addEventListener('click', function () {
-            featuredPhoto.classList.add('selected');
-            featuredPhoto.classList.remove('unselected');
-            secondPhoto.classList.add('unselected');
-            secondPhoto.classList.remove('selected');
-            thirdPhoto.classList.add('unselected');
-            thirdPhoto.classList.remove('selected');
-        });
-
-        document.querySelector('.select-second-photo').addEventListener('click', function () {
-            featuredPhoto.classList.add('unselected');
-            featuredPhoto.classList.remove('selected');
-            secondPhoto.classList.add('selected');
-            secondPhoto.classList.remove('unselected');
-            thirdPhoto.classList.add('unselected');
-            thirdPhoto.classList.remove('selected');
-        });
-
-        document.querySelector('.select-third-photo').addEventListener('click', function () {
-            featuredPhoto.classList.add('unselected');
-            featuredPhoto.classList.remove('selected');
-            secondPhoto.classList.add('unselected');
-            secondPhoto.classList.remove('selected');
-            thirdPhoto.classList.add('selected');
-            thirdPhoto.classList.remove('unselected');
-        });
+    function onPageLoad() {
+        secondPhoto.classList.add('unselected');
+        thirdPhoto.classList.add('unselected');
     };
+
+    onPageLoad();
+
+    document.querySelector('.select-featured-photo').addEventListener('click', function () {
+        featuredPhoto.classList.add('selected');
+        featuredPhoto.classList.remove('unselected');
+        secondPhoto.classList.add('unselected');
+        secondPhoto.classList.remove('selected');
+        thirdPhoto.classList.add('unselected');
+        thirdPhoto.classList.remove('selected');
+    });
+
+    document.querySelector('.select-second-photo').addEventListener('click', function () {
+        featuredPhoto.classList.add('unselected');
+        featuredPhoto.classList.remove('selected');
+        secondPhoto.classList.add('selected');
+        secondPhoto.classList.remove('unselected');
+        thirdPhoto.classList.add('unselected');
+        thirdPhoto.classList.remove('selected');
+    });
+
+    document.querySelector('.select-third-photo').addEventListener('click', function () {
+        featuredPhoto.classList.add('unselected');
+        featuredPhoto.classList.remove('selected');
+        secondPhoto.classList.add('unselected');
+        secondPhoto.classList.remove('selected');
+        thirdPhoto.classList.add('selected');
+        thirdPhoto.classList.remove('unselected');
+    });
+};
   
 
 // * * * * INIT PIECES
 init = function () {
     scroll();
     navMenu();
-    // banner();
     // photoSwitch();
     displayBlogPost();
 };
