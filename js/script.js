@@ -78,15 +78,15 @@ const displayBlogPost = () => {
 // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
 const photoSwitch = function () {
     const featuredPhoto = document.querySelector('.featured-item');
-    const secondPhoto = document.querySelector('.second-item');
-    const thirdPhoto = document.querySelector('.third-item');
+    const secondPhoto = document.querySelector('.second-item').classList.add('unselected');
+    const thirdPhoto = document.querySelector('.third-item').classList.add('unselected');
 
-    function onPageLoad() {
-        secondPhoto.classList.add('unselected');
-        thirdPhoto.classList.add('unselected');
-    };
+    // function onPageLoad() {
+    //     secondPhoto.classList.add('unselected');
+    //     thirdPhoto.classList.add('unselected');
+    // };
 
-    onPageLoad();
+    // onPageLoad();
 
     document.querySelector('.select-featured-photo').addEventListener('click', function () {
         featuredPhoto.classList.add('selected');
@@ -119,18 +119,82 @@ const photoSwitch = function () {
 // * * * * PORTFOLIO PAGE GALLERIES
 const affirmationArray = [
     {
-        title: "I'm title 1",
-        image: "./assets/pattern/PatternBone-Full.jpg",
-        imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
-        postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
-        link: "blog-article.html"
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
     },
      {
-        title: "I'm title 2",
-        image: "./assets/pattern/PatternBone-Full.jpg",
-        imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
-        postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
-        link: "blog-article.html"
+        title: "Grow Together Cactus",
+        image: "./assets/affimations/GrowTogetherCactus.jpg",
+        imageAlt: "Grow Together Cactus Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Healing is not Linear",
+        image: "./assets/affimations/Healing.jpg",
+        imageAlt: "Healing is not Linear Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Hold Space For Yourself",
+        image: "./assets/affimations/HoldSpace.jpg",
+        imageAlt: "Hold Space For Yourself Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "You are Incredible in Every Way",
+        image: "./assets/affimations/IncredibleInEveryWay.jpg",
+        imageAlt: "You are Incredible in Every Way Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Be Kind to Yourself",
+        image: "./assets/affimations/KindToYourself.jpg",
+        imageAlt: "Be Kind to Yourself Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Koala Climate Justice",
+        image: "./assets/affimations/KoalaClimate.jpg",
+        imageAlt: "Koala Climate Justice Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Raccoon Best",
+        image: "./assets/affimations/RaccoonBest.jpg",
+        imageAlt: "Raccoon Best Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Shrink You Down",
+        image: "./assets/affimations/ShrinkYouDown.jpg",
+        imageAlt: "Shrink You Down Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Survived So Much",
+        image: "./assets/affimations/Survived.jpg",
+        imageAlt: "Survived So Much Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Survive These Difficult Times",
+        image: "./assets/affimations/SurviveLikeCheetahs.jpg",
+        imageAlt: "Survive These Difficult Times Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+     {
+        title: "Vulnerability",
+        image: "./assets/affimations/Vulnerability.jpg",
+        imageAlt: "Vulnerability Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Valuable and Important",
+        image: "./assets/affimations/WorkBeaver.jpg",
+        imageAlt: "Valuable and Important Art Print | Frizz Kid Art",
+        link: "store.html"
     }
 
 ]
@@ -138,18 +202,17 @@ const affirmationArray = [
 // * * * * PUT GALLERIES ON PAGE
 const displayAffirmationGallery = () => {
 
-    const blogPost = affirmationArray.map((post) => {
-        return `<div class="blog-post-single">
-                <img src="${post.image}" alt="${post.imageAlt}">
-                <h3>${post.title}</h3>
-                <p>${content}</p>
-                <div class="button-box">
-                    <a href="${post.link}" class="frizz-button">Read More</a>
-                </div>
-                </div>
+    const affirmationImg = affirmationArray.map((post) => {
+        return `<figure class="image-frame">
+                    <img src="${post.image}" alt="${post.imageAlt}">
+                    <figcaption>
+                        <p>${post.title}</p>
+                        <a href="${post.link}" class="store-link">See in Store!</a>
+                    </figcaption>
+                </figure>
         `
     })
-    $(".blog-post-container").append(blogPost)
+    $(".affirmation-gallery").append(affirmationImg)
 }
   
 
@@ -159,6 +222,7 @@ init = function () {
     navMenu();
     // photoSwitch();
     displayBlogPost();
+    displayAffirmationGallery();
 };
 
 // * * * * DOCUMENT READY
