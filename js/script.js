@@ -115,6 +115,42 @@ const photoSwitch = function () {
         thirdPhoto.classList.remove('unselected');
     });
 };
+
+// * * * * PORTFOLIO PAGE GALLERIES
+const affirmationArray = [
+    {
+        title: "I'm title 1",
+        image: "./assets/pattern/PatternBone-Full.jpg",
+        imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
+        postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
+        link: "blog-article.html"
+    },
+     {
+        title: "I'm title 2",
+        image: "./assets/pattern/PatternBone-Full.jpg",
+        imageAlt: "Pattern Print Blue Bones | Frizz Kid Art",
+        postContent: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis accusantium necessitatibus sed deleniti tempore accusamus saepe laboriosam dolorem, cum veritatis odio quae aperiam voluptatibus dicta eius? Cupiditate praesentium ab in.",
+        link: "blog-article.html"
+    }
+
+]
+
+// * * * * PUT GALLERIES ON PAGE
+const displayAffirmationGallery = () => {
+
+    const blogPost = affirmationArray.map((post) => {
+        return `<div class="blog-post-single">
+                <img src="${post.image}" alt="${post.imageAlt}">
+                <h3>${post.title}</h3>
+                <p>${content}</p>
+                <div class="button-box">
+                    <a href="${post.link}" class="frizz-button">Read More</a>
+                </div>
+                </div>
+        `
+    })
+    $(".blog-post-container").append(blogPost)
+}
   
 
 // * * * * INIT PIECES
