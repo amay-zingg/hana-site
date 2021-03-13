@@ -199,6 +199,57 @@ const affirmationArray = [
 
 ]
 
+const generalArtArray = [
+    {
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Fight Fascism",
+        image: "./assets/affimations/FightFascism.jpg",
+        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        link: "store.html"
+    }
+]
+
 // * * * * PUT GALLERIES ON PAGE
 const displayAffirmationGallery = () => {
 
@@ -214,6 +265,21 @@ const displayAffirmationGallery = () => {
     })
     $(".affirmation-gallery").append(affirmationImg)
 }
+
+const displayGeneralArtGallery = () => {
+
+    const generalImg = generalArtArray.map((post) => {
+        return `<figure class="image-frame">
+                    <img src="${post.image}" alt="${post.imageAlt}">
+                    <figcaption>
+                        <p>${post.title}</p>
+                        <a href="${post.link}" class="store-link">See in Store!</a>
+                    </figcaption>
+                </figure>
+        `
+    })
+    $(".general-art-gallery").append(generalImg)
+}
   
 
 // * * * * INIT PIECES
@@ -223,6 +289,7 @@ init = function () {
     // photoSwitch();
     displayBlogPost();
     displayAffirmationGallery();
+    displayGeneralArtGallery();
 };
 
 // * * * * DOCUMENT READY
