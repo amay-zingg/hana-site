@@ -201,51 +201,54 @@ const affirmationArray = [
 
 const generalArtArray = [
     {
-        title: "Fight Fascism",
-        image: "./assets/affimations/FightFascism.jpg",
-        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        title: "Devdas",
+        image: "./assets/affimations/Devdas-Square.jpg",
+        imageAlt: "Devdas Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
-        title: "Fight Fascism",
-        image: "./assets/affimations/FightFascism.jpg",
-        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        title: "Eff Diet Culture",
+        image: "./assets/affimations/EffDietCulture-Square.jpg",
+        imageAlt: "Eff Diet Culture Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
-        title: "Fight Fascism",
-        image: "./assets/affimations/FightFascism.jpg",
-        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        title: "Umrao Jaan",
+        image: "./assets/affimations/UmraoJaan-Square.jpg",
+        imageAlt: "Umrao Jaan Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
-        title: "Fight Fascism",
-        image: "./assets/affimations/FightFascism.jpg",
-        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        title: "Body Posi Witches",
+        image: "./assets/affimations/Witches-Square.jpg",
+        imageAlt: "Body Posi Witches Art Print | Frizz Kid Art",
+        link: "store.html"
+    }
+]
+
+const patternArray = [
+    {
+        title: "Blue Bones Pattern",
+        image: "./assets/affimations/PatternBone-Square.jpg",
+        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
-        title: "Fight Fascism",
-        image: "./assets/affimations/FightFascism.jpg",
-        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        title: "Blue Bones Pattern",
+        image: "./assets/affimations/PatternBone-Square.jpg",
+        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
-        title: "Fight Fascism",
-        image: "./assets/affimations/FightFascism.jpg",
-        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        title: "Blue Bones Pattern",
+        image: "./assets/affimations/PatternBone-Square.jpg",
+        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
-        title: "Fight Fascism",
-        image: "./assets/affimations/FightFascism.jpg",
-        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
-        link: "store.html"
-    },
-    {
-        title: "Fight Fascism",
-        image: "./assets/affimations/FightFascism.jpg",
-        imageAlt: "Fight Fascism Art Print | Frizz Kid Art",
+        title: "Blue Bones Pattern",
+        image: "./assets/affimations/PatternBone-Square.jpg",
+        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     }
 ]
@@ -264,6 +267,21 @@ const displayAffirmationGallery = () => {
         `
     })
     $(".affirmation-gallery").append(affirmationImg)
+}
+
+const displayPatternGallery = () => {
+
+    const patternImg = patternArray.map((post) => {
+        return `<figure class="image-frame">
+                    <img src="${post.image}" alt="${post.imageAlt}">
+                    <figcaption>
+                        <p>${post.title}</p>
+                        <a href="${post.link}" class="store-link">See in Store!</a>
+                    </figcaption>
+                </figure>
+        `
+    })
+    $(".pattern-gallery").append(patternImg)
 }
 
 const displayGeneralArtGallery = () => {
@@ -289,6 +307,7 @@ init = function () {
     // photoSwitch();
     displayBlogPost();
     displayAffirmationGallery();
+    displayPatternGallery();
     displayGeneralArtGallery();
 };
 
