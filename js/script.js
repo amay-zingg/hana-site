@@ -234,21 +234,21 @@ const patternArray = [
         link: "store.html"
     },
     {
-        title: "Blue Bones Pattern",
-        image: "./assets/affimations/PatternBone-Square.jpg",
-        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
+        title: "Green Moth Pattern",
+        image: "./assets/affimations/PatternMoth-Square.jpg",
+        imageAlt: "Green Moth Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
-        title: "Blue Bones Pattern",
-        image: "./assets/affimations/PatternBone-Square.jpg",
-        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
+        title: "Red Eye Pattern",
+        image: "./assets/affimations/PatternEye-Square.jpg",
+        imageAlt: "Red Eye Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
-        title: "Blue Bones Pattern",
-        image: "./assets/affimations/PatternBone-Square.jpg",
-        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
+        title: "Purple Moon Pattern",
+        image: "./assets/affimations/PatternMoon-Square.jpg",
+        imageAlt: "Purple Moon Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     }
 ]
