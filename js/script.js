@@ -199,56 +199,56 @@ const affirmationArray = [
 
 ]
 
-const generalArtArray = [
-    {
-        title: "Devdas",
-        image: "./assets/affimations/Devdas-Square.jpg",
-        imageAlt: "Devdas Art Print | Frizz Kid Art",
-        link: "store.html"
-    },
-    {
-        title: "Eff Diet Culture",
-        image: "./assets/affimations/EffDietCulture-Square.jpg",
-        imageAlt: "Eff Diet Culture Art Print | Frizz Kid Art",
-        link: "store.html"
-    },
-    {
-        title: "Umrao Jaan",
-        image: "./assets/affimations/UmraoJaan-Square.jpg",
-        imageAlt: "Umrao Jaan Art Print | Frizz Kid Art",
-        link: "store.html"
-    },
-    {
-        title: "Body Posi Witches",
-        image: "./assets/affimations/Witches-Square.jpg",
-        imageAlt: "Body Posi Witches Art Print | Frizz Kid Art",
-        link: "store.html"
-    }
-]
-
 const patternArray = [
     {
         title: "Blue Bones Pattern",
-        image: "./assets/affimations/PatternBone-Square.jpg",
+        image: "./assets/pattern/PatternBone-Square.jpg",
         imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
         title: "Green Moth Pattern",
-        image: "./assets/affimations/PatternMoth-Square.jpg",
+        image: "./assets/pattern/PatternMoth-Square.jpg",
         imageAlt: "Green Moth Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
         title: "Red Eye Pattern",
-        image: "./assets/affimations/PatternEye-Square.jpg",
+        image: "./assets/pattern/PatternEye-Square.jpg",
         imageAlt: "Red Eye Pattern Art Print | Frizz Kid Art",
         link: "store.html"
     },
     {
         title: "Purple Moon Pattern",
-        image: "./assets/affimations/PatternMoon-Square.jpg",
+        image: "./assets/pattern/PatternMoon-Square.jpg",
         imageAlt: "Purple Moon Pattern Art Print | Frizz Kid Art",
+        link: "store.html"
+    }
+]
+
+const generalArtArray = [
+    {
+        title: "Devdas",
+        image: "./assets/generalArt/Devdas-Square.jpg",
+        imageAlt: "Devdas Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Eff Diet Culture",
+        image: "./assets/generalArt/EffDietCulture-Square.jpg",
+        imageAlt: "Eff Diet Culture Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Umrao Jaan",
+        image: "./assets/generalArt/UmraoJaan-Square.jpg",
+        imageAlt: "Umrao Jaan Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+    {
+        title: "Body Posi Witches",
+        image: "./assets/generalArt/Witches-Square.jpg",
+        imageAlt: "Body Posi Witches Art Print | Frizz Kid Art",
         link: "store.html"
     }
 ]
