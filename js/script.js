@@ -253,6 +253,34 @@ const generalArtArray = [
     }
 ]
 
+const tattooArray = [
+    {
+        title: "Amy Winehouse Tattoo",
+        image: "./assets/tattoos/Tattoo-AmyWinehouse.jpg",
+        imageAlt: "Amy Winehouse Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Bee Tattoo",
+        image: "./assets/tattoos/Tattoo-Bee.jpg",
+        imageAlt: "Bee Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Burnt Out Blossom Tattoo",
+        image: "./assets/tattoos/Tattoo-BurntOutBlossom.jpg",
+        imageAlt: "Burnt Out Blossom Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Conjure Resistance Tattoo",
+        image: "./assets/tattoos/Tattoo-ConjureResistance.jpg",
+        imageAlt: "Conjure Resistance Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Conjure Resistance Tattoo",
+        image: "./assets/tattoos/Tattoo-ConjureResistance2.jpg",
+        imageAlt: "Conjure Resistance Tattoo | Frizz Kid Art"
+    }
+]
+
 // * * * * PUT GALLERIES ON PAGE
 const displayAffirmationGallery = () => {
 
@@ -298,6 +326,20 @@ const displayGeneralArtGallery = () => {
     })
     $(".general-art-gallery").append(generalImg)
 }
+
+const displayTattooGallery = () => {
+
+    const tattooImg = tattooArray.map((post) => {
+        return `<figure class="image-frame">
+                    <img src="${post.image}" alt="${post.imageAlt}">
+                    <figcaption>
+                        <p>${post.title}</p>
+                    </figcaption>
+                </figure>
+        `
+    })
+    $(".tattoo-gallery").append(tattooImg)
+}
   
 
 // * * * * INIT PIECES
@@ -309,6 +351,7 @@ init = function () {
     displayAffirmationGallery();
     displayPatternGallery();
     displayGeneralArtGallery();
+    displayTattooGallery();
 };
 
 // * * * * DOCUMENT READY
