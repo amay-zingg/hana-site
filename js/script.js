@@ -278,6 +278,50 @@ const tattooArray = [
         title: "Conjure Resistance Tattoo",
         image: "./assets/tattoos/Tattoo-ConjureResistance2.jpg",
         imageAlt: "Conjure Resistance Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Conjure Resistance Tattoo",
+        image: "./assets/tattoos/Tattoo-ConjureResistance3.jpg",
+        imageAlt: "Conjure Resistance Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "First Book Cover Art Tattoo",
+        image: "./assets/tattoos/Tattoo-FirstBook.jpg",
+        imageAlt: "First Book Cover Art Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Flower Tattoo",
+        image: "./assets/tattoos/Tattoo-Flower.jpg",
+        imageAlt: "Flower Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Gentle With Yourself Tattoo",
+        image: "./assets/tattoos/Tattoo-Gentle.jpg",
+        imageAlt: "Gentle With Yourself Tattoo | Frizz Kid Art",
+        instaLink: "https://www.instagram.com/joeyramonatattooer",
+        instaTitle: "Go to joeyramonatattooer on Instagram",
+        instaText: "@joeyramonatattooer"
+    },
+    {
+        title: "Hairy Lady Tattoo",
+        image: "./assets/tattoos/Tattoo-HairyLady.jpg",
+        imageAlt: "Hairy Lady Tattoo | Frizz Kid Art",
+        instaLink: "https://www.instagram.com/joeyramonatattooer",
+        instaTitle: "Go to joeyramonatattooer on Instagram",
+        instaText: "@joeyramonatattooer"
+    },
+    {
+        title: "Haunting Ghost Tattoo",
+        image: "./assets/tattoos/Tattoo-Haunting.jpg",
+        imageAlt: "Haunting Ghost Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Keep Going Tattoo",
+        image: "./assets/tattoos/Tattoo-KeepGoing.jpg",
+        imageAlt: "Keep Going Tattoo | Frizz Kid Art",
+        instaLink: "https://www.instagram.com/vegas.ink",
+        instaTitle: "Go to vegas.ink on Instagram",
+        instaText: "@vegas.ink"
     }
 ]
 
@@ -334,6 +378,11 @@ const displayTattooGallery = () => {
                     <img src="${post.image}" alt="${post.imageAlt}">
                     <figcaption>
                         <p>${post.title}</p>
+                        <a href="${post.instaLink}" title="${post.instaTitle}"
+                            class="instagram-link">
+                            <img src="./assets/svg/instagram-black.svg" alt="Instagram Logo">
+                            <span>${post.instaText}</span>
+                        </a>
                     </figcaption>
                 </figure>
         `
