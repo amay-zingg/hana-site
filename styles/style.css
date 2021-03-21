@@ -305,6 +305,13 @@ input:focus-within, select:focus-within, textarea:focus-within {
   padding: 1em;
 }
 
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
 /* * * * PINK BORDER INPUT * * * */
 .pink-border {
   padding: 5px 15px;
@@ -2767,10 +2774,6 @@ p.website-by a img:active {
 
 @media only screen and (min-width: 900px) {
   /* * * * BASE STYLES * * * */
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-  }
   /* * * * NAVIGATION STYLES * * * */
   header {
     -webkit-box-orient: horizontal;

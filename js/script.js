@@ -322,7 +322,139 @@ const tattooArray = [
         instaLink: "https://www.instagram.com/vegas.ink",
         instaTitle: "Go to vegas.ink on Instagram",
         instaText: "@vegas.ink"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing1.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing2.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing3.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing4.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing5.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing6.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing7.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing8.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing9.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing10.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing11.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Healing is not Linear Tattoo",
+        image: "./assets/tattoos/Tattoo-LinearHealing12.jpg",
+        imageAlt: "Healing is not Linear Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "You Survived So Much Tattoo",
+        image: "./assets/tattoos/Tattoo-MountainSurvival.jpg",
+        imageAlt: "You Survived So Much Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "You Survived So MuchTattoo",
+        image: "./assets/tattoos/Tattoo-MountainSurvival2.jpg",
+        imageAlt: "You Survived So Much Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "You Survived So Much Tattoo",
+        image: "./assets/tattoos/Tattoo-MountainSurvival3.jpg",
+        imageAlt: "You Survived So Much Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Queer Tattoo",
+        image: "./assets/tattoos/Tattoo-Queer.jpg",
+        imageAlt: "Queer Tattoo | Frizz Kid Art",
+        instaLink: "https://www.instagram.com/vegas.ink",
+        instaTitle: "Go to vegas.ink on Instagram",
+        instaText: "@vegas.ink"
+    },
+    {
+        title: "Queer Tattoo",
+        image: "./assets/tattoos/Tattoo-Queer2.jpg",
+        imageAlt: "Queer Tattoo | Frizz Kid Art",
+        instaLink: "https://www.instagram.com/vegas.ink",
+        instaTitle: "Go to vegas.ink on Instagram",
+        instaText: "@vegas.ink"
+    },
+    {
+        title: "Rise and Riot Tattoo",
+        image: "./assets/tattoos/Tattoo-RiseAndRiot.jpg",
+        imageAlt: "Rise and Riot Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Rise and Riot Tattoo",
+        image: "./assets/tattoos/Tattoo-RiseAndRiot2.jpg",
+        imageAlt: "Rise and Riot Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Skull Tattoo",
+        image: "./assets/tattoos/Tattoo-Skull.jpg",
+        imageAlt: "Skull Tattoo | Frizz Kid Art"
+    },
+    {
+        title: "Tattoo Flash Sheet",
+        image: "./assets/tattoos/Tattoo-FlashSheet.jpg",
+        imageAlt: "Tattoo Flash Sheet | Frizz Kid Art"
+    },
+    {
+        title: "Tattoo Flash Sheet",
+        image: "./assets/tattoos/Tattoo-FlashSheet2.jpg",
+        imageAlt: "Tattoo Flash Sheet | Frizz Kid Art"
+    },
+    {
+        title: "Tattoo Flash Sheet",
+        image: "./assets/tattoos/Tattoo-FlashSheet3.jpg",
+        imageAlt: "Tattoo Flash Sheet | Frizz Kid Art"
+    },
+    {
+        title: "Tattoo Flash Sheet",
+        image: "./assets/tattoos/Tattoo-FlashSheet4.jpg",
+        imageAlt: "Tattoo Flash Sheet | Frizz Kid Art"
+    },
+    {
+        title: "Tattoo Flash Sheet",
+        image: "./assets/tattoos/Tattoo-FlashSheet5.jpg",
+        imageAlt: "Tattoo Flash Sheet | Frizz Kid Art"
     }
+    
 ]
 
 // * * * * PUT GALLERIES ON PAGE
