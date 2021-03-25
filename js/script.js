@@ -72,50 +72,6 @@ const displayBlogPost = () => {
 // * * * * Moved to init
 // displayBlogPost();
 
-// * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
-
-
-// // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
-const photoSwitch = function () {
-    const featuredPhoto = document.querySelector('.featured-item');
-    const secondPhoto = document.querySelector('.second-item').classList.add('unselected');
-    const thirdPhoto = document.querySelector('.third-item').classList.add('unselected');
-
-    // function onPageLoad() {
-    //     secondPhoto.classList.add('unselected');
-    //     thirdPhoto.classList.add('unselected');
-    // };
-
-    // onPageLoad();
-
-    document.querySelector('.select-featured-photo').addEventListener('click', function () {
-        featuredPhoto.classList.add('selected');
-        featuredPhoto.classList.remove('unselected');
-        secondPhoto.classList.add('unselected');
-        secondPhoto.classList.remove('selected');
-        thirdPhoto.classList.add('unselected');
-        thirdPhoto.classList.remove('selected');
-    });
-
-    document.querySelector('.select-second-photo').addEventListener('click', function () {
-        featuredPhoto.classList.add('unselected');
-        featuredPhoto.classList.remove('selected');
-        secondPhoto.classList.add('selected');
-        secondPhoto.classList.remove('unselected');
-        thirdPhoto.classList.add('unselected');
-        thirdPhoto.classList.remove('selected');
-    });
-
-    document.querySelector('.select-third-photo').addEventListener('click', function () {
-        featuredPhoto.classList.add('unselected');
-        featuredPhoto.classList.remove('selected');
-        secondPhoto.classList.add('unselected');
-        secondPhoto.classList.remove('selected');
-        thirdPhoto.classList.add('selected');
-        thirdPhoto.classList.remove('unselected');
-    });
-};
-
 // * * * * PORTFOLIO PAGE GALLERIES
 const affirmationArray = [
     {
@@ -457,6 +413,24 @@ const tattooArray = [
     
 ]
 
+const eventArray = [
+    {
+        title: "Blue Bones Pattern",
+        image: "./assets/pattern/PatternBone-Square.jpg",
+        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+]
+
+const commissionArray = [
+    {
+        title: "Blue Bones Pattern",
+        image: "./assets/pattern/PatternBone-Square.jpg",
+        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
+        link: "store.html"
+    },
+]
+
 // * * * * PUT GALLERIES ON PAGE
 const displayAffirmationGallery = () => {
 
@@ -521,7 +495,88 @@ const displayTattooGallery = () => {
     })
     $(".tattoo-gallery").append(tattooImg)
 }
+
+const displayEventGallery = () => {
+
+    const eventImg = eventArray.map((post) => {
+        return `<figure class="image-frame">
+                    <img src="${post.image}" alt="${post.imageAlt}">
+                    <figcaption>
+                        <p>${post.title}</p>
+                        <a href="${post.instaLink}" title="${post.instaTitle}"
+                            class="instagram-link">
+                            <img src="./assets/svg/instagram-black.svg" alt="Instagram Logo">
+                            <span>${post.instaText}</span>
+                        </a>
+                    </figcaption>
+                </figure>
+        `
+    })
+    $(".event-gallery").append(eventImg)
+}
+
+const displayCommissionGallery = () => {
+
+    const artImg = artArray.map((post) => {
+        return `<figure class="image-frame">
+                    <img src="${post.image}" alt="${post.imageAlt}">
+                    <figcaption>
+                        <p>${post.title}</p>
+                        <a href="${post.instaLink}" title="${post.instaTitle}"
+                            class="instagram-link">
+                            <img src="./assets/svg/instagram-black.svg" alt="Instagram Logo">
+                            <span>${post.instaText}</span>
+                        </a>
+                    </figcaption>
+                </figure>
+        `
+    })
+    $(".art-gallery").append(artImg)
+}
   
+
+
+// * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
+// // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
+const photoSwitch = function () {
+    const featuredPhoto = document.querySelector('.featured-item');
+    const secondPhoto = document.querySelector('.second-item').classList.add('unselected');
+    const thirdPhoto = document.querySelector('.third-item').classList.add('unselected');
+
+    // function onPageLoad() {
+    //     secondPhoto.classList.add('unselected');
+    //     thirdPhoto.classList.add('unselected');
+    // };
+
+    // onPageLoad();
+
+    document.querySelector('.select-featured-photo').addEventListener('click', function () {
+        featuredPhoto.classList.add('selected');
+        featuredPhoto.classList.remove('unselected');
+        secondPhoto.classList.add('unselected');
+        secondPhoto.classList.remove('selected');
+        thirdPhoto.classList.add('unselected');
+        thirdPhoto.classList.remove('selected');
+    });
+
+    document.querySelector('.select-second-photo').addEventListener('click', function () {
+        featuredPhoto.classList.add('unselected');
+        featuredPhoto.classList.remove('selected');
+        secondPhoto.classList.add('selected');
+        secondPhoto.classList.remove('unselected');
+        thirdPhoto.classList.add('unselected');
+        thirdPhoto.classList.remove('selected');
+    });
+
+    document.querySelector('.select-third-photo').addEventListener('click', function () {
+        featuredPhoto.classList.add('unselected');
+        featuredPhoto.classList.remove('selected');
+        secondPhoto.classList.add('unselected');
+        secondPhoto.classList.remove('selected');
+        thirdPhoto.classList.add('selected');
+        thirdPhoto.classList.remove('unselected');
+    });
+};
 
 // * * * * INIT PIECES
 init = function () {
@@ -533,6 +588,8 @@ init = function () {
     displayPatternGallery();
     displayGeneralArtGallery();
     displayTattooGallery();
+    displayEventGallery();
+    displayCommissionGallery();
 };
 
 // * * * * DOCUMENT READY
