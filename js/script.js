@@ -415,20 +415,18 @@ const tattooArray = [
 
 const eventArray = [
     {
-        title: "Blue Bones Pattern",
-        image: "./assets/pattern/PatternBone-Square.jpg",
-        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
-        link: "store.html"
-    },
+        title: "Hana Shafi Book Fall 2020",
+        image: "./assets/hanaPhotos/HanaShafi-BookFall2020.jpg",
+        imageAlt: "Hana Shafi Book Fall 2020 | Frizz Kid Art"
+    }
 ]
 
 const commissionArray = [
     {
-        title: "Blue Bones Pattern",
-        image: "./assets/pattern/PatternBone-Square.jpg",
-        imageAlt: "Blue Bones Pattern Art Print | Frizz Kid Art",
-        link: "store.html"
-    },
+        title: "Second Poster Frizz Kid Art created for the Toronto Rape Crisis Center",
+        image: "./assets/events/SecondPosterforTRCConTheSubway.jpg",
+        imageAlt: "Second Poster Frizz Kid Art created for the Toronto Rape Crisis Center | Frizz Kid Art"
+    }
 ]
 
 // * * * * PUT GALLERIES ON PAGE
@@ -503,11 +501,6 @@ const displayEventGallery = () => {
                     <img src="${post.image}" alt="${post.imageAlt}">
                     <figcaption>
                         <p>${post.title}</p>
-                        <a href="${post.instaLink}" title="${post.instaTitle}"
-                            class="instagram-link">
-                            <img src="./assets/svg/instagram-black.svg" alt="Instagram Logo">
-                            <span>${post.instaText}</span>
-                        </a>
                     </figcaption>
                 </figure>
         `
@@ -517,16 +510,11 @@ const displayEventGallery = () => {
 
 const displayCommissionGallery = () => {
 
-    const artImg = artArray.map((post) => {
+    const artImg = commissionArray.map((post) => {
         return `<figure class="image-frame">
                     <img src="${post.image}" alt="${post.imageAlt}">
                     <figcaption>
                         <p>${post.title}</p>
-                        <a href="${post.instaLink}" title="${post.instaTitle}"
-                            class="instagram-link">
-                            <img src="./assets/svg/instagram-black.svg" alt="Instagram Logo">
-                            <span>${post.instaText}</span>
-                        </a>
                     </figcaption>
                 </figure>
         `

@@ -47,14 +47,6 @@
 		width: 85%;
 	}
 
-	.gallery{
-		@include flexbox($direction: row, $wrap: wrap);
-	}
-
-	.gallery figure.image-frame figcaption{
-		padding-top: 40px;
-	}
-
 	.image-right, .words-left{
 		width: 50%;
 	}
@@ -83,11 +75,7 @@
 	.main-image{
 		width: 60%;
 	}
-
-	.gallery figure.image-frame{
-		width: 42%;
-	}
-
+	
 	.featured-section-left, .featured-section-right {
 		width: 100%;
 	}
@@ -280,17 +268,6 @@
 		width: 300px;
 		float: right;
 		margin: 15px;
-	}
-
-	/* * * * PORTFOLIO * * * */
-	.gallery figure.image-frame, figure.event-image {
-		width: 30%;
-		margin: 5px;
-	}
-
-	.portfolio-section, .portfolio-section .inner-portfolio-section{
-		height: 200px;
-		width: 350px;
 	}
 
 	/* * * * CHECKOUT * * * */

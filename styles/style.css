@@ -2284,32 +2284,44 @@ h2.section-title {
 }
 
 /* * * * EVENTS & COMMISSIONS * * * */
-.events, .commissions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  place-content: center;
-  place-items: flex-start;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media only screen and (min-width: 600px) {
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .gallery figure.image-frame figcaption {
+    padding-top: 40px;
+  }
 }
 
-figure.event-image {
-  width: 100%;
-  margin: 0;
-  text-align: center;
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .gallery figure.image-frame {
+    width: 42%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  /* * * * PORTFOLIO * * * */
+  .gallery figure.image-frame, figure.event-image {
+    width: 30%;
+    margin: 5px;
+  }
+  .portfolio-section, .portfolio-section .inner-portfolio-section {
+    height: 200px;
+    width: 350px;
+  }
 }
 
 /* * * * * * * * CART PAGE * * * * * * * */
@@ -2611,25 +2623,6 @@ p.website-by a img:active {
   .about {
     width: 85%;
   }
-  .gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-  }
-  .gallery figure.image-frame figcaption {
-    padding-top: 40px;
-  }
   .image-right, .words-left {
     width: 50%;
   }
@@ -2665,9 +2658,6 @@ p.website-by a img:active {
 @media only screen and (min-width: 600px) and (max-width: 900px) {
   .main-image {
     width: 60%;
-  }
-  .gallery figure.image-frame {
-    width: 42%;
   }
   .featured-section-left, .featured-section-right {
     width: 100%;
@@ -2905,15 +2895,6 @@ p.website-by a img:active {
     width: 300px;
     float: right;
     margin: 15px;
-  }
-  /* * * * PORTFOLIO * * * */
-  .gallery figure.image-frame, figure.event-image {
-    width: 30%;
-    margin: 5px;
-  }
-  .portfolio-section, .portfolio-section .inner-portfolio-section {
-    height: 200px;
-    width: 350px;
   }
   /* * * * CHECKOUT * * * */
   .responsive-checkout {
