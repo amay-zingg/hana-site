@@ -737,50 +737,31 @@ const displayCommissionGallery = () => {
 // * * * * IF THESE ARE ON THE PAGE DISPLAY THEM
 // // SELECTED PHOTO FROM THUMBNAIL OPENS IN FEATURED PHOTO AREA\
 const photoSwitch = function () {
-    const featuredPhoto = document.querySelector('.featured-item');
-    const secondPhoto = document.querySelector('.second-item').classList.add('unselected');
-    const thirdPhoto = document.querySelector('.third-item').classList.add('unselected');
 
-    // function onPageLoad() {
-    //     secondPhoto.classList.add('unselected');
-    //     thirdPhoto.classList.add('unselected');
-    // };
+    $('.select-featured-photo').click(function() {
+        TweenMax.to($('.featured-item'), 0.5, {opacity: 1, display: 'block'});
+        TweenMax.to($('.second-item'), 0.5, {opacity: 0});
+        TweenMax.to($('.third-item'), 0.5, {opacity: 0});
+    })
 
-    // onPageLoad();
+    $('.select-second-photo').click(function() {
+        TweenMax.to($('.featured-item'), 0.5, {opacity: 0});
+        TweenMax.to($('.second-item'), 0.5, {opacity: 1, display: 'block'});
+        TweenMax.to($('.third-item'), 0.5, {opacity: 0});
+    })
 
-    document.querySelector('.select-featured-photo').addEventListener('click', function () {
-        featuredPhoto.classList.add('selected');
-        featuredPhoto.classList.remove('unselected');
-        secondPhoto.classList.add('unselected');
-        secondPhoto.classList.remove('selected');
-        thirdPhoto.classList.add('unselected');
-        thirdPhoto.classList.remove('selected');
-    });
-
-    document.querySelector('.select-second-photo').addEventListener('click', function () {
-        featuredPhoto.classList.add('unselected');
-        featuredPhoto.classList.remove('selected');
-        secondPhoto.classList.add('selected');
-        secondPhoto.classList.remove('unselected');
-        thirdPhoto.classList.add('unselected');
-        thirdPhoto.classList.remove('selected');
-    });
-
-    document.querySelector('.select-third-photo').addEventListener('click', function () {
-        featuredPhoto.classList.add('unselected');
-        featuredPhoto.classList.remove('selected');
-        secondPhoto.classList.add('unselected');
-        secondPhoto.classList.remove('selected');
-        thirdPhoto.classList.add('selected');
-        thirdPhoto.classList.remove('unselected');
-    });
+    $('.select-third-photo').click(function() {
+        TweenMax.to($('.featured-item'), 0.5, {opacity: 0});
+        TweenMax.to($('.second-item'), 0.5, {opacity: 0});
+        TweenMax.to($('.third-item'), 0.5, {opacity: 1, display: 'block'});
+    })
 };
 
 // * * * * INIT PIECES
 init = function () {
     scroll();
     navMenu();
-    // photoSwitch();
+    photoSwitch();
     displayBlogPost();
     displayAffirmationGallery();
     displayPatternGallery();

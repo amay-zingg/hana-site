@@ -80,20 +80,12 @@ section.reviews h2{
     width: 100%;
 }
 
-// .review-cards .second-item, .review-cards .third-item, .featured-image .second-item, .featured-image .third-item{
-//     display: none;
-// }
+.review-cards .second-item, .review-cards .third-item, .featured-image .second-item, .featured-image .third-item{
+    display: none;
+}
 
 .review-cards .unselected, .second-item, .third-item{
 	display: none;
-}
-
-.selected{
-	display: block;
-}
-
-.unselected, .featured .unselected, .product .featured-item.unselected, .product .second-item.unselected, .product .third-item.unselected, .featured-image .second-item.unselected{
-    display: none;
 }
 
 .photo-credit{
@@ -112,4 +104,22 @@ section.reviews h2{
 .photo-credit a:hover, 
 .photo-credit a:active{
 	border-bottom: 2px solid $secondary;
+}
+
+/* * * * IMAGE SWITCHEROO * * * */
+
+.product .featured-image{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.product .featured-item, .product .second-item, .product .third-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
