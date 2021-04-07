@@ -76,6 +76,7 @@ section.reviews h2{
     width: 100%;
 }
 
+
 .review .featured-item{
     width: 100%;
 }
@@ -106,20 +107,3 @@ section.reviews h2{
 	border-bottom: 2px solid $secondary;
 }
 
-/* * * * IMAGE SWITCHEROO * * * */
-
-.product .featured-image{
-    position: relative;
-    width: 300px;
-    height: 300px;
-}
-
-.product .featured-item, .product .second-item, .product .third-item{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-}

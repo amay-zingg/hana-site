@@ -1,0 +1,182 @@
+/* * * * * * * * * * * * * * SINGLE PRODUCT * * * * * * * * * * * * * * */
+.product{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.product .product-right{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+.product .product-right{
+	padding: 0 1em;
+	justify-content: center;
+}
+
+//LEFT
+.product .product-left{
+	width: 100%;
+	display: flex; 
+	justify-items: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* * * * IMAGE SWITCHEROO * * * */
+.product .featured-image{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.product .featured-item, .product .second-item, .product .third-item{
+    width: 100%;
+    height: 100%;
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.image-container{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.product .second-item, .product .third-item{
+    // display: none;
+    opacity: 0;
+}
+
+.featured-item img, .second-item img, .third-item img{
+	border-radius: 15px;
+	border: 2px solid $secondary;
+	box-shadow: 1px 1px 5px $secondary, -1px -1px 5px $secondary;
+    width: 300px;
+}
+
+.product-images-block{
+    display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	padding: 1em;
+}
+
+.product-images-block img{
+	width: 40%;
+	margin: 5px;
+	box-shadow: 1px 1px 2px $black;
+	border-radius: 5px;
+}
+
+//RIGHT
+p.price{
+	padding: 0;
+	margin: 0;
+	font-family: 'Chicle', cursive;
+	letter-spacing: 3px;
+	font-size: 3rem;
+	border-bottom: 2px solid $secondary;
+	text-shadow: 1px 1px 1px $secondary;
+}
+
+p.price span{
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.5rem;
+	letter-spacing: 0;
+	margin-left: 2em;
+}
+
+p.price span a{
+	color: $secondary;
+	font-weight: bolder;
+	font-size: 1.5rem;
+}
+
+.quantity-cart{
+	display: flex;
+	align-items: center;
+}
+
+p.italic{
+	font-style: italic;
+}
+
+/* * * * PRODUCT PAGE - FORM * * * */
+form.centered-form{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+form select.product-select{
+	margin-bottom: 1em;
+	padding: 10px 0;
+	display: block;
+	min-height: 40px;
+	width: 100%;
+	cursor: pointer;
+	font-size: 1.4rem;
+}
+
+.quantity{
+	border: 2px solid $secondary;
+	border-radius: 10px;
+	position: relative;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 40px;
+	width: 100px;
+}
+
+.quantity input{
+	border: none;
+	font-size: 1.4rem;
+	width: 95px;
+	height: 35px;
+	border-radius: 10px;
+	padding: 0 20px;
+}
+
+// /* Chrome, Safari, Edge, Opera */
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// /* Firefox */
+// input[type=number] {
+//   -moz-appearance: textfield;
+// }
+
+/* * * * PINK BORDER INPUT * * * */
+.pink-border{
+	padding: 5px 15px;
+	border: 2px solid $secondary;
+	border-radius: 10px;
+}
+
+/* * * * BREADCRUMBS * * * */
+nav.breadcrumb{
+	width: 100%;
+	padding: 20px 0;
+}
+
+nav.breadcrumb a:hover, nav.breadcrumb a:active{
+	text-shadow: 1px 1px 1px $secondary;
+}
+
+span.arrow-icon{
+	font-size: 1.5rem;
+}
+
