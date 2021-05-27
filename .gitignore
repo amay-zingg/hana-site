@@ -6,3 +6,19 @@
 thumbs.db
 
 # https://devconnected.com/how-to-clear-git-cache/
+
+<!-- META INFO & SOCIAL SHARING -->
+    <meta name="description" content="I'm Frizz Kid, and I'm an illustrator & writer based in Toronto. This is my store and artist gallery!">
+    <meta property="og:title" content="Hana Shafi | Frizz Kid Art">
+    <meta property="og:image" content="./assets/hanaPhotos/HanaShafi-GladDayBookSigning2020.jpg">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@HanaShafi">
+    <meta name="twitter:creator" content="@HanaShafi">
+    <meta name="twitter:title" content="Hana Shafi | Frizz Kid Art">
+    <meta name="twitter:description"
+        content="I'm Frizz Kid, and I'm an illustrator & writer based in Toronto. This is my store and artist gallery!">
+    <meta name="twitter:image"
+        content="./assets/HanaPhotos/hanaShafi-GladDayBookSigning2020.jpg">
+    <meta name="twitter:image:alt" content="Hana Shafi signing copies of her book outside of Glad Day Book Store in Toronto.">
