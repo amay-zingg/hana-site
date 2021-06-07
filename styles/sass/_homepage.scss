@@ -51,27 +51,11 @@ section.intro {
   margin-bottom: 1em;
 }
 
-// .image-block img {
-//   width: 30%;
-//   margin: 5px;
-//   box-shadow: 1px 1px 2px black;
-//   border-radius: 5px;
-// }
-
-// * * * * MEDIA QUERIES
-@media only screen and (min-width: 600px) {
-  .image-block {
-    @include flexbox(
-      $placeItems: center,
-      $placeContent: center,
-      $direction: row,
-      $wrap: wrap
-    );
-  }
-
-  .image-block img {
-    width: 3%;
-  }
+.image-block img {
+  width: 30%;
+  margin: 5px;
+  box-shadow: 1px 1px 2px black;
+  border-radius: 5px;
 }
 
 .photo-border {
@@ -353,4 +337,137 @@ form.contact-form .button-box .frizz-button {
 .contact-form .button-box input {
   width: 30%;
   box-shadow: 1px 1px 2px black;
+}
+
+/* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
+@media only screen and (min-width: 600px) {
+  .image-block {
+    @include flexbox(
+      $placeItems: center,
+      $placeContent: center,
+      $direction: row,
+      $wrap: wrap
+    );
+  }
+
+  .image-block img {
+    width: 33%;
+  }
+
+  .title-block,
+  .main-image {
+    padding: 15px;
+  }
+
+  // *** Is this important?
+  // LEFT
+  .image-block {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .image-block img {
+    max-width: 150px;
+  }
+
+  //RIGHT
+  .product-images-block img {
+    max-width: 150px;
+    height: 150px;
+  }
+
+  .product {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  form select.product-select {
+    width: 375px;
+    // ***
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  //RIGHT
+  .main-image {
+    width: 60%;
+  }
+
+  .featured-section-left,
+  .featured-section-right {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  /* * * * MAIN * * * */
+  section.intro {
+    @include flexbox($direction: row);
+  }
+
+  //LEFT
+  .title-block {
+    width: 60%;
+  }
+
+  //RIGHT
+  .main-image {
+    width: 40%;
+  }
+
+  /* * * * FEATURED SECTION * * * */
+  .inner-featured-section {
+    background: url(./../assets/bannersPNG/Transparent-Patterns-full.png);
+    width: 980px;
+    height: 280px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .featured-section-left,
+  .featured-section-right {
+    width: 48%;
+    height: 280px;
+  }
+
+  .featured-sections-homepage {
+    @include flexbox($placeContent: space-between);
+  }
+  //
+
+  .display-item-1 .image,
+  .display-item-2 .image {
+    width: 50%;
+  }
+
+  .display-item-1,
+  .display-item-2 {
+    @include flexbox($placeContent: center, $direction: row);
+  }
+
+  /* * * * REVIEWS * * * */
+  .review-cards figure {
+    width: 30%;
+  }
+
+  .review-cards .review-words {
+    width: 65%;
+  }
+
+  .review-cards .review-words {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .review-cards .review .inner-review {
+    @include flexbox(
+      $placeItems: center,
+      $placeContent: center,
+      $direction: row
+    );
+    width: 100%;
+    min-height: 425px;
+  }
 }
