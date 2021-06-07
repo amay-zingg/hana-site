@@ -2620,6 +2620,11 @@ section.books {
           flex-grow: 0;
 }
 
+.display-item-1 .image img,
+.display-item-2 .image img {
+  width: 70%;
+}
+
 /* * * * REVIEWS HAS OWN SCSS PAGE * * * */
 /* * * * Blog + Twitter (blogNtwit) SCSS PAGE * * * */
 /* * * * FEATURED SECTION * * * */

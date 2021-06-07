@@ -139,6 +139,11 @@ section.books {
   @include flexbox($placeItems: center, $placeContent: center);
 }
 
+.display-item-1 .image img,
+.display-item-2 .image img {
+  width: 70%;
+}
+
 /* * * * REVIEWS HAS OWN SCSS PAGE * * * */
 
 /* * * * Blog + Twitter (blogNtwit) SCSS PAGE * * * */
@@ -434,6 +439,7 @@ form.contact-form .button-box .frizz-button {
   .featured-sections-homepage {
     @include flexbox($placeContent: space-between);
   }
+
   //
 
   .display-item-1 .image,
